@@ -10,6 +10,8 @@
 \usepackage{algpseudocode}
 \usepackage{mathtools}
 
+\usepackage{tikz-feynman}
+
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 
@@ -206,11 +208,28 @@
 \pagebreak
 
 \begin{homeworkProblem}
-   (H\&M exercise 12.13) Predict the ratio of the K $\rightarrow$ e $\bar{\nu}_e$ and K $\rightarrow$ $\mu$ $\bar{\nu}_\mu$ decay rates. Given that the lifetime of the K is \(\tau = 1.2 \times 10^8 s\) and the K $\rightarrow \mu \nu$ branching ratio is 64\%, estimate the decay constant f$_K$. Comment on your assumptions and your result.
+   (H\&M exercise 12.13) Predict the ratio of the K$^{-}$ $\rightarrow$ e$^{-}$ $\bar{\nu}_e$ and K$^{-}$ $\rightarrow$ $\mu^{-}$ $\bar{\nu}_\mu$ decay rates. Given that the lifetime of the K is \(\tau = 1.2 \times 10^{-8} s\) and the K $\rightarrow \mu \nu$ branching ratio is 64\%, estimate the decay constant f$_K$. Comment on your assumptions and your result.
    \\
    \\
    \textbf{Solution}
-   Starting with K $\rightarrow$ e $\bar{\nu}_e$:
+   \\
+   %\feynmandiagram [horizontal=a to b] {
+%	i1 -- [fermion] a -- [fermion] i2
+%	a -- [photon] b
+%   };
+
+   
+   Starting with K$^{-}$ $\rightarrow$ e$^{-}$ $\bar{\nu}_e$, and following the procedure outlined in H\&M for $\pi^{-}$ decay (p.265):
+   \\
+   \[
+	   \mathcal{M} = \frac{G}{\sqrt{2}}q^{\sigma}f_k\bar{u}(p_3)\gamma_{\sigma}(1-\gamma^5)v(p_4)
+   \]
+   \[
+	   q=p_3+p_4
+   \]
+   \[
+	    \Rightarrow \mathcal{M} = \frac{Gf_k}{\sqrt2}(p_3^\sigma+p_4^\sigma)\bar{u}(p_3)\gamma_{\sigma}(1-\gamma^5)v(p_4)
+   \]
    
    
 \end{homeworkProblem}
