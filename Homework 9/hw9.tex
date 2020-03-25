@@ -11,7 +11,6 @@
 \usepackage{mathtools}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage{tikz-feynman}
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
@@ -214,11 +213,6 @@
    \\
    \textbf{Solution}
    \\
-   %\feynmandiagram [horizontal=a to b] {
-%	i1 -- [fermion] a -- [fermion] i2
-%	a -- [photon] b
-%   };
-
    
    Starting with K$^{-}$ $\rightarrow$ e$^{-}$ $\bar{\nu}_e$, and following the procedure outlined in H\&M for $\pi^{-}$ decay (p.265):
    \\
@@ -261,12 +255,69 @@
 \begin{homeworkProblem}
 	\textbf{Part a}
 	\\
-	\textbf{Solution}
+	\[
+		V_{CKM}=
+		\begin{pmatrix}
+		1-\frac{1}{2}\lambda^2 & \lambda & A\lambda^3(\rho-i\eta) \\
+		-\lambda & 1-\frac{1}{2}\lambda^2 & A\lambda^2 \\
+		A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1
+		\end{pmatrix}
+	\]
 	\\
-	\includegraphics[scale=0.35]{unitaryTriangles}
+	If we let \(A=\rho=\eta=1$ and $\lambda=0.2\), then we can write this as:
+	\\
+	\[
+		V_{CKM}=
+		\begin{pmatrix}
+		0.98 & 0.2 & 0.008-i0.008 \\
+		-0.2 & 0.98 & 0.04 \\
+		-i0.008 & -0.04 & 1
+	\end{pmatrix}
+	\]
+	
+	We can take the dot product between any row and any other row, $row_i row_j^*$ and the dot product between any column and any other column, $col_i col_j^*$ and these dot products must be equal to zero. This is due to the unitarity of the CKM matrix. Each of these six dot products then represents a triangle in the complex plain whose sides are defined by the vector pointing to each of the products in the dot products. 
+	\\
+	\\
+	Here I'll write each product of the six dot products out in the form of a column vector defined like this: \(v=\begin{pmatrix} a_1 \\ a_2 \end{pmatrix}\) where $a_1=$ the real component and $a_2=$ the imaginary component
+	\\
+	\\
+	Triangle 1 ($row_1 row_2^*$):
+	\[
+		p_1=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad p_2=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.00032 \\ -0.00032 \end{pmatrix}
+	\]
+	Triangle 2 ($row_1 row_3^*$):
+	\[
+		p_1=\begin{pmatrix} 0 \\ 0.008 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.008 \\ -0.008 \end{pmatrix}
+	\]
+	Triangle 3 ($row_2 row_3^*$):
+	\[
+		p_1=\begin{pmatrix} 0 \\ -0.0016 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.04 \\ 0 \end{pmatrix}
+	\]
+	Triangle 4 ($col_1 col_2^*$):
+	\[
+		p_1=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0 \\ 0.0032 \end{pmatrix}
+	\]
+	Triangle 5 ($col_1 col_3^*$):
+	\[
+		p_1=\begin{pmatrix} 0.008 \\ 0.008 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0 \\ -0.008 \end{pmatrix}
+	\]
+	Triangle 6 ($col_2 col_3^*$):
+	\[
+		p_1=\begin{pmatrix} 0.0016 \\ 0.0016 \end{pmatrix}, \quad p_2=\begin{pmatrix} 0.04 \\ 0 	\end{pmatrix}, \quad p_3=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}
+	\]
+	Now these can all be plotted together, which I did using Desmos on the following page
+	\pagebreak
+	\\
+	
+	\begin{figure}[t]
+		\includegraphics[scale=0.3]{unitaryTriangles}
+		\centering
+		\caption{The six triangles plotted for $A=\rho=\eta=1$ and $\lambda=0.2$}
+		\centering
+	\end{figure}
 	\textbf{Part b}
-	\\
-	\textbf{Solution}
+	
+	\textbf{Part c}
 \end{homeworkProblem}
 
 
