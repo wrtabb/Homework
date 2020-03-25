@@ -253,8 +253,12 @@
 \pagebreak
 
 \begin{homeworkProblem}
+	Because the SKM matrix is unitary, there are constraints among its elements. In particular, the six "dot products" $(row)_i(row)_j^*$ and $(column)_i(column)_j^*$, with $i\neq j$, are all equal to zero. Thus, the six quantities can be expressed graphically in terms of six triangles in the complex plane. These are called unitarity triangles.
+	\\
+	\\
 	\textbf{Part a}
 	\\
+	Using the Wolfenstein approximation for the CKM matrix that we used in class,
 	\[
 		V_{CKM}=
 		\begin{pmatrix}
@@ -263,8 +267,12 @@
 		A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1
 		\end{pmatrix}
 	\]
+	which is good up to factors of $\lambda^4$, to show that four of the six unitarity triangles are squashed. The other two triangles all have sides of the same order of magnitude.
 	\\
-	If we let \(A=\rho=\eta=1$ and $\lambda=0.2\), then we can write this as:
+	\\
+	\textbf{Solution}
+	\\
+	If we let \(A=\rho=\eta=1$ and $\lambda=0.2\), then we can write the CKM matrix as:
 	\\
 	\[
 		V_{CKM}=
@@ -286,7 +294,7 @@
 		p_1=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad p_2=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.00032 \\ -0.00032 \end{pmatrix}
 	\]
 	Triangle 2 ($row_1 row_3^*$):
-	\[
+	\[	
 		p_1=\begin{pmatrix} 0 \\ 0.008 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.008 \\ -0.008 \end{pmatrix}
 	\]
 	Triangle 3 ($row_2 row_3^*$):
@@ -305,19 +313,36 @@
 	\[
 		p_1=\begin{pmatrix} 0.0016 \\ 0.0016 \end{pmatrix}, \quad p_2=\begin{pmatrix} 0.04 \\ 0 	\end{pmatrix}, \quad p_3=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}
 	\]
-	Now these can all be plotted together, which I did using Desmos on the following page
-	\pagebreak
-	\\
-	
-	\begin{figure}[t]
+	Each of these triangles is plotted together in the following figures. As you can see in Figure \ref{fullPlot}, most of the triangles are very squished. In the zoom plot in Figure \ref{zoomPlot}, you can see that two of the triangles have sides of comparable length.
+		
+	\begin{figure}[h]
 		\includegraphics[scale=0.3]{unitaryTriangles}
 		\centering
 		\caption{The six triangles plotted for $A=\rho=\eta=1$ and $\lambda=0.2$}
+		\label{fullPlot}
 		\centering
 	\end{figure}
-	\textbf{Part b}
 	
+	
+	\begin{figure}[h]			
+		\includegraphics[scale=0.3]{unitaryTrianglesZoom}
+		\centering
+		\caption{The six triangles plotted to better see the two triangles whose sides are of similar size}
+		\label{zoomPlot}
+		\centering
+	\end{figure}
+	
+	\textbf{Part b}
+	\\
+	Show that to leading order in $\lambda$ the two remaining triangles are really the same triangle. 
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	To leading order in $\lambda$, we can write the 
+	\\
 	\textbf{Part c}
+	
 \end{homeworkProblem}
 
 
