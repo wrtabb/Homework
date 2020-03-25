@@ -163,7 +163,7 @@
 \\
     \textbf{Solution}
 
-    Start by defining the momentum four-vectors for each particle in the center of momentum frame. Note that $\sigma$ is the index while $\mu$, $\nu$, and $\pi$ are the names of the particles.
+    Start by defining the momentum four-vectors for each particle in the center of momentum frame. Note that $\sigma$ is the index while $\mu$, $\nu$, and $\pi$ are the names of the particles. In the CM frame, the momentum of the pion must be zero, so by conservation of momentum, the two outgoing particles must have equal and opposite momentum.
     \\
 	\[
 		\begin{split}
@@ -192,7 +192,7 @@
 		P_\pi^2 + P_\nu^2 - 2P_\nu^\sigma P_{\pi,\sigma} = m_\mu^2
 		\end{split}
 	\]
-	Since we are assuming the the neutrino is massless, \(P_\nu^2 = 0\) and \(E_\nu = \abs{\vec{p}}\)
+	Since we are assuming the the neutrino is massless, \(P_\nu^2 = m_\nu^2 = 0\) and \(E_\nu = \abs{\vec{p}}\)
 	
 	\[
 		\begin{split}
@@ -291,28 +291,41 @@
 	\\
 	Triangle 1 ($row_1 row_2^*$):
 	\[
-		p_1=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad p_2=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.00032 \\ -0.00032 \end{pmatrix}
+		p_1=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad 
+		p_2=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad 
+		p_3=\begin{pmatrix} 0.00032 \\ -0.00032 \end{pmatrix}
 	\]
 	Triangle 2 ($row_1 row_3^*$):
 	\[	
-		p_1=\begin{pmatrix} 0 \\ 0.008 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.008 \\ -0.008 \end{pmatrix}
+		p_1=\begin{pmatrix} 0 \\ 0.008 \end{pmatrix}, \quad 
+		p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad 
+		p_3=\begin{pmatrix} 0.008 \\ -0.008 \end{pmatrix}
 	\]
 	Triangle 3 ($row_2 row_3^*$):
 	\[
-		p_1=\begin{pmatrix} 0 \\ -0.0016 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0.04 \\ 0 \end{pmatrix}
+		p_1=\begin{pmatrix} 0 \\ -0.0016 \end{pmatrix}, \quad 
+		p_2=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}, \quad 
+		p_3=\begin{pmatrix} 0.04 \\ 0 \end{pmatrix}
 	\]
 	Triangle 4 ($col_1 col_2^*$):
 	\[
-		p_1=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0 \\ 0.0032 \end{pmatrix}
+		p_1=\begin{pmatrix} 0.2 \\ 0 \end{pmatrix}, \quad 
+		p_2=\begin{pmatrix} -0.2 \\ 0 \end{pmatrix}, \quad 
+		p_3=\begin{pmatrix} 0 \\ 0.0032 \end{pmatrix}
 	\]
 	Triangle 5 ($col_1 col_3^*$):
 	\[
-		p_1=\begin{pmatrix} 0.008 \\ 0.008 \end{pmatrix}, \quad p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad p_3=\begin{pmatrix} 0 \\ -0.008 \end{pmatrix}
+		p_1=\begin{pmatrix} 0.008 \\ 0.008 \end{pmatrix}, \quad 
+		p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad 
+		p_3=\begin{pmatrix} 0 \\ -0.008 \end{pmatrix}
 	\]
 	Triangle 6 ($col_2 col_3^*$):
 	\[
-		p_1=\begin{pmatrix} 0.0016 \\ 0.0016 \end{pmatrix}, \quad p_2=\begin{pmatrix} 0.04 \\ 0 	\end{pmatrix}, \quad p_3=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}
+		p_1=\begin{pmatrix} 0.0016 \\ 0.0016 \end{pmatrix}, \quad 
+		p_2=\begin{pmatrix} 0.04 \\ 0 	\end{pmatrix}, \quad 
+		p_3=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}
 	\]
+	
 	Each of these triangles is plotted together in the following figures. As you can see in Figure \ref{fullPlot}, most of the triangles are very squished. In the zoom plot in Figure \ref{zoomPlot}, you can see that two of the triangles have sides of comparable length.
 		
 	\begin{figure}[h]
@@ -339,8 +352,36 @@
 	\\
 	\textbf{Solution}
 	\\
-	To leading order in $\lambda$, we can write the 
+	In part a I immediately wrote all the complex numbers using the numerical approximation for the parameters. Now I will rewrite the complex numbers in vector form for the two triangles which have comparable side lengths. These are triangles 2 and 5
 	\\
+	\\
+	Triangle 2
+	\[
+		p_1=A\lambda^3(1-\frac{1}{2}\lambda^2)\begin{pmatrix} 1-\rho \\ \eta \end{pmatrix}, \quad p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
+		p_3=A\lambda^3\begin{pmatrix} \rho \\ -\eta \end{pmatrix}
+	\]
+	Triangle 5
+	\[
+		p_1=A\lambda^3(1-\frac{1}{2}\lambda^2)\begin{pmatrix} \rho \\ \eta \end{pmatrix}, \quad p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
+		p_3=A\lambda^3\begin{pmatrix} 1-\rho \\ -\eta \end{pmatrix}
+	\]
+		
+	To leading order in $\lambda$, which is $\lambda^3$, we can write:
+	\\
+	Triangle 2
+	\[
+		p_1=A\lambda^3\begin{pmatrix} 1-\rho \\ \eta \end{pmatrix}, \quad 
+		p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
+		p_3=A\lambda^3\begin{pmatrix} \rho \\ -\eta \end{pmatrix}
+	\]
+	Triangle 5
+	\[
+		p_1=A\lambda^3\begin{pmatrix} \rho \\ \eta \end{pmatrix}, \quad 
+		p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
+		p_3=A\lambda^3\begin{pmatrix} 1-\rho \\ -\eta \end{pmatrix}
+	\]
+	
+	
 	\textbf{Part c}
 	
 \end{homeworkProblem}
