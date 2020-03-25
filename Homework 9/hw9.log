@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  24 MAR 2020 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  25 MAR 2020 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,18 +605,18 @@ File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
  (./hw9.aux)
 \openout1 = `hw9.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
  ABD: EveryShipout initializing macros
 (c:/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -678,71 +678,83 @@ e
 
 Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices a
 utomatically placed. You can disable this warning by setting /tikzfeynman/warn 
-luatex=false on input line 154.
+luatex=false on input line 155.
 
 
 Package tikz-feynman Warning: Consider loading TikZ-Feynman with \usepackage[co
 mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
- input line 154.
+ input line 155.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 156.
+LaTeX Font Info:    Try loading font information for U+msa on input line 157.
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 156.
+LaTeX Font Info:    Try loading font information for U+msb on input line 157.
 
 (c:/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
+Underfull \hbox (badness 10000) in paragraph at lines 162--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 211--220
+Underfull \hbox (badness 10000) in paragraph at lines 212--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--220
+Underfull \hbox (badness 10000) in paragraph at lines 212--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
-[3] [4] [5] [6] [7] (./hw9.aux) ) 
+[3] [4] [5] [6]
+<./images/unitaryTriangles.png, id=34, 1440.13031pt x 666.23906pt>
+File: ./images/unitaryTriangles.png Graphic file (type png)
+
+<use ./images/unitaryTriangles.png>
+Package pdftex.def Info: ./images/unitaryTriangles.png used on input line 266.
+(pdftex.def)             Requested size: 504.05316pt x 233.18716pt.
+
+Overfull \hbox (34.29817pt too wide) in paragraph at lines 262--271
+[]
+ []
+
+[7 <./images/unitaryTriangles.png>] (./hw9.aux) ) 
 Here is how much of TeX's memory you used:
- 16688 strings out of 493033
- 362103 string characters out of 6137749
- 439677 words of memory out of 5000000
- 19876 multiletter control sequences out of 15000+600000
+ 16695 strings out of 493033
+ 362271 string characters out of 6137749
+ 439692 words of memory out of 5000000
+ 19880 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,80p,415b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb>
-Output written on hw9.pdf (7 pages, 114516 bytes).
+<c:/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on hw9.pdf (7 pages, 213621 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
