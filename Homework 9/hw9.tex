@@ -283,7 +283,7 @@
 	\end{pmatrix}
 	\]
 	
-	We can take the dot product between any row and any other row, $row_i row_j^*$ and the dot product between any column and any other column, $col_i col_j^*$ and these dot products must be equal to zero. This is due to the unitarity of the CKM matrix. Each of these six dot products then represents a triangle in the complex plain whose sides are defined by the vector pointing to each of the products in the dot products. 
+	We can take the dot product between any row and any other row, $row_i row_j^*$ and the dot product between any column and any other column, $col_i col_j^*$ and these dot products must be equal to zero. This is due to the unitarity of the CKM matrix. Each of these six dot products then represents a triangle in the complex plane whose sides are defined by the vector pointing to each of the products in the dot products. 
 	\\
 	\\
 	Here I'll write each product of the six dot products out in the form of a column vector defined like this: \(v=\begin{pmatrix} a_1 \\ a_2 \end{pmatrix}\) where $a_1=$ the real component and $a_2=$ the imaginary component
@@ -297,13 +297,13 @@
 	\]
 	Triangle 2 ($row_1 row_3^*$):
 	\[	
-		p_1=\begin{pmatrix} 0 \\ 0.008 \end{pmatrix}, \quad 
+		p_1=\begin{pmatrix} 0 \\ -0.008 \end{pmatrix}, \quad 
 		p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad 
 		p_3=\begin{pmatrix} 0.008 \\ -0.008 \end{pmatrix}
 	\]
 	Triangle 3 ($row_2 row_3^*$):
 	\[
-		p_1=\begin{pmatrix} 0 \\ -0.0016 \end{pmatrix}, \quad 
+		p_1=\begin{pmatrix} 0 \\ 0.0016 \end{pmatrix}, \quad 
 		p_2=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}, \quad 
 		p_3=\begin{pmatrix} 0.04 \\ 0 \end{pmatrix}
 	\]
@@ -315,13 +315,13 @@
 	\]
 	Triangle 5 ($col_1 col_3^*$):
 	\[
-		p_1=\begin{pmatrix} 0.008 \\ 0.008 \end{pmatrix}, \quad 
+		p_1=\begin{pmatrix} 0.008 \\ -0.008 \end{pmatrix}, \quad 
 		p_2=\begin{pmatrix} -0.008 \\ 0 \end{pmatrix}, \quad 
 		p_3=\begin{pmatrix} 0 \\ -0.008 \end{pmatrix}
 	\]
 	Triangle 6 ($col_2 col_3^*$):
 	\[
-		p_1=\begin{pmatrix} 0.0016 \\ 0.0016 \end{pmatrix}, \quad 
+		p_1=\begin{pmatrix} 0.0016 \\ -0.0016 \end{pmatrix}, \quad 
 		p_2=\begin{pmatrix} 0.04 \\ 0 	\end{pmatrix}, \quad 
 		p_3=\begin{pmatrix} -0.04 \\ 0 \end{pmatrix}
 	\]
@@ -340,7 +340,7 @@
 	\begin{figure}[h]			
 		\includegraphics[scale=0.3]{unitaryTrianglesZoom}
 		\centering
-		\caption{The six triangles plotted to better see the two triangles whose sides are of similar size}
+		\caption{The six triangles plotted to better see the two triangles whose sides are of similar size. The purple triangle is plotted with dotted lines and x's for points so it can be seen overlaid on the other triangle. Since these are plotted using an approximation for the parameters, these look the same but are actually slightly different. (see part b)}
 		\label{zoomPlot}
 		\centering
 	\end{figure}
@@ -357,30 +357,32 @@
 	\\
 	Triangle 2
 	\[
-		p_1=A\lambda^3(1-\frac{1}{2}\lambda^2)\begin{pmatrix} 1-\rho \\ \eta \end{pmatrix}, \quad p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
+		p_1=A\lambda^3(1-\frac{1}{2}\lambda^2)\begin{pmatrix} 1-\rho \\ -\eta \end{pmatrix}, \quad p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
 		p_3=A\lambda^3\begin{pmatrix} \rho \\ -\eta \end{pmatrix}
 	\]
 	Triangle 5
 	\[
-		p_1=A\lambda^3(1-\frac{1}{2}\lambda^2)\begin{pmatrix} \rho \\ \eta \end{pmatrix}, \quad p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
+		p_1=A\lambda^3(1-\frac{1}{2}\lambda^2)\begin{pmatrix} \rho \\ -\eta \end{pmatrix}, \quad p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
 		p_3=A\lambda^3\begin{pmatrix} 1-\rho \\ -\eta \end{pmatrix}
 	\]
 		
 	To leading order in $\lambda$, which is $\lambda^3$, we can write:
 	\\
+	\\
 	Triangle 2
 	\[
-		p_1=A\lambda^3\begin{pmatrix} 1-\rho \\ \eta \end{pmatrix}, \quad 
+		p_1=A\lambda^3\begin{pmatrix} 1-\rho \\ -\eta \end{pmatrix}, \quad 
 		p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
 		p_3=A\lambda^3\begin{pmatrix} \rho \\ -\eta \end{pmatrix}
 	\]
 	Triangle 5
 	\[
-		p_1=A\lambda^3\begin{pmatrix} \rho \\ \eta \end{pmatrix}, \quad 
+		p_1=A\lambda^3\begin{pmatrix} \rho \\ -\eta \end{pmatrix}, \quad 
 		p_2=A\lambda^3\begin{pmatrix} -1 \\ 0 	\end{pmatrix}, \quad 
 		p_3=A\lambda^3\begin{pmatrix} 1-\rho \\ -\eta \end{pmatrix}
 	\]
-	
+	And now we see that triangles 2 and 5 contain the same points and are the same triangle to leading order in $\lambda$. This is the same result we see in the triangle plots from part a.
+	\\
 	
 	\textbf{Part c}
 	
