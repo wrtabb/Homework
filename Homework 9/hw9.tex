@@ -213,19 +213,22 @@
    \\
    \textbf{Solution}
    \\
-   
-   Starting with K$^{-}$ $\rightarrow$ e$^{-}$ $\bar{\nu}_e$, and following the procedure outlined in H\&M for $\pi^{-}$ decay (p.265):
+   In Halzen and Martin, this calculation is done for the $\pi^-$ decay. This decay looks exactly like what we have here, we just need to follow the procedure outlined from equations (12.45) to (12.54). 
    \\
+   \\
+   Thus we have:
    \[
-	   \mathcal{M} = \frac{G}{\sqrt{2}}q^{\sigma}f_k\bar{u}(p_3)\gamma_{\sigma}(1-\gamma^5)v(p_4)
+	   \begin{split}
+	   \Gamma(K^- \rightarrow e^- \bar{\nu}_e) = \frac{G^2}{8\pi}f_k^2m_k m_e^2 (\frac{m_k^2-m_e^2}{m_k^2})^2 \\
+	   \Gamma(K^- \rightarrow \mu^- \bar{\nu}_\mu) = \frac{G^2}{8\pi}f_k^2m_k m_\mu^2 (\frac{m_k^2-m_\mu^2}{m_k^2})^2 \\
+	   \frac{\Gamma(K^- \rightarrow e^- \bar{\nu}_e)}{\Gamma(K^- \rightarrow \mu^- \bar{\nu}_\mu)} = \frac{\frac{G^2}{8\pi}f_k^2m_k m_e^2 (\frac{m_k^2-m_e^2}{m_k^2})^2}{\frac{G^2}{8\pi}f_k^2m_k m_\mu^2 (\frac{m_k^2-m_\mu^2}{m_k^2})^2} = \frac{m_e^2}{m_\mu^2}(\frac{m_k^2-m_e^2}{m_k^2-m_\mu^2})^2
+	   \end{split}
    \]
+   Now just plug in the relevant numbers, \(m_k = 493.68 MeV, \quad m_\mu = 105.66 MeV, \quad m_e = 0.51100 MeV\)
    \[
-	   q=p_3+p_4
+	   \Gamma(K^- \rightarrow e^- \bar{\nu}_e) =  \frac{0.51100^2}{105.66^2}(\frac{493.68^2-0.51100^2}{493.68^2-105.66^2})^2 = 2.5686 \times 10^{-5}
    \]
-   \[
-	    \Rightarrow \mathcal{M} = \frac{Gf_k}{\sqrt2}(p_3^\sigma+p_4^\sigma)\bar{u}(p_3)\gamma_{\sigma}(1-\gamma^5)v(p_4)
-   \]
-   
+   The PDG (http://pdg.lbl.gov/2017/listings/rpp2017-list-K-plus-minus.pdf) gives this value as $2.488 \times 10^{-5}$ which is reasonably close to the value obtained here.
    
 \end{homeworkProblem}
 
