@@ -283,7 +283,7 @@
 	\end{pmatrix}
 	\]
 	
-	We can take the dot product between any row and any other row, $row_i row_j^*$ and the dot product between any column and any other column, $col_i col_j^*$ and these dot products must be equal to zero. This is due to the unitarity of the CKM matrix. Each of these six dot products then represents a triangle in the complex plane whose sides are defined by the vector pointing to each of the products in the dot products. 
+	We can take the dot product between any row and any other row, $row_i row_j^*$ and the dot product between any column and any other column, $col_i col_j^*$ and these dot products must be equal to zero. This is due to the unitarity of the CKM matrix. Each of these six dot products then represents a triangle in the complex plane whose sides are defined by the points in the complex plane coming from these dot products. 
 	\\
 	\\
 	Here I'll write each product of the six dot products out in the form of a column vector defined like this: \(v=\begin{pmatrix} a_1 \\ a_2 \end{pmatrix}\) where $a_1=$ the real component and $a_2=$ the imaginary component
@@ -385,6 +385,89 @@
 	\\
 	
 	\textbf{Part c}
+	\\
+	A general representation of the CKM matrix is:
+	\[
+		\begin{split}
+		V_{CKM} = 
+		\begin{pmatrix} 
+			1 & 0 & 0 \\ 
+			0 & c_{23} & s_{23} \\
+			0 & -s_{23} & c_{23}\\		
+		\end{pmatrix}
+		\begin{pmatrix} 
+			c_{13} & 0 & s_{13} e^{-i\delta} \\ 
+			0 & 1 & 0 \\
+			s_{13} e^{i\delta} & 0 & c_{13}\\		
+		\end{pmatrix}
+		\begin{pmatrix} 
+			c_{12} & s_{12} & 0 \\ 
+			-s_{12} & c_{12} & 0 \\
+			0 & 0 & 1\\		
+		\end{pmatrix}
+		\\
+		=\begin{pmatrix} 
+			c_{12}c_{13} & s_{12}c_{13} &  s_{13}e^{-i\delta} \\ 
+			-s_{12}c_{23}-c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13} \\
+			s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}\\		
+		\end{pmatrix}
+		\end{split}
+	\]
+	where \(c_{ij} \equiv cos\theta_{ij}\) and \(s_{ij} \equiv sin\theta_{ij}\) and the $\theta_{ij}$ are three rotation angles while $\delta$ is a phase. Show that in this representation the area of each of the six triangles is given by
+	\[
+		Area= \frac{1}{2}\abs{s_{12}s_{13}s_{23}c_{12}c_{13}^2c_{23}sin\delta}
+	\]
+	We have six triangles whose sides are defined by points in the complex plane which are found by taking the dot product between rows and columns of the CKM matrix. Given that we have these points, we can easily find the lengths of the sides of the triangle and then apply Heron's Formula to calculate the area from just these side lengths. 
+	\\
+	\\
+	Heron's formula:
+	\[
+		A=\sqrt{s(s-a)(s-b)(s-c)}
+	\]
+	Where \(s=\frac{a+b+c}{2}\) and a, b, and c are the lengths of the sides.
+	To start, I will choose the triangle defined by taking $row_1 row_2$:
+	\\
+	\[
+		\begin{split}
+		P_1 = -s_{12}c_{12}c_{13}c_{23}-s_{13}s_{23}c_{12}^2c_{13}e^{i\delta}\\
+			= -s_{12}c_{12}c_{13}c_{23}-s_{13}s_{23}c_{12}^2c_{13}
+				\begin{pmatrix} cos\delta \\ sin\delta \end{pmatrix} \\
+			= -\begin{pmatrix}
+				s_{12}c_{12}c_{13}c_{23}+s_{13}s_{23}c_{12}^2c_{13}cos\delta \\
+				s_{13}s_{23}c_{12}^2c_{13}sin\delta
+			   \end{pmatrix} \\
+		\end{split}		
+	\]
+	
+	\[
+		\begin{split}
+		P_2 = s_{12}c_{12}c_{13}c_{23}-s_{12}^2s_{13}s_{23}c_{13}e^{i\delta}\\
+			= s_{12}c_{12}c_{13}c_{23}-s_{12}^2s_{13}s_{23}c_{13}
+				\begin{pmatrix} cos\delta \\ sin\delta \end{pmatrix} \\
+			= \begin{pmatrix} 
+				s_{12}c_{12}c_{13}c_{23}-s_{12}^2s_{13}s_{23}c_{13}cos\delta \\
+				-s_{12}^2s_{13}s_{23}c_{13}sin\delta
+				 \end{pmatrix}				
+		\end{split}		
+	\]
+		
+	\[
+		\begin{split}
+			P_3 = s_{13}s_{23}c_{13}e^{-i\delta} \\
+			= \begin{pmatrix}
+			s_{13}s_{23}c_{13}cos\delta\\
+			-s_{13}s_{23}c_{13}sin\delta
+			\end{pmatrix}			
+		\end{split}		
+	\]
+	Now to find the lengths of the sides. I will define \(a=\overline{\rm P_1 P}_2\), \(b=\overline{\rm P_1 P}_3\), and \(c=\overline{\rm P_2 P}_3\). Now to calculate the these side lengths:
+	\[
+		a = \sqrt{(-s_{12}c_{12}c_{13}c_{23}-s_{13}s_{23}c_{12}^2c_{13}cos\delta-s_{12}c_{12}c_{13}c_{23}-s_{12}^2s_{13}s_{23}c_{13}cos\delta)^2+(s_{13}s_{23}c_{12}^2c_{13}sin\delta+s_{12}^2s_{13}s_{23}c_{13}sin\delta)^2}
+	\]
+	\[
+		b = 
+		\sqrt{(-s_{12}c_{12}c_{13}c_{23}-s_{13}s_{23}c_{12}^2c_{13}cos\delta-s_{13}s_{23}c_{13}cos\delta)^2+(s_{13}s_{23}c_{12}^2c_{13}sin\delta+s_{13}s_{23}c_{13}sin\delta)^2}
+	\]
 	
 \end{homeworkProblem}
 
