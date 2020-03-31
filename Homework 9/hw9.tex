@@ -236,12 +236,12 @@
 	   \Gamma_{total}\times64\%=\frac{64\%}{\tau}=\frac{G^2}{8\pi}f_k^2m_k m_\mu^2 (\frac{m_k^2-m_\mu^2}{m_k^2})^2=\frac{0.64}{1.2\times10^{-8}}
    \]
    
-   Rearranging we get:
+   Rearranging we get (I cut back the number of digits for the masses since we are only given two digits of $\tau$.):
    \[
 	   \begin{split}
 	   f_k&=\sqrt{\frac{8\pi}{G^2}\frac{0.64}{1.2\times10^{-8}}\frac{1}{m_km_\mu^2}(\frac{m_k^2}{m_k^2-m_\mu^2})^2} \\
 	   &=\sqrt{\frac{8\pi}{(1.17\times 10^{-5})^2}\frac{0.64}{1.8\times10^{16}}\frac{1}{0.494\times 0.106^2}(\frac{0.494^2}{0.494^2-0.106^2})^2} \\
-	   &=0.0359 \quad GeV = \quad 35.9 MeV
+	   &=0.036 \quad GeV = \quad 36 MeV
 	   \end{split}
    \]
    A quick note on units: 
@@ -260,15 +260,50 @@
 \pagebreak
 
 \begin{homeworkProblem}
+	If the weak charged current had had a structure $\gamma^\mu(a+b\gamma^5)$, show that for neutrino-electron scattering:
+	\[
+		\frac{d\sigma}{d\Omega}=\frac{G^2 s}{32\pi}(A^+ + A^-cos^4(\frac{\theta}{2}))
+	\]
+	for both $\nu_ee$ and $\bar{\nu}_ee$ scattering. If this were the case, then in contrast to Equation 12.64, we would have $\sigma(\nu_ee)=\sigma(\bar{\nu}_ee)$.
+	\\
+	\\
 	\textbf{Solution}
+	\begin{figure}[h]
+		\includegraphics[scale=0.3]{diagram3}
+		\centering
+		\caption{Feynman diagram for neutrino-electron scattering}
+		\label{fullPlot}
+		\centering
+	\end{figure}
+   Start by calculating $\mathcal{M}$
+   \[
+	   \mathcal{M} = \frac{G}{\sqrt{2}}[\bar{u}(p_4)\gamma^\mu(a+b\gamma^5)u(p_2)][\bar{u}(p_3)\gamma_\mu(a+b\gamma^5)u(p_1)]
+   \]
    
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
+	Estimate the relative rates for the following decay modes of the $D^0$ meson: \(D^0\rightarrow K^-\pi^+,\pi^-\pi^+,K^+\pi^-\). Compare your estimates to the values given in the PDG.
+	\\
+	\\
 	\textbf{Solution}
-    
+    \begin{figure}[h]
+    	\includegraphics[scale=0.3]{diagram4}
+    	\centering
+    	\caption{The diagrams for each of the three processes}
+    	\label{fullPlot}
+    	\centering
+    \end{figure}
+    To calculate $\mathcal{M}$ for the given diagrams, we must use the Cabibbo angle to find the strengths of the interactions. These can be found on p.281 in Halzen and Martin. What we see from the vertices in these diagrams is:
+    \[
+	    \begin{split}
+	    \abs{\mathcal{M}(D^0\rightarrow K^- \pi^+)}\propto cos^2\theta_c \\
+	    \abs{\mathcal{M}(D^0\rightarrow \pi^- \pi^+)}\propto sin\theta_c cos\theta_c \\
+	    \abs{\mathcal{M}(D^0\rightarrow \pi^- K^+)}\propto sin^2\theta_c
+	    \end{split}
+    \]
 \end{homeworkProblem}
 
 \pagebreak

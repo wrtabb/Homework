@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  31 MAR 2020 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  31 MAR 2020 15:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,7 +524,14 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 \c@partCounter=\count132
 \c@homeworkProblemCounter=\count133
- (./hw9.aux)
+ (./hw9.aux
+
+LaTeX Warning: Label `fullPlot' multiply defined.
+
+
+LaTeX Warning: Label `fullPlot' multiply defined.
+
+)
 \openout1 = `hw9.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
@@ -637,105 +644,132 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--235
 
  []
 
-[3] [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 284--290
+[3] <./images/diagram3.jpg, id=28, 925.4575pt x 941.5175pt>
+File: ./images/diagram3.jpg Graphic file (type jpg)
+
+<use ./images/diagram3.jpg>
+Package pdftex.def Info: ./images/diagram3.jpg used on input line 272.
+(pdftex.def)             Requested size: 277.63939pt x 282.45743pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--279
+
+ []
+
+[4 <./images/diagram3.jpg>]
+<./images/diagram4.jpg, id=32, 666.49pt x 940.51375pt>
+File: ./images/diagram4.jpg Graphic file (type jpg)
+
+<use ./images/diagram4.jpg>
+Package pdftex.def Info: ./images/diagram4.jpg used on input line 293.
+(pdftex.def)             Requested size: 199.94853pt x 282.1563pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--300
+
+ []
+
+[5 <./images/diagram4.jpg>] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 319--325
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--305
+Underfull \hbox (badness 10000) in paragraph at lines 332--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--305
+Underfull \hbox (badness 10000) in paragraph at lines 332--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--321
+Underfull \hbox (badness 10000) in paragraph at lines 349--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--321
+Underfull \hbox (badness 10000) in paragraph at lines 349--356
 
  []
 
-[7] <./images/unitaryTriangles.png, id=41, 1369.36594pt x 554.82281pt>
+[7] <./images/unitaryTriangles.png, id=43, 1369.36594pt x 554.82281pt>
 File: ./images/unitaryTriangles.png Graphic file (type png)
 
 <use ./images/unitaryTriangles.png>
-Package pdftex.def Info: ./images/unitaryTriangles.png used on input line 360.
+Package pdftex.def Info: ./images/unitaryTriangles.png used on input line 395.
 (pdftex.def)             Requested size: 410.81296pt x 166.44812pt.
 
-<./images/unitaryTrianglesZoom.png, id=43, 593.21625pt x 352.31625pt>
+<./images/unitaryTrianglesZoom.png, id=45, 593.21625pt x 352.31625pt>
 File: ./images/unitaryTrianglesZoom.png Graphic file (type png)
 
 <use ./images/unitaryTrianglesZoom.png>
-Package pdftex.def Info: ./images/unitaryTrianglesZoom.png used on input line 3
-69.
+Package pdftex.def Info: ./images/unitaryTrianglesZoom.png used on input line 4
+04.
 (pdftex.def)             Requested size: 177.96625pt x 105.69568pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--387
+Underfull \hbox (badness 10000) in paragraph at lines 411--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--387
+Underfull \hbox (badness 10000) in paragraph at lines 411--422
 
  []
 
 [8 <./images/unitaryTriangles.png> <./images/unitaryTrianglesZoom.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 397--401
+Underfull \hbox (badness 10000) in paragraph at lines 432--436
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--414
+Underfull \hbox (badness 10000) in paragraph at lines 446--449
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--452
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--458
+Underfull \hbox (badness 10000) in paragraph at lines 489--493
 
  []
 
 [9]
-Overfull \hbox (39.0816pt too wide) detected at line 494
+Overfull \hbox (39.0816pt too wide) detected at line 529
 \OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = []
  []
 
-[10] (./hw9.aux) ) 
+[10] (./hw9.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 14048 strings out of 493033
- 281707 string characters out of 6137749
- 344228 words of memory out of 5000000
- 17294 multiletter control sequences out of 15000+600000
+ 14059 strings out of 493033
+ 281941 string characters out of 6137749
+ 344267 words of memory out of 5000000
+ 17302 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,21n,66p,455b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c
-:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw9.pdf (10 pages, 236705 bytes).
+ 55i,21n,66p,455b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
+pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb>
+Output written on hw9.pdf (10 pages, 387359 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
