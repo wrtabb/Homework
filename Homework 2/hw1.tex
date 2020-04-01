@@ -1,0 +1,316 @@
+\documentclass{article}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\newcommand*{\Value}{\frac{1}{2}x^2}%
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Homework\ \#2}
+\newcommand{\hmwkDueDate}{January 28, 2020}
+\newcommand{\hmwkClass}{Physics 926}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{Professor Ken Bloom}
+\newcommand{\hmwkAuthorName}{\textbf{Robert Tabb}}
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 5pm}\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\hmwkAuthorName}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\begin{homeworkProblem}
+	Cosmic-ray muons are produced in the upper atmosphere at an altitude of about 800 m, and then travel toward the earth at nearly the speed of light (0.998c).
+	\\
+	\\
+	(a) The lifetime of the muon is $2.2\times 10^{-6}s$. According to classical physics, how far would the muon travel before decaying? Does it ever reach ground level?
+	\\
+	\\
+	(b) Now answer the same question using special relativity.
+	\\
+	\\
+	(c) from the perspective of the muon at rest in its own frame, its lifetime is $2.2\times 10^{-6}s$. How does it make it to the ground?
+	\\
+	\\
+	(d) Pions are also produced in the upper atmosphere, and the pion lifetime is about a factor of a hundred shorter than the muon lifetime. Do they ever reach the ground?
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a) 
+	\[
+		\begin{split}
+		v_\mu=&0.008c\\
+		=&3\times 10^8 m/s\\
+		\tau_\mu=&2.2\times 10^{-6}s
+		\end{split}
+	\]
+	The distance traveled classically is: \(d=v_\mu \tau_\mu=(3\times 10^8 m/s)(2.2\times 10^{-6}s)\)
+	\[
+		d=660 m
+	\]
+	Sine the muons are produced at a height of 8000 meters, they don't even get close to the ground classically.
+	\\
+	\\
+	(b) Let's look at this using time dilation. For an observer on the ground, time for the muon would be dilated like: \(\Delta t' =\gamma\Delta t\). In our case with $\beta=0.998$:
+	\[
+		\gamma=\frac{1}{\sqrt{1-0.998^2}}=15.8
+	\]
+	So time passes 15.8 times more slowly for the muon. The lifetime then becomes:
+	\[
+		\tau_\mu'=(2.2\times 10^{-6}s)(15.8)=3.5\times 10^{-5}s
+	\]
+	In this time period the muon would travel a distance:
+	\[
+		(d = 3.5\times 10^{-5}s)(3\times 10^8 m/s)=10440m
+	\]
+	The muon would reach the ground.
+	\\
+	\\
+	(c) The muon would observe length contraction:
+	\[
+		\Delta z'= \frac{1}{\gamma}\Delta z=505.7m
+	\]
+	This is less than the 660 meters it can travel in $2.2\times 10^{-6}s$
+	\\
+	\\
+	(d) For the pion, $\tau_\pi=2.2\times 10^{-8}s$
+	\[
+		\begin{split}
+		\Rightarrow \Delta t' =& \gamma\Delta t = (15.82)(2.2\times 10^{-8}s)\\
+		=&3.5\times 10^{-7}s
+		\end{split}
+	\]
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+	Particle A of energy E hits particle B at rest and produces particles $C_1,C_2,...,C_n$.
+	\\
+	\\
+	(a) What is the minimum energy E required for this reaction to take place?
+	\\
+	\\
+	(b) A beam of protons is incident on a target of stationary protons. What is the minimum beam energy needed to create the final state $p\Sigma^+K^0$?
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a) The energy required to produce $\sum_{i}C_i$ is:
+	\[
+		E_{CM}=\sum_{i}m_i
+	\]
+	Where $m_i$ is the mass of state i.
+	\\
+	\\
+	Calculate the center of mass energy calculated before the collision:
+	\[
+		\begin{split}
+		E_{CM}=&\sqrt{s}\\
+		P_A^\mu=&(E_A,\vec{p}_A) \\
+		P_B^\mu=&(m_B,\vec{0}) \\
+		\Rightarrow s =& (P_A^\mu+P_B^\mu)^2\\
+		=& P_A^\mu P_{A,\mu}+P_B^\mu P_{B,\mu}+2P_A^\mu P_{B,\mu} \\
+		=& m_A^2+m_B^2+2E_A m_B \\
+		\Rightarrow E_{CM}=&\sqrt{m_A^2+m_B^2+2E_A m_B} \\
+		E_A =& \frac{1}{2m_B}[E_{CM}^2-m_A^2-m_B^2] \\
+		=& \frac{1}{2m_B}[(\sum_{i}m_i)^2-m_A^2-m_B^2]
+		\end{split}
+	\]
+	
+		(b)
+		\[
+			\begin{split}
+			m_p=0.938 GeV \\
+			m_\Sigma=1.189 GeV\\
+			m_K = 0.498 GeV
+			\end{split}
+		\]
+		The rest mass of the final state:
+		\[
+			\begin{split}
+			E_{CM}=&(0.938+1.189+0.498)GeV\\
+			=&2.625GeV
+			\end{split}
+		\]
+		Using the final result of part (a) we can easily find the beam energy needed:
+		\[
+			\begin{split}
+			E_{beam} =& \frac{1}{2m_B}[(\sum_{i}m_i)^2-m_A^2-m_B^2] \\
+			=& \frac{1}{2(0.938)}[(2.625)^2-2(0.938)^2] \\
+			=& 2.735 GeV
+			\end{split}
+		\]
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+	A particle with mass M decays at rest into particles of mass $m_1$ and $m_2$ with $m_1 > m_2$.
+	\\
+	\\
+	(a) Use conservation of four-momentum to calculate the energy and momentum of the two decay particles in the rest frame of the original particle. Express the momentum in terms of $\mu=m_1+m_2$ and $\delta m=m_1-m_2$. If the kinetic energy of the particle is $T_i-E_i-m_i$, which of the two particles has the larger energy, and which the larger kinetic energy?
+	\\
+	\\
+	(b) Compute these energies, kinetic energies and momenta for the decay $D^{*+}\rightarrow D^0\pi^+$. 
+	\\
+	\\
+	(c) Suppose the $D^{*+}$ has momentum q in the laboratory frame. Find the momentum of the two decay products in the lab as a function of $cos\theta$, the Cm angle of decay with respect to the flight path of the $D^{*+}$. 
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+\end{homeworkProblem}
+
+
+\end{document}
