@@ -170,12 +170,23 @@
 	\\
 	\\
 	\[
+		\ket{K_L}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}-\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K}^0}\right] 
+	\]
+	
+	For $K_L \rightarrow \pi^-e^+\nu_e$, the decay has to come from the $\ket{\bar{K}^0}$ component of $\ket{K_L}$ and for $K_L \rightarrow \pi^+e^-\bar{\nu}_e$, the decay must come from the $\ket{K^0}$ component. 
+	\[
 		\begin{split}
-		\ket{K_L}=&\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}-\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K}^0}\right] \\
-		\ket{K_S}=&\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}+\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K}^0}\right]
+		\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e) \propto \abs{\braket{\bar{K}^0|K_L}}^2 \propto \abs{1-\epsilon}^2=(1-\epsilon)(1-\epsilon^*)=1-\epsilon^*-\epsilon+\abs{\epsilon}^2 \approx 1-2Re(\epsilon) \\ 
+		\Gamma(K_L \rightarrow \pi^-e^+\nu_e) \propto \abs{\braket{K^0|K_L}}^2 \propto \abs{1+\epsilon}^2=(1+\epsilon)(1+\epsilon^*)=1+\epsilon^*+\epsilon+\abs{\epsilon}^2 \approx 1+2Re(\epsilon)
 		\end{split}
 	\]
-
+	Here I dropped the $\epsilon^2$ term since we are only looking to first order in $\epsilon$. I also dropped any constants since they will be the same for each term and will divide out in the end.
+	\[
+		\begin{split}
+		\frac{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)-\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))}{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)+\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))} =& \frac{1+2Re(\epsilon)-1+2Re(\epsilon)}{1+2Re(\epsilon)+1-2Re(\epsilon)}\\
+		=&\frac{4Re(\epsilon)}{2} = 2Re(\epsilon)
+		\end{split}
+	\]
 	
 \end{homeworkProblem}
 
