@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage{fancyhdr}
+\usepackage{braket}
 \usepackage{extramarks}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -158,7 +159,24 @@
 \pagebreak
 
 \begin{homeworkProblem}
+	Show that:
+	\[
+		\frac{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)-\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))}{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)+\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))} = 2Re(\epsilon)
+	\]
+	to first order in $\epsilon$. This asymmetry is evidence for indirect CP violation, and also allows us to unambiguously define electric charge - positive charge is assigned to the lepton that dominates in the $K_L$ decay.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	\[
+		\begin{split}
+		\ket{K_L}=&\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}-\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K}^0}\right] \\
+		\ket{K_S}=&\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}+\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K}^0}\right]
+		\end{split}
+	\]
 
+	
 \end{homeworkProblem}
 
 \pagebreak
