@@ -1,7 +1,5 @@
 # Phys926Homework
 
-This is a repository to hold the homework for Physics 926, particle physics, for the last part of the semester.
-Due to Coronavirus, classes have been moved online and I decided it was a good idea to start typing out my homework
-assigmnets using LaTeX. Keeping this in GitHub is nice because I can track changes as they occur.
+This is a repository to hold my homework for Physics 926 and Physics 916. I decided to take the opportunity of being forced to work from home due to the COVID-19 scares to start doing homework assignments in LaTeX.
 
 I found the first template I am using here: https://joshldavis.com/2014/02/12/doing-your-homework-in-latex/
