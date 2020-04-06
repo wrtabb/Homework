@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  6 APR 2020 12:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  6 APR 2020 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,43 +621,84 @@ ce is spanned by an or-thonor-mal ba-sis $\OMS/cmsy/m/n/10 f[] \OML/cmm/m/it/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--180
+Underfull \hbox (badness 10000) in paragraph at lines 169--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--180
+Underfull \hbox (badness 10000) in paragraph at lines 169--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--180
+Underfull \hbox (badness 10000) in paragraph at lines 169--187
 
  []
 
-[2] [3] [4] [5] (./hw4.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--225
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 362--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
+
+ []
+
+[3] [4] [5] [6] [7] (./hw4.aux) ) 
 Here is how much of TeX's memory you used:
- 14057 strings out of 493033
- 281642 string characters out of 6137749
- 336452 words of memory out of 5000000
- 17303 multiletter control sequences out of 15000+600000
+ 14058 strings out of 493033
+ 281658 string characters out of 6137749
+ 350452 words of memory out of 5000000
+ 17304 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,66p,415b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
-b><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti12.pfb>
-Output written on hw4.pdf (5 pages, 107565 bytes).
+ 55i,21n,66p,415b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
+2.pfb>
+Output written on hw4.pdf (7 pages, 124728 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -167,7 +167,14 @@
 		S\ket{u_1}=&\ket{u_3}, S\ket{u_2}=\ket{u_2}, S\ket{u_3}=\ket{u_1}
 		\end{split}
 	\]
-	(a) Write the matrices which represent, in the $\{\ket{u_1},\ket{u_2},\ket{u_3}\}$ basis, the operators $L_z,L_z^2,S,$ and $S^2$. Are these operators observables?
+	(a) Write the matrices which represent, in the $\{\ket{u_1},\ket{u_2},\ket{u_3}\}$ basis, the operators $L_z,L_z^2,S,$ and $S^2$. Are these operators observables? 
+	\\
+	\\
+	(b) Give the form of the most general matrix, which represents an operator which
+	commutes with $L_z$. Same for $L_z^2$ and $S^2$.
+	\\
+	\\
+	(c) Do $L_z^2$ and $S^2$ form a CSCO? Give a basis of common eigenvectors.
 	\\
 	\\
 	\textbf{Solution}
@@ -202,7 +209,214 @@
 		0 & 0 & 1
 		\end{pmatrix}
 	\]
-
+	These are all observables because they are Hermitian:
+	\[
+		\begin{split}
+		L_z^\dagger =& L_z, (L_z^2)^\dagger=L_z^2 \\
+		S^\dagger =& S, (S^2)^\dagger=S^2
+		\end{split}
+	\]
+	\\
+	\\
+	\textbf{Part b}
+	\\
+	\\
+	To find the most general matrix, A, which commutes with $L_z$, we need to solve:
+	\[
+		[L_z,A] = L_zA-AL_z = 0
+	\]
+	Let's define A in a general way as:
+	\[
+		A = \begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix}
+	\]
+	Then we have:
+	\[
+	\begin{split}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 0 & 0 \\
+		0 & 0 &-1
+		\end{pmatrix}
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix} = &
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 0 & 0 \\
+		0 & 0 &-1
+		\end{pmatrix}  \\
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		0 & 0 & 0 \\
+		-a_{31} & -a_{32} & -a_{33}
+		\end{pmatrix} =& 
+		\begin{pmatrix}
+		a_{11} & 0 & -a_{13} \\
+		a_{21} & 0 & -a_{23} \\
+		a_{31} & 0 & -a_{33}
+		\end{pmatrix} \\
+		\Rightarrow a_{11}=a_{11},\;a_{12}=0,\;a_{13}=-a_{13} \\
+		a_{21}=0,\;a_{22}=a_{22},\;a_{23}=0 \\
+		a_{31}=0,\;a_{23}=0,\;a_{33}=a_{33} \\
+		\Rightarrow A = \begin{pmatrix}
+		a_{11} & 0 & 0 \\
+		0 & a_{22} & 0 \\
+		0 & 0 & a_{33}
+		\end{pmatrix}
+	\end{split}
+	\]
+	Let's use the same general definition of A to find the general matrix which commutes with $L_z^2$:
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 0 & 0 \\
+		0 & 0 &1
+		\end{pmatrix}
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix} = &
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 0 & 0 \\
+		0 & 0 & 1
+		\end{pmatrix}  \\
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		0 & 0 & 0 \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix} =& 
+		\begin{pmatrix}
+		a_{11} & 0 & a_{13} \\
+		a_{21} & 0 & a_{23} \\
+		a_{31} & 0 & a_{33}
+		\end{pmatrix} \\
+		\Rightarrow a_{11}=a_{11},\;a_{12}=0,\;a_{13}=a_{13} \\
+		a_{21}=0,\;a_{22}=a_{22},\;a_{23}=0 \\
+		a_{31}=a_{31},\;a_{32}=0,\;a_{33}=a_{33} \\
+		\Rightarrow A = \begin{pmatrix}
+		a_{11} & 0 & a_{13} \\
+		0 & a_{22} & 0 \\
+		a_{31} & 0 & a_{33}
+		\end{pmatrix} 
+		\end{split}
+	\]
+	And now for $S^2$:
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 &1
+		\end{pmatrix}
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix} = &
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1
+		\end{pmatrix}  \\
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix} =& 
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix} \\
+		A = 
+		\begin{pmatrix}
+		a_{11} & a_{12} & a_{13} \\
+		a_{21} & a_{22} & a_{23} \\
+		a_{31} & a_{32} & a_{33}
+		\end{pmatrix}
+		\end{split}
+	\]
+	The commuting matrix for $L_z$ must be diagonal, for $L_z^2$ it must have the structure shown above, and for $S^2$ everything commutes because $S^2=I$, the identity.
+	\\
+	\\
+	\textbf{Part c}
+	\\
+	\\
+	The first thing to note is that both $L_Z^2$ and $S^2$ are degenerate. This means that the eigenvalues of either alone cannot fully specify the state of a vector. 
+	\\
+	
+	Next, I want to see if $L_z^2$ commutes with $S^2$. If you refer back to the matrix representation of $S^2$ from part a, you'll see that $S^2=I$, where I is the identity matrix. \(\Rightarrow [S^2,L_z^2]=[I,L_Z^2]=0\). 
+	\\
+	
+	But do they form a CSCO? We can quickly find the eigenvectors for $L_z^2$. Since the matrix is diagonal, we can simply read off the eigenvalues, $\lambda=1,0$. Plugging these into the characteristic equation, we get:
+	\\
+	For $\lambda=0$:
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 0 & 0\\
+		0 & 0 & 1
+		\end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} =& \begin{pmatrix} 0\\0\\0 \end{pmatrix} \\
+		\Rightarrow c_1 = 0, c_3 =& 0 \\
+		\ket{v_{\lambda=0}} = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}
+		\end{split}
+	\]
+	For $\lambda=1$:
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 &-1 & 0\\
+		0 & 0 & 0
+		\end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} =& \begin{pmatrix} 0\\0\\0 \end{pmatrix} \\
+		\Rightarrow c_2 =& 0 \\
+		\ket{v_{\lambda=1}} = \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}
+		\end{split}
+	\]
+	But we can split $\ket{v_{\lambda=1}}$ into two orthogonal vectors:
+	\[
+		\ket{v_{\lambda=1}}=\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} + \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+	\]
+	Renaming the vectors as $v_1,v_2,v_3$:
+	\[
+		\ket{v_1}=\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \ket{v_2}=\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \ket{v_3}=\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+	\]
+	Now we have three mutually orthogonal eigenvectors fully specifying the eigenspace. These are easy to check:
+	\[
+		\begin{split}
+		L_z^2\ket{v_1} =& \ket{v_1}, \: S^2\ket{v_1} = \ket{v_1} \\
+		L_z^2\ket{v_2} =& \ket{0}, \; S^2\ket{v_2} = \ket{v_2} \\
+		L_z^2\ket{v_3} =& \ket{v_3}, \: S^2\ket{v_3} = \ket{v_3}
+		\end{split}
+	\]
+	This has not gotten rid of our degeneracy. We still have $\lambda=1$ for $v_1$ and $v_3$. Thus, $L_z^2$ and $S^2$ do not form a CSCO.
 	
 \end{homeworkProblem}
 
