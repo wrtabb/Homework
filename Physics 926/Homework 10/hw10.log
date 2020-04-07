@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  7 APR 2020 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  7 APR 2020 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -649,32 +649,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--253
 
  []
 
-[4] [5] [6] [7] (./hw10.aux) ) 
+[4] <./Images/probEvolution.png, id=33, 1441.63594pt x 664.73344pt>
+File: ./Images/probEvolution.png Graphic file (type png)
+
+<use ./Images/probEvolution.png>
+Package pdftex.def Info: ./Images/probEvolution.png used on input line 262.
+(pdftex.def)             Requested size: 288.32208pt x 132.94434pt.
+ [5 <./Images/probEvolution.png>] [6] [7]
+(./hw10.aux) ) 
 Here is how much of TeX's memory you used:
- 14069 strings out of 493033
- 281812 string characters out of 6137749
- 344452 words of memory out of 5000000
- 17311 multiletter control sequences out of 15000+600000
+ 14075 strings out of 493033
+ 281967 string characters out of 6137749
+ 344460 words of memory out of 5000000
+ 17316 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,21n,66p,556b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
-fb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw10.pdf (7 pages, 231205 bytes).
+ 55i,21n,66p,556b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb>
+Output written on hw10.pdf (7 pages, 284751 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
