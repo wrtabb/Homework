@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{braket}
 \usepackage{extramarks}
@@ -155,7 +156,9 @@
 \begin{document}
 
 \maketitle
-
+*In addition to the lecture notes, the following resources were used to better understand the material:\\
+\url{https://arxiv.org/pdf/hep-ph/0401236.pdf}\\
+\url{https://www.hep.phy.cam.ac.uk/~thomson/lectures/partIIIparticles/Handout12_2009.pdf}
 \pagebreak
 
 \begin{homeworkProblem}
@@ -189,7 +192,7 @@
 		\Gamma(K_L \rightarrow \pi^-e^+\nu_e) \propto \abs{\braket{K^0|K_L}}^2 \propto \abs{1+\epsilon}^2=(1+\epsilon)(1+\epsilon^*)=1+\epsilon^*+\epsilon+\abs{\epsilon}^2 \approx 1+2Re(\epsilon)
 		\end{split}
 	\]
-	Here I dropped the $\epsilon^2$ term since we are only looking to first order in $\epsilon$. I also dropped any constants since they will be the same for each term and will divide out in the end.
+	Here I dropped the $\epsilon^2$ term since we are only looking to first order in $\epsilon$. I also dropped any common constants since they will be the same for each term and will divide out in the end.
 	\[
 		\begin{split}
 		\frac{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)-\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))}{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)+\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))} =& \frac{1+2Re(\epsilon)-(1-2Re(\epsilon))}{1+2Re(\epsilon)+(1-2Re(\epsilon))}\\
@@ -258,6 +261,8 @@
 		\abs{\braket{K_1|\psi_{\bar{K^0}}(t)}}^2\approx&\frac{1}{2+2\abs{\epsilon}} \left[ e^{-\Gamma_St}-2Re(\epsilon e^{i\Delta mt}e^{-(\Gamma_S+\Gamma_L)t/2})    \right]
 		\end{split}
 	\]
+	The plot of the probabilities can be found in Figure \ref{kaonlifetime}.
+	
 	\begin{figure}[h]
 		\includegraphics[scale=0.4]{kaonlifetime}
 		\centering
@@ -266,18 +271,75 @@
 		\centering
 	\end{figure}
 	
+	
+	
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
-
+	Calculate $P(A,t;B)$, where $A$ and $B$ are either $K^0$ or $\bar{K^0}$. This is defined to be the probability that a neutral kaon in state $B$ at $t=0$ has oscillated into a state $A$ after a time $t$. Express your answer in terms of $\epsilon, \Delta m, \Gamma_S,$ and $\Gamma_L$. Keep only leading terms in $\epsilon$. Plot the probabilities as before, going out to 20 $K_S$ lifetimes, and using a factor of $\epsilon$ which is a factor of ten larger than the experimental value.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	Once again, here are $K_L$ and $K_S$:
+	\[
+		\begin{split}
+		\ket{K_L}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}-\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K^0}}\right] \\
+		\ket{K_S}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}+\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K^0}}\right]
+		\end{split}
+	\]
+	We can use these equations to write $K^0$ and $\bar{K^0}$ in terms of $K_L$ and $K_S$.
+	\[
+		\begin{split}
+		\ket{K^0} =& \sqrt{\frac{1+\abs{\epsilon^2}}{2}}\frac{1}{1+\epsilon}\left[ \ket{K_L}+\ket{K_S} \right] \\
+		\ket{\bar{K^0}} =& \sqrt{\frac{1+\abs{\epsilon^2}}{2}}\frac{1}{1-\epsilon}\left[ \ket{K_L}-\ket{K_S} \right]
+		\end{split}
+	\]
+	Now write the wave functions with time included.
+	\[
+		\begin{split}
+		\ket{K^0(t)} =& \sqrt{\frac{1+\abs{\epsilon^2}}{2}}\frac{1}{1+\epsilon} \left[e^{im_Lt-\Gamma_Lt/2}\ket{K_L} + e^{im_St-\Gamma_St/2}\ket{K_S} \right] \\
+		\ket{\bar{K^0}(t)} =& \sqrt{\frac{1+\abs{\epsilon^2}}{2}}\frac{1}{1-\epsilon} \left[e^{im_Lt-\Gamma_Lt/2}\ket{K_L} - e^{im_St-\Gamma_St/2}\ket{K_S} \right]
+		\end{split}
+	\]
+	Let's find the probability that a neutral kaon, $K^0$, at $t=0$ decays into its anti-particle, $\bar{K^0}$ at time $t$.
+	\[
+		\begin{split}
+		\abs{\braket{K^0(t=0)|\bar{K^0}(t)}}^2 =& \abs{ \frac{1+\abs{\epsilon^2}}{2}\frac{1}{\abs{1+\epsilon}^2} \left[\bra{K_L} + \bra{K_S} \right]\left[e^{im_Lt-\Gamma_Lt/2}\ket{K_L} - e^{im_St-\Gamma_St/2}\ket{K_S} \right] }^2\\
+		=&\left(\frac{1+\abs{\epsilon^2}}{2}\frac{1}{\abs{1+\epsilon}^2}\right)^2 \abs{\left[e^{im_Lt-\Gamma_Lt/2} - e^{im_St-\Gamma_St/2} \right] }^2 \\
+		\approx&\frac{1}{4(1+4Re[\epsilon])}\left[ e^{-\Gamma_Lt}+e^{-\Gamma_St} + 2Re\left( e^{-i\Delta mt}e^{-(\Gamma_S+\Gamma_L)t/2}\right) \right]
+		\end{split}
+	\] 
+	Between the second and third lines, I dropped all factors of $\epsilon$ which were of order greater than 1. You will find the plot of this probability in Figure \ref{kaonoscillation}. 
+	\\
+	\\
+	If you start with a particle in state $\bar{K^0}$ going to $K^0$, you will get the same plot. The only difference in the equation will be in the prefactor you will have a $1-4Re(\epsilon)$ instead of $1+4Re(\epsilon)$ in the denominator, but because $\epsilon$ is so small, the difference will be negligible.
+	\begin{figure}[h]
+		\includegraphics[scale=0.4]{kaonoscillation}
+		\centering
+		\caption{Probability for $K^0$ to oscillate to $\bar{K^0}$ as a function of time}
+		\label{kaonoscillation}
+		\centering
+	\end{figure}
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
-
+In class we briefly mentioned the (approximate) $\Delta I = 1/2$ rule, which says that in strange particle decays, transitions with $\Delta I = 1/2$ are enhanced over those with $\Delta I = 3/2$. Use this rule to derive:
+\[
+	\Gamma(K_L \rightarrow 3\pi^0)=\frac{3}{2}\Gamma(K_L\rightarrow \pi^+\pi^-\pi^0)
+\]
+and compare this result with experimental data. Make the reasonable assumption that all pairs of pions are in an $L=0$ state. Don't forget that pions are bosons and you'll need to write totally symmetric wave functions.
+\\
+\\
+\textbf{Solution}
+\\
+\\
 \end{homeworkProblem}
 
 \end{document}
+
