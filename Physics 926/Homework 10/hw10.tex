@@ -223,8 +223,8 @@
 	And here they are in terms of the CP eigenstates:
 	\[
 		\begin{split}
-		\ket{K_L}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[K_2+\epsilon K_1\right] \\
-		\ket{K_S}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[K_1+\epsilon K_2\right] 
+		\ket{K_L}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\ket{K_2}+\epsilon \ket{K_1}\right] \\
+		\ket{K_S}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\ket{K_1}+\epsilon \ket{K_2}\right] 
 		\end{split}
 	\]
 	First, define the time-evolution of the wave function in the same way it was done in the lecture notes: 
@@ -232,15 +232,30 @@
 		\begin{split}
 		\ket{K_S(t)}=&\ket{K_S}e^{im_St-\Gamma_St/2} \\
 		\ket{K_L(t)}=&\ket{K_L}e^{im_Lt-\Gamma_Lt/2} \\
-		\ket{\psi(t)}_{K^0}=& \frac{1}{\sqrt{2}}\left[\ket{K_S(t)} + \ket{K_L(t)} \right] \\
-		=& \frac{1}{\sqrt{2}}\left[\ket{K_S}e^{im_St-\Gamma_St/2} + \ket{K_L}e^{im_Lt-\Gamma_Lt/2}\right] \\
-		\ket{\psi(t)}_{\bar{K^0}}=& \frac{1}{\sqrt{2}}\left[\ket{K_S}e^{im_St-\Gamma_St/2} - \ket{K_L}e^{im_Lt-\Gamma_Lt/2}\right] \\
+		\end{split}
+	\]
+	We know that the$\pi^+\pi^-$ is a CP eigenstate with eigenvalue of +1. So to project $K_L$ or $K_S$ onto $\pi^+\pi^-$ we project onto $K_1$:
+	\[
+		\begin{split}
+		\braket{\pi^+\pi^-|K_L} = \braket{K_1|K_L}=\frac{\epsilon}{\sqrt{1+\abs{\epsilon}}}e^{im_Lt-\Gamma_Lt/2} \\
+		\braket{\pi^+\pi^-|K_L} = \braket{K_1|K_S}=\frac{1}{\sqrt{1+\abs{\epsilon}}}e^{im_St-\Gamma_St/2}
+		\end{split}
+	\]
+	So now we have:
+	\[
+		\begin{split}
+		\frac{\braket{\pi^+\pi^-|K_L}}{\braket{\pi^+\pi^-|K_S}} =& \epsilon e^{i(m_L-m_s)t+\frac{1}{2}(\Gamma_S-\Gamma_L)t} \\
+		=& \epsilon e^{-i\Delta mt+\frac{1}{2}(\Gamma_S-\Gamma_L)t} \\
+		=& \abs{\eta_\pm}e^{i\phi_\pm}
 		\end{split}
 	\]
 	The subscript on the wave function state refers to the initial beam being either purely $K^0$ or purely $\bar{K^0}$.
 	Here I will rewrite the wave functions in terms of the CP eigenstates because the $\pi^+\pi^-$ system is a CP eigenstate with eigenvalue of +1 and we can use this:
 	\[
 		\begin{split}
+				\ket{\psi(t)}_{K^0}=& \frac{1}{\sqrt{2}}\left[\ket{K_S(t)} + \ket{K_L(t)} \right] \\
+				=& \frac{1}{\sqrt{2}}\left[\ket{K_S}e^{im_St-\Gamma_St/2} + \ket{K_L}e^{im_Lt-\Gamma_Lt/2}\right] \\
+				\ket{\psi(t)}_{\bar{K^0}}=& \frac{1}{\sqrt{2}}\left[\ket{K_S}e^{im_St-\Gamma_St/2} - \ket{K_L}e^{im_Lt-\Gamma_Lt/2}\right] \\
 		\ket{\psi(t)}_{K^0}=&\frac{1}{\sqrt{2}}\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[  (\ket{K_1}+\epsilon \ket{K_2})e^{im_St-\Gamma_St/2} + (\ket{K_2}+\epsilon\ket{K_1})e^{im_Lt-\Gamma_Lt/2}\right] \\
 		=& \frac{1}{\sqrt{2}}\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[ (e^{im_St-\Gamma_St/2}+\epsilon e^{im_Lt-\Gamma_Lt/2})\ket{K_1}+(e^{im_Lt-\Gamma_Lt/2}+\epsilon e^{im_St-\Gamma_St/2})\ket{K_2}\right] \\
 		\ket{\psi(t)}_{\bar{K^0}}=& \frac{1}{\sqrt{2}}\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[ (e^{im_St-\Gamma_St/2}-\epsilon e^{im_Lt-\Gamma_Lt/2})\ket{K_1}+(-e^{im_Lt-\Gamma_Lt/2}+\epsilon e^{im_St-\Gamma_St/2})\ket{K_2}\right]
