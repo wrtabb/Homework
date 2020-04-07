@@ -192,7 +192,7 @@
 	Here I dropped the $\epsilon^2$ term since we are only looking to first order in $\epsilon$. I also dropped any constants since they will be the same for each term and will divide out in the end.
 	\[
 		\begin{split}
-		\frac{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)-\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))}{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)+\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))} =& \frac{1+2Re(\epsilon)-1+2Re(\epsilon)}{1+2Re(\epsilon)+1-2Re(\epsilon)}\\
+		\frac{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)-\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))}{\Gamma(K_L \rightarrow \pi^-e^+\nu_e)+\Gamma(K_L \rightarrow \pi^+e^-\bar{\nu}_e))} =& \frac{1+2Re(\epsilon)-(1-2Re(\epsilon))}{1+2Re(\epsilon)+(1-2Re(\epsilon))}\\
 		=&\frac{4Re(\epsilon)}{2} = 2Re(\epsilon)
 		\end{split}
 	\]
@@ -202,7 +202,51 @@
 \pagebreak
 
 \begin{homeworkProblem}
+	Defining
+	\[
+		\eta_{\pm}=\abs{\eta_\pm}e^{i\phi_\pm}=\frac{\braket{\pi^+\pi^-|K_L}}{\braket{\pi^+\pi^-|K_S}}
+	\]
+	calculate the probabilities of $\pi^+\pi^-$ decay as a function of proper time for an initial $K^0$ or $\bar{K^0}$ produced at $t=0$. Express your answer, up to common proportionality constants, in terms of $\epsilon,\abs{\eta_\pm},\phi_\pm,\Delta m, \Gamma_S,$ and $\Gamma_L$, where $\Delta m = K_S - K_L$. Keep only leading terms in $\epsilon$. Using the experimental values for these quantities, plot the two probabilities as a function of time in units of the $K_S$ lifetime, going out to 30 $K_S$ lifetimes.	
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	Here are the definitions of $K_L$ and $K_S$ in terms of $K^0$ and $\bar{K^0}$:
+	\[
+		\begin{split}
+		\ket{K_L}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}-\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K^0}}\right] \\
+		\ket{K_S}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[\frac{1+\epsilon}{\sqrt{2}}\ket{K^0}+\frac{1-\epsilon}{\sqrt{2}}\ket{\bar{K^0}}\right] 
+		\end{split}	
+	\]
 
+	And here they are in terms of the CP eigenstates:
+	\[
+		\begin{split}
+		\ket{K_L}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[K_2+\epsilon K_1\right] \\
+		\ket{K_S}=\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[K_1+\epsilon K_2\right] 
+		\end{split}
+	\]
+	First, define the time-evolution of the wave function in the same way it was done in the lecture notes: 
+	\[
+		\begin{split}
+		\ket{K_S(t)}=&\ket{K_S}e^{im_St-\Gamma_St/2} \\
+		\ket{K_L(t)}=&\ket{K_L}e^{im_Lt-\Gamma_Lt/2} \\
+		\ket{\psi(t)}_{K^0}=& \frac{1}{\sqrt{2}}\left[\ket{K_S(t)} + \ket{K_L(t)} \right] \\
+		=& \frac{1}{\sqrt{2}}\left[\ket{K_S}e^{im_St-\Gamma_St/2} + \ket{K_L}e^{im_Lt-\Gamma_Lt/2}\right] \\
+		\ket{\psi(t)}_{\bar{K^0}}=& \frac{1}{\sqrt{2}}\left[\ket{K_S}e^{im_St-\Gamma_St/2} - \ket{K_L}e^{im_Lt-\Gamma_Lt/2}\right] \\
+		\end{split}
+	\]
+	The subscript on the wave function state refers to the initial beam being either purely $K^0$ or purely $\bar{K^0}$.
+	Here I will rewrite the wave functions in terms of the CP eigenstates because the $\pi^+\pi^-$ system is a CP eigenstate with eigenvalue of +1 and we can use this:
+	\[
+		\begin{split}
+		\ket{\psi(t)}_{K^0}=&\frac{1}{\sqrt{2}}\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[  (\ket{K_1}+\epsilon \ket{K_2})e^{im_St-\Gamma_St/2} + (\ket{K_2}+\epsilon\ket{K_1})e^{im_Lt-\Gamma_Lt/2}\right] \\
+		=& \frac{1}{\sqrt{2}}\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[ (e^{im_St-\Gamma_St/2}+\epsilon e^{im_Lt-\Gamma_Lt/2})\ket{K_1}+(e^{im_Lt-\Gamma_Lt/2}+\epsilon e^{im_St-\Gamma_St/2})\ket{K_2}\right] \\
+		\ket{\psi(t)}_{\bar{K^0}}=& \frac{1}{\sqrt{2}}\frac{1}{\sqrt{1+\abs{\epsilon}}}\left[ (e^{im_St-\Gamma_St/2}-\epsilon e^{im_Lt-\Gamma_Lt/2})\ket{K_1}+(-e^{im_Lt-\Gamma_Lt/2}+\epsilon e^{im_St-\Gamma_St/2})\ket{K_2}\right]
+		\end{split}
+	\] 
+	
 \end{homeworkProblem}
 
 \pagebreak
