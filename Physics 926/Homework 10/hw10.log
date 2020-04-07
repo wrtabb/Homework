@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  7 APR 2020 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  7 APR 2020 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -649,17 +649,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--253
 
  []
 
-[4] <./Images/probEvolution.png, id=33, 1441.63594pt x 664.73344pt>
-File: ./Images/probEvolution.png Graphic file (type png)
+[4] <./Images/kaonlifetime.png, id=33, 1132.98282pt x 685.8122pt>
+File: ./Images/kaonlifetime.png Graphic file (type png)
 
-<use ./Images/probEvolution.png>
-Package pdftex.def Info: ./Images/probEvolution.png used on input line 262.
-(pdftex.def)             Requested size: 288.32208pt x 132.94434pt.
- [5 <./Images/probEvolution.png>] [6] [7]
+<use ./Images/kaonlifetime.png>
+Package pdftex.def Info: ./Images/kaonlifetime.png used on input line 262.
+(pdftex.def)             Requested size: 453.1851pt x 274.32002pt.
+ [5 <./Images/kaonlifetime.png>] [6] [7]
 (./hw10.aux) ) 
 Here is how much of TeX's memory you used:
  14075 strings out of 493033
- 281967 string characters out of 6137749
+ 281961 string characters out of 6137749
  344460 words of memory out of 5000000
  17316 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
@@ -678,7 +678,7 @@ xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/201
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2015/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw10.pdf (7 pages, 284751 bytes).
+Output written on hw10.pdf (7 pages, 272931 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
