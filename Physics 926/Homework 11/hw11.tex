@@ -104,7 +104,7 @@
 %   - Author
 %
 
-\newcommand{\hmwkTitle}{Homework\ \#10}
+\newcommand{\hmwkTitle}{Homework\ \#11}
 \newcommand{\hmwkDueDate}{April 14, 2020}
 \newcommand{\hmwkClass}{Physics 926}
 \newcommand{\hmwkClassTime}{}
@@ -171,6 +171,10 @@
 		U=\begin{pmatrix}
 		\cos\theta & \sin\theta \\
 		-\sin\theta & \cos\theta
+		\end{pmatrix}, \quad
+		U^*=\begin{pmatrix}
+		\cos\theta & -\sin\theta \\
+		\sin\theta & \cos\theta
 		\end{pmatrix}
 	\]
 	and $\Delta m_{12}^2=m_1^2-m_2^2$
@@ -182,6 +186,14 @@
 	Equation (7) from the lecture gives us a good starting point. This equation is an approximation which is valid when mass is small, which in this case it is
 	\[
 		P(\nu_1 \rightarrow \nu_2) = \abs{\sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E}}^2
+	\]
+	Using this equation as a starting point, we can plug in the given values of $U$ and explicitly do the sum.
+	\[
+		\begin{split}
+		\sum_i U_{1i}^* U_{2i} e^{-im_1^2L/2E} =& \cos\theta(-\sin\theta) e^{-im_1^2L/2E} + (-\sin\theta)\cos\theta e^{-im_2^2L/2E} \\
+		=& -\cos\theta\sin\theta e^{-im_1^2L/2E} - \cos\theta\sin\theta e^{-im_2^2L/2E} \\
+		=& -\cos\theta\sin\theta \left( e^{-im_1^2L/2E} + e^{-im_2^2L/2E} \right)
+		\end{split}
 	\]
 
 \end{homeworkProblem}
