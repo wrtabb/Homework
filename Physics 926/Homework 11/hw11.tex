@@ -164,7 +164,7 @@
 \begin{homeworkProblem}
 	Show that
 	\[
-		P(\nu_1 \rightarrow \nu_2) = \sin^22\theta\frac{\Delta m_{12}^2L}{4E}
+		P(\nu_1 \rightarrow \nu_2) = \sin^22\theta\sin^2\frac{\Delta m_{12}^2L}{4E}
 	\]
 	for a two neutrino system in which the mixing matrix is
 	\[
@@ -196,7 +196,15 @@
 		=& -\cos\theta\sin\theta e^{-im_1^2L/2E} - \cos\theta\sin\theta e^{-im_2^2L/2E} \\
 		=& -\cos\theta\sin\theta \left( e^{-im_1^2L/2E} + e^{-im_2^2L/2E} \right) \\
 		\sum_j U_{2j}^* U_{1j} e^{im_j^2L/2E} =& \sin\theta\cos\theta e^{im_1^2L/2E} + \cos\theta\sin\theta e^{im_2^2L/2E} \\
-		=& \cos\theta\sin\theta \left( e^{im_1^2L/2E} + e^{im_2^2L/2E} \right)
+		=& \cos\theta\sin\theta \left( e^{im_1^2L/2E} + e^{im_2^2L/2E} \right) \\
+		\end{split}
+	\]
+	\[
+		\begin{split}
+		\left[ \sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E} \right] \left[ \sum_j U_{2j}^* U_{1j} e^{im_j^2L/2E} \right] =& -\cos^2\theta\sin^2\theta \left( e^{-im_1^2L/2E} + e^{-im_2^2L/2E} \right) \left( e^{im_1^2L/2E} + e^{im_2^2L/2E} \right) \\
+		=& -\cos^2\theta\sin^2\theta \left( 2+e^{-i(m_1^2-m_2^2)L/2E}+e^{i(m_1^2-m_2^2)L/2E} \right) \\
+		=& -\cos^2\theta\sin^2\theta \left( 2+2Re\left[e^{-i2(m_1^2-m_2^2)L/4E}\right] \right) \\
+		=& -\frac{1}{2}\sin^22\theta\left( 1+\cos^2\frac{\Delta m_{12}^2L}{4E} \right)
 		\end{split}
 	\]
 	
