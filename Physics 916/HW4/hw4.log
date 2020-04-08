@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  6 APR 2020 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  8 APR 2020 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -675,7 +675,70 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--374
 
  []
 
-[3] [4] [5] [6] [7] (./hw4.aux) ) 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 375--379
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 427--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--437
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+
+Overfull \hbox (3.77496pt too wide) in paragraph at lines 486--509
+\OT1/cmr/m/n/10 (e) Let $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 be an op-er-a-tor 
+with ma-trix el-e-ments, $\OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = []$. Prove the
+ re-la-tion: $\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 A[]U\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 m; n\OT1/cmr/m/n/10 )$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--509
+
+ []
+
+[6] [7] (./hw4.aux) ) 
 Here is how much of TeX's memory you used:
  14058 strings out of 493033
  281658 string characters out of 6137749
@@ -684,18 +747,17 @@ Here is how much of TeX's memory you used:
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,21n,66p,415b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
-2.pfb>
-Output written on hw4.pdf (7 pages, 124730 bytes).
+<c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on hw4.pdf (7 pages, 136622 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream

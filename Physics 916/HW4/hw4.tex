@@ -189,7 +189,7 @@
 		1 & 0 & 0 \\
 		0 & 0 & 0 \\
 		0 & 0 &-1
-		\end{pmatrix},
+		\end{pmatrix}, \quad
 		S = \begin{pmatrix}
 		0 & 0 & 1\\
 		0 & 1 & 0 \\
@@ -202,7 +202,7 @@
 		1 & 0 & 0 \\
 		0 & 0 & 0 \\
 		0 & 0 & 1
-		\end{pmatrix},
+		\end{pmatrix}, \quad
 		S^2 = \begin{pmatrix}
 		1 & 0 & 0\\
 		0 & 1 & 0 \\
@@ -374,6 +374,7 @@
 	
 	But do they form a CSCO? We can quickly find the eigenvectors for $L_z^2$. Since the matrix is diagonal, we can simply read off the eigenvalues, $\lambda=1,0$. Plugging these into the characteristic equation, we get:
 	\\
+	\\
 	For $\lambda=0$:
 	\[
 		\begin{split}
@@ -416,20 +417,122 @@
 		L_z^2\ket{v_3} =& \ket{v_3}, \: S^2\ket{v_3} = \ket{v_3}
 		\end{split}
 	\]
-	This has not gotten rid of our degeneracy. We still have $\lambda=1$ for $v_1$ and $v_3$. Thus, $L_z^2$ and $S^2$ do not form a CSCO.
+	This has not gotten rid of our degeneracy. We still have $\lambda=1$ for $v_1$ and $v_3$. Thus, $L_z^2$ and $S^2$ do not form a CSCO. Also note; the choice of basis vectors here is not unique since $\ket{v_1}$ and $\ket{v_3}$ were chosen arbitrarily. There are an infinite number of vectors in the plane spanned by these that could act as orthonormal basis vectors for the eigenspace.
 	
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
-
+	(a) Consider a linear operator $A$ in a state space. Show that the trace of this operator is invariant under the change of basis. The trace of a matrix $A$, noted as $Tr\{A\}$, is defined as the sum of its diagonal elements.
+	\\
+	\\
+	(b) Assume that the eigenvalues, $a_n$, of the observable $A$ are degenerate with a degree $g_n$. Calculate $Tr\{A\}$ in terms of the eigenvalues and the degree of degeneracy.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a) We have a linear operator, $A$ and a unitary transformation $U$ which acts to change the basis such that $\ket{v}= U\ket{v'}$. Acting on the operator $A$ with $U$ is accomplished like this: $U^\dagger AU$. So for the trace to remain unchanged, we must have $Tr\{A\} = Tr\{U^\dagger AU\}$. Let's rewrite this in tensor notation for convenience using the Einstein summation convention:
+	\[
+		\begin{split}
+		Tr\{A\} =& A_{ii} \\
+		Tr\{U^\dagger AU\} =& U_{ij}^\dagger A_{jk}U_{ki} \\
+		=& U_{ki}U_{ij}^\dagger A_{jk} \\
+		=& \left( UU^\dagger\right)_{kj}A_{jk}
+		\end{split}
+	\]
+	Since $U$ is unitary, $U^\dagger U = I$, which in Einstein notation, is the Kronecker delta:
+	\[
+		\begin{split}
+		\left( U^\dagger U\right)_{kj}A_{jk} =& \delta_{kj} A_{jk} \\
+		=& A_{kk} \\
+		=& Tr\{A\}
+		\end{split}
+	\]
+	
+	(b) I have already shown that the trace is invariant under a change of basis. It is also well known that one can create a matrix through a change of basis such that the diagonals of the observable are its eigenvalues. 
+	\[
+		U^\dagger AU = \begin{pmatrix}
+		a_1 & * & \cdots & * \\ 
+		0 & a_2 & \cdots & * \\ 
+		\vdots & \vdots & \ddots & \vdots \\ 
+		0 & 0 & \cdots & a_n
+		\end{pmatrix}
+	\]
+	The trace of $U^\dagger AU$ is then just the sum of the eigenvalues:
+	\[
+		Tr\{U^\dagger AU\} = \sum_i^n a_i
+	\]
+	And since I just showed in part a that the trace of A is unchanged under a change of basis, we have:
+	\[
+		\begin{split}		
+		Tr\{A\} =& Tr\{U^\dagger AU\} \\
+		=& \sum_i^n a_i
+		\end{split}
+	\]
+	So the trace of a linear operator is the sum of its eigenvalues. But if there are degeneracies present, simply summing the eigenvalues is not enough since any degenerate eigenvalues would be present more than once. The degree of degeneracy, $g_n$ is the number of times a degenerate eigenvalue is present. Therefore we can simply multiply the degree of degeneracy by the eigenvalues in the trace:
+	\[
+		Tr\{A\} = \sum_i^n g_i a_i
+	\]
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
-
+	Let $\ket{\phi_n}$ be the eigenstates of a Hermitian operator $H$ ($H$ is the Hamiltonian of an arbitrary physical system for this problem). Assume that the states, $\ket{\phi_n}$ form a discrete orthonormal basis. The operator $U(m,n)$ is defined by:
+	\[
+		U(m,n) = \ket{\phi_m}\bra{\phi_n}
+	\]
+	(a) Calculate $U^\dagger(m,n)$ of $U(m,n)$.
+	\\
+	\\
+	(b) Calculate the commutator, $\left[ H,U(m,n) \right]$
+	\\
+	\\
+	(c) Prove the relation: $U(m,n)U^\dagger(m,n) = \delta_{nq}(m,p)$
+	\\
+	\\
+	(d) Calculate $Tr\{U(m,n)\}$, the trace of the operator $U(m,n)$.
+	\\
+	\\
+	(e) Let $A$ be an operator with matrix elements, $A_{mn}=\braket{\phi_m|A|\phi_n}$. Prove the relation: $A=\sum_{m,n}A_{mn}U(m,n)$
+	\\
+	\\
+	(f) Show that $A_{pq}=Tr\{AU^\dagger(m,n)\}$.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a) 
+	\[
+		\begin{split}
+		U(m,n) =& \ket{\phi_m}\bra{\phi_n} \\
+		U^\dagger(m,n)=&\left[ \ket{\phi_m}\bra{\phi_n} \right]^\dagger \\
+		=& \bra{\phi_n}^\dagger \ket{\phi_m}^\dagger \\
+		=& \ket{\phi_n}\bra{\phi_m}
+		\end{split}
+	\]
+	(b) 
+	\[
+		\begin{split}
+		\left[ H,U(m,n) \right] =& HU(m,n)-U(m,n)H \\
+		=&H\ket{\phi_m}\bra{\phi_n} - \ket{\phi_m}\bra{\phi_n}H
+		\end{split}
+	\]
+	Since $\ket{\phi_n}$ is an eigenstate of $H$, we can say that $H\ket{\phi_n}=E_n\ket{\phi_n}$ and also that the hermitian conjugate of this is also true: $\bra{\phi_n}H=E_n\bra{\phi_n}$. Note that since $H$ is hermitian, $H^\dagger = H$, so in the previous equation I simply left it written as $H$. Using this, the commutation relation can be rewritten:
+	\[
+		\begin{split}
+		H\ket{\phi_m}\bra{\phi_n} - \ket{\phi_m}\bra{\phi_n}H =& E_m\ket{\phi_m}\bra{\phi_n} - E_n\ket{\phi_m}\bra{\phi_n} \\
+		=&\left( E_m-E_n \right) \ket{\phi_m}\bra{\phi_n} \\
+		=& \left( E_m-E_n \right) U(m,n)
+		\end{split}
+	\]
+	(c) Using the definition of $U^\dagger$ determined in part (a):
+	\[
+		U(m,n)U^\dagger(m,n) = \ket{\phi_m}\bra{\phi_n} \ket{\phi_n}\bra{\phi_m}
+	\]
 \end{homeworkProblem}
 
 \pagebreak
