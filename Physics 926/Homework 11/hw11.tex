@@ -190,11 +190,16 @@
 	Using this equation as a starting point, we can plug in the given values of $U$ and explicitly do the sum.
 	\[
 		\begin{split}
-		\sum_i U_{1i}^* U_{2i} e^{-im_1^2L/2E} =& \cos\theta(-\sin\theta) e^{-im_1^2L/2E} + (-\sin\theta)\cos\theta e^{-im_2^2L/2E} \\
+		\abs{\sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E}}^2 =& \left[ \sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E} \right] \left[ \sum_j U_{1j}^* U_{2j} e^{-im_j^2L/2E} \right]^* \\
+		=& \left[ \sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E} \right] \left[ \sum_j U_{2j}^* U_{1j} e^{im_j^2L/2E} \right] \\
+		\sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E} =& \cos\theta(-\sin\theta) e^{-im_1^2L/2E} + (-\sin\theta)\cos\theta e^{-im_2^2L/2E} \\
 		=& -\cos\theta\sin\theta e^{-im_1^2L/2E} - \cos\theta\sin\theta e^{-im_2^2L/2E} \\
-		=& -\cos\theta\sin\theta \left( e^{-im_1^2L/2E} + e^{-im_2^2L/2E} \right)
+		=& -\cos\theta\sin\theta \left( e^{-im_1^2L/2E} + e^{-im_2^2L/2E} \right) \\
+		\sum_j U_{2j}^* U_{1j} e^{im_j^2L/2E} =& \sin\theta\cos\theta e^{im_1^2L/2E} + \cos\theta\sin\theta e^{im_2^2L/2E} \\
+		=& \cos\theta\sin\theta \left( e^{im_1^2L/2E} + e^{im_2^2L/2E} \right)
 		\end{split}
 	\]
+	
 
 \end{homeworkProblem}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  8 APR 2020 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  8 APR 2020 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,23 +725,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--187
  []
 
 [2] [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (./hw11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `hw11.out' has not changed.
 (rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
  17566 strings out of 493033
  334822 string characters out of 6137749
- 412242 words of memory out of 5000000
+ 414242 words of memory out of 5000000
  20785 multiletter control sequences out of 15000+600000
  12624 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,66p,416b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,17n,66p,416b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2015
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2015/texmf-di
@@ -755,7 +755,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb>
-Output written on hw11.pdf (4 pages, 141768 bytes).
+Output written on hw11.pdf (4 pages, 142970 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
