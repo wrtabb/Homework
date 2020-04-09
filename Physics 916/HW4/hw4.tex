@@ -542,4 +542,46 @@
 
 \end{homeworkProblem}
 
+\pagebreak
+
+\begin{homeworkProblem}
+	Consider a three-dimensional state space and the following set of operators:
+	\[
+		A= \begin{pmatrix}
+		1 & 1 & 0 \\
+		1 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix}, \quad
+		B = \begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 0 \end{pmatrix}, \quad
+		C= \begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1 \end{pmatrix}
+	\]
+	Find all possible CSCOs. That is, determine whether or not each of the sets: $\{A\}$, $\{B\}$, $\{C\}$, $\{A,B\}$, $\{A,C\}$, $\{B,C\}$, $\{A,B,C\}$ constitutes a valid CSCO.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	I'll take each set individually and determine if they constitute a valid CSCO. First the sets of single operators:
+	\\
+	\\
+	$\{A\}$: \\
+	First determine the eigenvalues by solving the characteristic equation:
+	\[
+		\begin{split}
+		det(A-\lambda I) =& \begin{vmatrix} 
+		1-\lambda & 1 & 0 \\
+		1 & -\lambda & 0 \\
+		0 & 0 & -\lambda \end{vmatrix} \\
+		=& (1-\lambda)\lambda^2 + \lambda=0
+		\end{split}
+	\]
+	
+	
+\end{homeworkProblem}
+
 \end{document}

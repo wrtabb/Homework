@@ -198,11 +198,17 @@
 	\[
 		\begin{split}
 		\left[ \sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E} \right] \left[ \sum_j U_{2j}^* U_{1j} e^{im_j^2L/2E} \right] =& \cos^2\theta\sin^2\theta \left( e^{-im_2^2L/2E} - e^{-im_1^2L/2E} \right) \left( e^{im_2^2L/2E} - e^{im_1^2L/2E} \right) \\
-		=& \cos^2\theta\sin^2\theta \left( 2 - e^{i(m_1^2-m_2^2)L/2E} - e^{-i(m_1^2-m_2^2)L/2E} \right) \\
-		=& \cos^2\theta\sin^2\theta \left( 2 - e^{2i(m_1^2-m_2^2)L/4E} - e^{-2i(m_1^2-m_2^2)L/4E} \right) \\
-		=& \cos^2\theta\sin^2\theta \left( 2 - 2Re\left[e^{i(m_1^2-m_2^2)L/4E}\right]^2 \right) \\
-		=& 2\cos^2\theta\sin^2\theta \left( 1 - \cos^2\frac{\Delta m_{12}L}{4E} \right) \\
-		=& \sin^22\theta sin^2\frac{\Delta m_{12}L}{4E}
+		=& \cos^2\theta\sin^2\theta \left( 2 - e^{i(m_1^2-m_2^2)L/2E} - e^{-i(m_1^2-m_2^2)L/2E} \right) \\		
+		=& \cos^2\theta\sin^2\theta \left( 2 - 2Re\left[e^{i(m_1^2-m_2^2)L/2E}\right] \right) \\
+		=& 2\cos^2\theta\sin^2\theta \left( 1 - \cos\frac{\Delta m_{12}^2L}{2E}  \right)
+		\end{split}
+	\]
+	From here, use the trig identity: \(1-cos\theta = 2\sin^2\frac{\theta}{2}\) and then $2\cos\theta\sin\theta = \sin2\theta$:
+	\[
+		\begin{split}
+		\left[ \sum_i U_{1i}^* U_{2i} e^{-im_i^2L/2E} \right] \left[ \sum_j U_{2j}^* U_{1j} e^{im_j^2L/2E} \right] =&  2\cos^2\theta\sin^2\theta \left( 2\sin^2\frac{\Delta m_{12}^2L}{4E}  \right) \\
+		=& 4\cos^2\theta\sin^2\theta \left( \sin^2\frac{\Delta m_{12}^2L}{4E}  \right) \\
+		=& \sin^22\theta \sin^2\frac{\Delta m_{12}^2L}{4E}
 		\end{split}
 	\]
 	
