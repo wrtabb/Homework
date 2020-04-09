@@ -569,18 +569,103 @@
 	I'll take each set individually and determine if they constitute a valid CSCO. First the sets of single operators:
 	\\
 	\\
-	$\{A\}$: \\
+	$\{A\}$ \\
 	First determine the eigenvalues by solving the characteristic equation:
 	\[
 		\begin{split}
-		det(A-\lambda I) =& \begin{vmatrix} 
+		\det(A-\lambda I) =& \begin{vmatrix} 
 		1-\lambda & 1 & 0 \\
 		1 & -\lambda & 0 \\
 		0 & 0 & -\lambda \end{vmatrix} \\
-		=& (1-\lambda)\lambda^2 + \lambda=0
+		=& (1-\lambda)\lambda^2 + \lambda \\
+		=& -\lambda^3+\lambda^2+\lambda  \\
+		=& -\lambda(\lambda^2-\lambda-1) = 0 \\
+		\Rightarrow \lambda =& 0, \frac{1}{2}(1+\sqrt{5}), \frac{1}{2}(1-\sqrt{5}) \\		
 		\end{split}
 	\]
-	
+	Since none of the eigenvalues are degenerate, $\{A\}$ is a CSCO.
+	\\
+	\\
+	$\{B\}$ is diagonal, so by simple inspection we see that there are two eigenvalues, $\lambda = 1,0$ and that $\lambda = 1$ is degenerate. Therefore $\{B\}$ is not a CSCO.
+	\\
+	\\
+	$\{C\}$ has the same eigenvalues and degeneracies that $\{B\}$ has. It is also not a CSCO.
+	\\
+	\\
+	$\{A,B\}$ \\
+	The first step with sets of more than one operator is to determine if they commute:
+	\[
+		\begin{split}
+		\left[ A,B \right] =& 
+		\begin{pmatrix}
+		1 & 1 & 0 \\
+		1 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 0 \end{pmatrix} - 
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 0 \end{pmatrix}
+		\begin{pmatrix}
+		1 & 1 & 0 \\
+		1 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix} \\
+		=& \begin{pmatrix}
+		1 & 1 & 0 \\
+		1 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix} - 
+		\begin{pmatrix}
+		1 & 1 & 0 \\
+		1 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix} \\
+		=& 0
+		\end{split}
+	\]
+	Now let's find the eigenvectors and see if we can construct a common set starting with A:\\
+	$\lambda = 0$:
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		1 & 1 & 0 \\
+		1 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix}
+		\begin{pmatrix}
+		c_1 \\ c_2 \\ c_3
+		\end{pmatrix} =& 
+		\begin{pmatrix}
+		0 \\ 0 \\ 0
+		\end{pmatrix} \\
+		c_1+c_2=&0 \\
+		c_1 =& 0 \\
+		c_2 =& 0 \\
+		\Rightarrow \vec{v}_{\lambda=0} =& \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+		\end{split}
+	\]
+	$\lambda = \frac{1}{2}(1+\sqrt{5})$
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		\frac{1}{2}(1-\sqrt{5}) & 1 & 0 \\
+		1 & -\frac{1}{2}(1+\sqrt{5}) & 0 \\
+		0 & 0 & -\frac{1}{2}(1+\sqrt{5}) \end{pmatrix}
+		\begin{pmatrix}
+		c_1 \\ c_2 \\ c_3
+		\end{pmatrix} =& 
+		\begin{pmatrix}
+		0 \\ 0 \\ 0
+		\end{pmatrix} \\
+		\frac{c_1}{2}(1-\sqrt{5})+c_2=&0 \\
+		c_1-\frac{c_2}{2}(1+\sqrt{5})=&0 \\
+		-\frac{c_3}{2}(1+\sqrt{5})=&0 \\
+		c_1 = 1+\sqrt{5} \\ 
+		c_2 = 2 \\
+		c_3 = 0 \\
+		\Rightarrow \vec{v}_{\lambda=\frac{1}{2}(1+\sqrt{5})} =& \frac{1}{\sqrt{2(5+\sqrt{5})}}\begin{pmatrix} 1+\sqrt{5} \\ 2 \\ 0 \end{pmatrix}
+		\end{split}
+	\]
 	
 \end{homeworkProblem}
 
