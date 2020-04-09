@@ -212,7 +212,55 @@
 \pagebreak
 
 \begin{homeworkProblem}
-
+	As an exercise in natural units, show that the quantity $\Delta m_{12}^2L/4E$ that appears in the theory of neutrino oscillations is in fact equal to $1.27\Delta m_{12}^2(eV^2)L(km)/E(GeV)$.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	First we want to get the expression in terms of S.I. units as a starting point for the conversion. The factor in question, $\Delta m_{12}^2L/4E$, has to be dimensionless since it is the argument of a sine function. So let's look at the dimensions:
+	\[
+		\begin{split}
+		\frac{[\Delta m_{12}^2][L]}{[E]} =& \frac{M^2L}{ML^2/T^2} \\
+		=& \frac{MT^2}{L}
+		\end{split}
+	\]
+	To get this to be unitless, we need a factor with units of $L/MT^2$. Since we have been working under the paradigm that $c=\hbar =1$ we need to plug in factors of these to give the needed units. 
+	\[
+		\begin{split} 
+		[c] =& \frac{L}{T} \\
+		[\hbar] = & \frac{ML^2}{T}
+		\end{split}
+	\]
+	To get the needed units of $L/MT^2$, we can see right away that $\hbar$ must be in the denominator with a power of one since it's the only unit with mass in it. The $T$ from $\hbar$ is going to cancel the $T$ from c, and we need a $T^2$ in the final result. This leads to the conclusion that $c$ must be to the third power. 
+	\[
+		\begin{split}
+		\frac{[c]^3}{[\hbar]} =& \left( \frac{L^3}{T^3} \right) \left( \frac{T}{ML^2} \right) \\
+		=& \frac{L}{MT^2}
+		\end{split}
+	\]
+	These are the dimensions we needed to make the argument of the sine function dimensionless. Therefore we can rewrite the argument this way:
+	\[
+		\frac{\Delta m_{12}^2L}{4E}\frac{c^3}{\hbar}
+	\]
+	Let's start with $kg, m, J$ and use the conversions we used earlier in the semester to convert to $eV, km, GeV$. Using the values I calculated back in Homework \#1:
+	\[
+		\begin{split} 
+		1kg =& 5.608\times10^{26} GeV \\
+		=& 5.608\times10^{35} eV \\
+		\Delta m_{12}^2 (kg^2) = & \frac{1}{5.608\times10^{35}}\Delta m_{12}^2 (eV) \\
+		L (m) =& 10^3 L(km) \\
+		E (J) =& 1.602\times10^{-19} J \times 10^9 eV = 1.602\times10^{-10} E (GeV) \\
+		c =& 2.998\times10^8 m/s \\
+		\hbar =& 1.055 J\cdot s
+		\end{split}
+	\]
+	Now putting this all together, we get:
+	\[
+		\begin{split} 
+		\left[ \frac{1}{(5.61\times10^{35})^2}\Delta m_{12}^2 (eV^2)  \right] \left[ \frac{10^3 L (km)}{4\times 1.61\times10^{-10} E(GeV)} \right] \left[ \frac{(2.998\times10^8 m/s)^3}{1.055\times10^{-34} J\cdot s} \right]= 1.27\frac{\Delta m_{12}^2 (eV^2)L(km)}{E (GeV)}
+		\end{split}
+	\]
 \end{homeworkProblem}
 
 \pagebreak
