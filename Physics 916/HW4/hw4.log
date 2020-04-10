@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  10 APR 2020 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  10 APR 2020 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,106 +739,116 @@ Underfull \hbox (badness 10000) in paragraph at lines 487--510
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 542--552
+Underfull \hbox (badness 10000) in paragraph at lines 542--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--552
+Underfull \hbox (badness 10000) in paragraph at lines 542--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--552
+Underfull \hbox (badness 10000) in paragraph at lines 542--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--589
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 607--619
+Underfull \hbox (badness 10000) in paragraph at lines 542--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--619
+Underfull \hbox (badness 10000) in paragraph at lines 588--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 607--619
+Underfull \hbox (badness 10000) in paragraph at lines 588--596
+
+ []
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 637--649
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--642
+Underfull \hbox (badness 10000) in paragraph at lines 637--649
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--642
+Underfull \hbox (badness 10000) in paragraph at lines 637--649
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--642
-
- []
-
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 745--754
+Underfull \hbox (badness 10000) in paragraph at lines 660--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--754
+Underfull \hbox (badness 10000) in paragraph at lines 660--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--790
+Underfull \hbox (badness 10000) in paragraph at lines 660--672
+
+ []
+
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 775--784
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--790
+Underfull \hbox (badness 10000) in paragraph at lines 775--784
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--790
+Underfull \hbox (badness 10000) in paragraph at lines 813--820
 
  []
 
 
-Overfull \hbox (24.1666pt too wide) detected at line 833
+Underfull \hbox (badness 10000) in paragraph at lines 813--820
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--820
+
+ []
+
+
+Overfull \hbox (24.1666pt too wide) detected at line 863
 \OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 = 0[]
  []
 
 
-Overfull \hbox (24.1666pt too wide) detected at line 845
+Overfull \hbox (24.1666pt too wide) detected at line 875
 \OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 = 1[]
  []
 
-[10]
-Overfull \hbox (24.1666pt too wide) detected at line 862
+[11]
+Overfull \hbox (24.1666pt too wide) detected at line 892
 \OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 = 0[]
  []
 
 
-Overfull \hbox (24.1666pt too wide) detected at line 874
+Overfull \hbox (24.1666pt too wide) detected at line 904
 \OML/cmm/m/it/10 ^^U \OT1/cmr/m/n/10 = 1[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--885
+Underfull \hbox (badness 10000) in paragraph at lines 908--915
 
  []
 
-[11] (./hw4.aux) ) 
+[12] (./hw4.aux) ) 
 Here is how much of TeX's memory you used:
  14058 strings out of 493033
  281658 string characters out of 6137749
@@ -846,7 +856,7 @@ Here is how much of TeX's memory you used:
  17304 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,21n,66p,415b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,21n,66p,415b,272s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texli
@@ -858,10 +868,10 @@ sfonts/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr9.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive
 /2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw4.pdf (11 pages, 158043 bytes).
+Output written on hw4.pdf (12 pages, 159859 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

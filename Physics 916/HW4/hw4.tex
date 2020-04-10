@@ -545,6 +545,9 @@
 	(a) Show that $F(A)=e^A$ has a definite parity, whereas $F(B)=e^B$ does not.	
 	\\
 	\\
+	(b) Show that when $\ket{\phi_C}$ is an eigenvector of a Hermitian operator, $C$, with the eigenvalue of c, $\ket{\phi_C}$ is also an eigenvector of $F(C)$, with the eigenvalue $F(c)$.
+	\\
+	\\
 	\textbf{Solution}
 	\\
 	\\
@@ -552,14 +555,16 @@
 	\[
 		\begin{split}
 		F(A) =& \sum_n\frac{1}{n!}\frac{d^{n}F(A)}{dA^n}\bigg\rvert_{A=0}A^n \\
+		=& \sum_n \frac{1}{n!}A^n \\
 		F(B) =& \sum_n\frac{1}{n!}\frac{d^{n}F(B)}{dB^n}\bigg\rvert_{B=0}B^n \\
+		=& \sum_n \frac{1}{n!}B^n
 		\end{split}
 	\]
 	So let's check the parity of these operators. As we learned in lecture, for even operators, $\Pi A \Pi=A$, and for odd operators, $\Pi B\Pi=-B$. Let's apply this to $F(A)$ and $F(B)$ to see what parity they have.
 	\[
 		\begin{split}
-		\Pi F(A) \Pi= \sum_n\frac{1}{n!}\frac{d^{n}F(A)}{dA^n}\bigg\rvert_{A=0}\Pi A^n \Pi \\
-		\Pi F(B) \Pi= \sum_n\frac{1}{n!}\frac{d^{n}F(B)}{dB^n}\bigg\rvert_{B=0}\Pi B^n \Pi
+		\Pi F(A) \Pi= \sum_n\frac{1}{n!}\Pi A^n \Pi \\
+		\Pi F(B) \Pi= \sum_n\frac{1}{n!}\Pi B^n \Pi
 		\end{split}
 	\]
 	What is the parity of an operator to the n-th power? First recall that $\Pi\Pi=1$ since it is unitary and Hermitian.
@@ -577,14 +582,39 @@
 	\]
 	\[
 	\begin{split}
-	\Pi F(A) \Pi=& \sum_n\frac{1}{n!}\frac{d^{n}F(A)}{dA^n}\bigg\rvert_{A=0}A^n = F(A)\\
-	\Pi F(B) \Pi=& \sum_n\frac{1}{n!}\frac{d^{n}F(B)}{dB^n}\bigg\rvert_{B=0}(-1)^nB^n \neq \pm F(B)
+	\Pi F(A) \Pi=& \sum_n\frac{1}{n!}A^n = F(A)\\
+	\Pi F(B) \Pi=& \sum_n\frac{1}{n!}(-1)^nB^n \neq \pm F(B)
 	\end{split}
 	\]
 	For the even operator, the number of factors does not matter. We very clearly have that $F(A)$ is an even operator.
 	\\
 	\\
 	For the odd operator, $B$, the parity depends on how many factors of B there are. For the full Taylor series, that is when the series converges to the exact value of $F(B)$, there are an infinite number of factors. This means $(-1)^n$ is impossible to evaluate and so the parity of $F(B)$ is impossible to determine. F(B) has no definite parity.
+	\\
+	\\
+	(b) We define the operator, $C$, like this:
+	\[
+		C\ket{\phi_C} = c\ket{\phi_C}
+	\]
+	And we can define $F(C)$ as a Taylor series expanded about $C=0$.
+	\[
+		\begin{split}
+		F(C)=&\sum_n\frac{1}{n!}\frac{d^nF(C)}{dC^n}\bigg\rvert_{C=0}C^n \\
+		F(C)\ket{\phi_C} =& \sum_n\frac{1}{n!}\frac{d^nF(C)}{dC^n}\bigg\rvert_{C=0}C^n\ket{\phi_C}
+		\end{split}
+	\]
+	The derivative part of the series expansion is just a number. The only part containing the operator itself is the $C^n$ factor.
+	\[
+		\begin{split}
+		C^n\ket{\phi_C}=&C\times C\times \cdots \times C \ket{\phi_C} \\
+		=& c\times c\times \cdots \times c \ket{\phi_C} \\
+		=& c^n \ket{\phi_C} \\
+		\Rightarrow F(C)\ket{\phi_C} =& \sum_n\frac{1}{n!}\frac{d^nF(C)}{dC^n}\bigg\rvert_{C=0}C^n\ket{\phi_C} \\
+		=& \sum_n\frac{1}{n!}\frac{d^nF(C)}{dC^n}\bigg\rvert_{C=0}c^n\ket{\phi_C} \\
+		=& F(c)\ket{\phi_C}
+		\end{split}
+	\]
+	
 \end{homeworkProblem}
 
 \pagebreak
