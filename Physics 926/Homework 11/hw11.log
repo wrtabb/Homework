@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  9 APR 2020 16:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  10 APR 2020 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,15 +739,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 221--228
 
  []
 
-[4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--311
+
+ []
+
+[5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
  (./hw11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
 Package rerunfilecheck Info: File `hw11.out' has not changed.
 (rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 337.
  ) 
 Here is how much of TeX's memory you used:
  17568 strings out of 493033
@@ -771,7 +811,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist
 e1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on hw11.pdf (5 pages, 157369 bytes).
+Output written on hw11.pdf (5 pages, 164443 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream

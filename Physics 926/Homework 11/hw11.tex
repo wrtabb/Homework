@@ -272,6 +272,65 @@
 \pagebreak
 
 \begin{homeworkProblem}
+	As mentioned in class, experiments such as NO$\nu$A are taking advantage of the fact that neutrinos that are traveling off-axis of a neutrino beam have a narrower energy spread. Let's take a look.
+	\\
+	\\
+	(a) We want to make a neutrino beam from a beam of $\pi^+$ with $E_\pi = 20\; GeV$. How long should the decay pipe be to ensure the the great bulk of pions have decayed before they reach the absorber?
+	\\
+	\\
+	(b) Consider a pion with energy $E_\pi$ in the laboratory frame. Find the energy of the neutrino $E_\nu$ in the decay $\pi^+\rightarrow \mu^+\nu_\mu$ as a function of the laboratory angle $\theta$ that the emitted neutrino makes with the original flight direction of the $\pi^+$.
+	\\
+	\\
+	(c) Plot $E_\nu$ for $E_\pi$ between 2 and 20 $GeV$ in the case $\theta=0$ and $\theta=15 \; mrad$.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a)
+	\\
+	\\
+	(b) In the lab frame, the four-momenta of each particle can be defined. Let the initial direction of the pion be in the x-direction. ($\sigma$ is the index of the four-vectors while $\mu$ and $\nu$ are reserved for the muon and neutrino)
+	\\
+	\\
+	Before the decay:
+	\[
+		P_\pi^\sigma = (E_\pi,p_\pi,0,0)
+	\]
+	After the decay:
+	\[
+		\begin{split}
+		P_\mu^\sigma =& (E_\mu,\vec{p}_\mu) \\
+		P_\nu^\sigma =& (E_\nu,p_\nu\cos\theta,p_\nu\sin\theta,0)
+		\end{split}
+	\]
+	Note: I left the muon momentum completely general because it won't matter what value it has in the end.
+	\\
+	\\
+	Due to conservation of four-momentum, we can write:
+	\[
+		\begin{split}
+		P_\pi^\sigma = P_\mu^\sigma + P_\nu^\sigma \\
+		P_\pi^\sigma - P_\nu^\sigma = P_\mu^\sigma \\		
+		\end{split}
+	\]
+	We can contract each side with itself since this operation is Lorentz invariant:
+	\[
+		\begin{split}
+		(P_\pi - P_\nu)^\sigma (P_\pi - P_\nu)_\sigma =& P_\mu^\sigma P_{\mu,\sigma} \\
+		P_\pi^2+P_\nu^2-2P_\nu^\sigma P_{\pi,\sigma} =& P_\mu^2 \\
+		m_\pi^2+m_\nu^2-2(E_\pi E_\nu-p_\pi p_\nu \cos\theta) =& m_\mu^2
+		\end{split}
+	\]
+	The pion energy is high enough that we can assume $p_\pi \approx E_\pi$. If we also let the neutrino mass equal zero, which it approximately is compared with the other masses in this equation, so $p_\nu \approx E_\nu$. 
+	\[
+		\begin{split}		
+		m_\pi^2-2(E_\pi E_\nu-E_\pi E_\nu \cos\theta) = m_\mu^2 \\
+		m_\pi^2-m_\mu^2 = 2E_\pi E_\nu(1-\cos\theta) \\
+		E_\nu = \frac{m_\pi^2-m_\mu^2}{2E_\pi(1-\cos\theta)}
+		\end{split}
+	\]
+
 
 \end{homeworkProblem}
 
