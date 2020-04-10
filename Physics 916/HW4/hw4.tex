@@ -539,7 +539,52 @@
 \pagebreak
 
 \begin{homeworkProblem}
-
+	Consider the even operator $A$ and the odd operator $B$. Let $F(A)$ and $F(B)$ be the functions of these operators. It is always possible to expand the function $F(A)$ in a power series; same for $F(B)$.
+	\\
+	\\
+	(a) Show that $F(A)=e^A$ has a definite parity, whereas $F(B)=e^B$ does not.	
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a) We can rewrite both functions of operators in their power series representations:
+	\[
+		\begin{split}
+		F(A) =& \sum_n\frac{1}{n!}\frac{d^{n}F(A)}{dA^n}\bigg\rvert_{A=0}A^n \\
+		F(B) =& \sum_n\frac{1}{n!}\frac{d^{n}F(B)}{dB^n}\bigg\rvert_{B=0}B^n \\
+		\end{split}
+	\]
+	So let's check the parity of these operators. As we learned in lecture, for even operators, $\Pi A \Pi=A$, and for odd operators, $\Pi B\Pi=-B$. Let's apply this to $F(A)$ and $F(B)$ to see what parity they have.
+	\[
+		\begin{split}
+		\Pi F(A) \Pi= \sum_n\frac{1}{n!}\frac{d^{n}F(A)}{dA^n}\bigg\rvert_{A=0}\Pi A^n \Pi \\
+		\Pi F(B) \Pi= \sum_n\frac{1}{n!}\frac{d^{n}F(B)}{dB^n}\bigg\rvert_{B=0}\Pi B^n \Pi
+		\end{split}
+	\]
+	What is the parity of an operator to the n-th power? First recall that $\Pi\Pi=1$ since it is unitary and Hermitian.
+	\[
+		\begin{split}
+		\Pi A^n \Pi =& \Pi A\times A\times A\times \cdots \Pi\\
+		=& (\Pi A \Pi)\times(\Pi A \Pi)\times(\Pi A \Pi)\times\cdots\times(\Pi A \Pi) \\
+		=& A\times A\times A\times \cdots \\
+		=& A^n \\
+		\Pi B^n \Pi =& \Pi B\times B\times B\times \cdots \Pi\\
+		=& (\Pi B \Pi)\times(\Pi B \Pi)\times(\Pi B \Pi)\times\cdots\times(\Pi B \Pi) \\
+		=& (-B)\times (-B)\times (-B)\times \cdots \\
+		=& (-1)^nB^n
+		\end{split}
+	\]
+	\[
+	\begin{split}
+	\Pi F(A) \Pi=& \sum_n\frac{1}{n!}\frac{d^{n}F(A)}{dA^n}\bigg\rvert_{A=0}A^n = F(A)\\
+	\Pi F(B) \Pi=& \sum_n\frac{1}{n!}\frac{d^{n}F(B)}{dB^n}\bigg\rvert_{B=0}(-1)^nB^n \neq \pm F(B)
+	\end{split}
+	\]
+	For the even operator, the number of factors does not matter. We very clearly have that $F(A)$ is an even operator.
+	\\
+	\\
+	For the odd operator, $B$, the parity depends on how many factors of B there are. For the full Taylor series, that is when the series converges to the exact value of $F(B)$, there are an infinite number of factors. This means $(-1)^n$ is impossible to evaluate and so the parity of $F(B)$ is impossible to determine. F(B) has no definite parity.
 \end{homeworkProblem}
 
 \pagebreak
