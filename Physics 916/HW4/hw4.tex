@@ -666,7 +666,176 @@
 		\Rightarrow \vec{v}_{\lambda=\frac{1}{2}(1+\sqrt{5})} =& \frac{1}{\sqrt{2(5+\sqrt{5})}}\begin{pmatrix} 1+\sqrt{5} \\ 2 \\ 0 \end{pmatrix}
 		\end{split}
 	\]
-	
+	$\lambda = \frac{1}{2}(1-\sqrt{5})$
+	\[
+	\begin{split}
+	\begin{pmatrix}
+	\frac{1}{2}(1+\sqrt{5}) & 1 & 0 \\
+	1 & -\frac{1}{2}(1-\sqrt{5}) & 0 \\
+	0 & 0 & -\frac{1}{2}(1-\sqrt{5}) \end{pmatrix}
+	\begin{pmatrix}
+	c_1 \\ c_2 \\ c_3
+	\end{pmatrix} =& 
+	\begin{pmatrix}
+	0 \\ 0 \\ 0
+	\end{pmatrix} \\
+	\frac{-c_1}{2}(1+\sqrt{5})+c_2=&0 \\
+	c_1-\frac{c_2}{2}(1-\sqrt{5})=&0 \\
+	-\frac{c_3}{2}(1-\sqrt{5})=&0 \\
+	c_1 = 1-\sqrt{5} \\ 
+	c_2 = 2 \\
+	c_3 = 0 \\
+	\Rightarrow \vec{v}_{\lambda=\frac{1}{2}(1-\sqrt{5})} =& \frac{1}{\sqrt{2(5-\sqrt{5})}}\begin{pmatrix} 1-\sqrt{5} \\ 2 \\ 0 \end{pmatrix}
+	\end{split}
+	\]
+	Now to determine if the eigenvectors of A are also eigenvectors of B. 
+	\[
+		\begin{split}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 0 \end{pmatrix}
+		\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix} =& \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}
+		\end{split}
+	\]
+	This is an eigenvector of B with $\lambda = 0$. But note that for A, $\lambda = 0$. This vector is an eigenvector of both A and B with the same eigenvalue. Therefore this does not get rid of the degeneracy. 
+	\\
+	\\
+	$\{A,B\}$ is not a CSCO.
+	\\
+	\\
+	$\{A,C\}$ \\
+	Do A and C commute?
+	\[
+	\begin{split}
+	\left[ A,C \right] =& 
+	\begin{pmatrix}
+	1 & 1 & 0 \\
+	1 & 0 & 0 \\
+	0 & 0 & 0 \end{pmatrix}
+	\begin{pmatrix}
+	0 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1 \end{pmatrix} - 
+	\begin{pmatrix}
+	0 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1 \end{pmatrix}
+	\begin{pmatrix}
+	1 & 1 & 0 \\
+	1 & 0 & 0 \\
+	0 & 0 & 0 \end{pmatrix} \\
+	=& \begin{pmatrix}
+	0 & 1 & 0 \\
+	0 & 0 & 0 \\
+	0 & 0 & 0 \end{pmatrix} - 
+	\begin{pmatrix}
+	0 & 0 & 0 \\
+	1 & 0 & 0 \\
+	0 & 0 & 0 \end{pmatrix} \\
+	\neq& 0
+	\end{split}
+	\]
+	\\
+	\\
+	$\{A,C\}$ is not a CSCO.
+	\\
+	\\
+	$\{B,C\}$ \\
+	\[
+	\begin{split}
+	\left[ B,C \right] =& 
+	\begin{pmatrix}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 0 \end{pmatrix}
+	\begin{pmatrix}
+	0 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1 \end{pmatrix} - 
+	\begin{pmatrix}
+	0 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 1 \end{pmatrix}
+	\begin{pmatrix}
+	1 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 0 \end{pmatrix} \\
+	=& \begin{pmatrix}
+	0 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 0 \end{pmatrix} - 
+	\begin{pmatrix}
+	0 & 0 & 0 \\
+	0 & 1 & 0 \\
+	0 & 0 & 0 \end{pmatrix} \\
+	=& 0
+	\end{split}
+	\]
+	B and C do commute. What are their eigenvectors? \\
+	For B:
+	\[
+		\lambda = 0
+		\begin{split}
+		\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 0 \end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
+		c_1 = 0, \; c_2=0 \\	
+		\vec{v} = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+		\end{split}
+	\]
+	\[
+		\lambda = 1
+		\begin{split}
+		\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 0 & 0 \\
+		0 & 0 & -1 \end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
+		c_3 = 0 \\	
+		\vec{v}_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix},\; \vec{v}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}
+		\end{split}
+	\]
+	The set of eignevectors for $B$ are:
+	\[
+		\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix},\;\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix},\;\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}
+	\]
+	For C:
+	\[
+		\lambda = 0
+		\begin{split}
+		\begin{pmatrix}
+		0 & 0 & 0 \\
+		0 & 1 & 0 \\
+		0 & 0 & 1 \end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
+		c_2 = 0, \; c_3=0 \\	
+		\vec{v} = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}
+		\end{split}
+	\]
+	\[
+		\lambda = 1
+		\begin{split}
+		\begin{pmatrix}
+		-1 & 0 & 0 \\
+		0 & 0 & 0 \\
+		0 & 0 & 0 \end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \\ c_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} \\
+		c_1 = 0 \\	
+		\vec{v}_1 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix},\; \vec{v}_2 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+		\end{split}
+	\]
+	The set of eignevectors for $C$ are:
+	\[
+		\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix},\;\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix},\;\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}
+	\]
+	The set of eigenvectors for B and C have one vector with the same eigenvalue in common, so $\{B,C\}$ are not a CSCO.
+	\\
+	\\
+	$\{A,B,C\}$\\
+	Since we already know that not all pairs in this set commute, this set cannot form a CSCO.
 \end{homeworkProblem}
 
 \end{document}
