@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{braket}
 \usepackage{extramarks}
@@ -548,6 +549,23 @@
 	(b) Show that when $\ket{\phi_C}$ is an eigenvector of a Hermitian operator, $C$, with the eigenvalue of c, $\ket{\phi_C}$ is also an eigenvector of $F(C)$, with the eigenvalue $F(c)$.
 	\\
 	\\
+	(c) If $\ket{\phi_a}$ is an eigenvector of $F(A)$, calculate the matrix element $\braket{\phi_a \rvert B \rvert \phi_a}$.
+	\\
+	\\
+	(d) As an application of the result of part b, calculate the function $e^C$ if the matrix $C$ is given by:
+	\[
+		C=\begin{pmatrix}
+		1 & 0 \\
+		0 & -1 \end{pmatrix}
+	\]
+	\\
+	\\
+	(e) Comnpare the three following functions: $F(A)F(B)$, $F(B)F(A)$, and $F(A+B)$. Are they equal? If not, why?
+	\\
+	\\
+	(f) Repeat query in part e if the operator $B$ is replaced by the parity operator.
+	\\
+	\\
 	\textbf{Solution}
 	\\
 	\\
@@ -623,7 +641,57 @@
 		\end{split}
 	\]
 	This is true because $B$ is odd and the eigenvectors are of the same parity.
-	
+	\\
+	\\
+	(d) As shown previously, we must write any function of an operator as a power series:
+	\[
+		\begin{split}
+		F(C)=&e^C \\
+		=& \sum_n \frac{1}{n!}\frac{d^nF(C)}{dC^n}\bigg\rvert_{C=0}C^n \\
+		=& \sum_n \frac{1}{n!}C^n \\
+		\end{split}
+	\]
+	Now let's look at the behavior of the given operator, $C$ under repeated exponentiation.
+	\[
+		\begin{split}
+		C=&\begin{pmatrix}
+		1 & 0 \\
+		0 & -1 \end{pmatrix} \\
+		C^2 =& \begin{pmatrix}
+		1 & 0 \\
+		0 & -1 \end{pmatrix}\begin{pmatrix}
+		1 & 0 \\
+		0 & -1 \end{pmatrix} \\
+		=& \begin{pmatrix}
+		1 & 0 \\
+		0 & 1 \end{pmatrix} \\
+		=& I \\
+		C^4 =& C^2C^2 \\
+		=&II\\
+		=& I
+		\end{split}
+	\]
+	So for all $n=$ even, we have \(C^n=I\). Let's look at odd $n$.
+	\[
+	\begin{split}
+	C^3 =& C^2C \\
+	=& IC \\
+	=& C
+	\end{split}
+	\]
+	So for all $n=$ odd, we have \(C^n=C\). So let's go back to our definition of $F(C)$ and split it between even and odd. I'll let $n=$ even integers and $m=$ odd integers.
+	\[
+		\begin{split}
+		\sum_n \frac{1}{n!} I + \sum_m \frac{1}{m!} C
+		=& \begin{pmatrix}
+		\sum_n \frac{1}{n!}+\sum_m \frac{1}{m!} & 0 \\
+		0 & \sum_n \frac{1}{n!}-\sum_m \frac{1}{m!} \end{pmatrix} \\
+		\Rightarrow F(C)=& \begin{pmatrix} 
+		e & 0 \\
+		0 &1/e \end{pmatrix}
+		\end{split}
+	\]
+ The sums above are well-known and they converge to $e$ and $1/e$ as I put in the final result. (see \url{https://en.wikipedia.org/wiki/E_(mathematical_constant})
 \end{homeworkProblem}
 
 \pagebreak
