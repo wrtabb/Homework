@@ -118,7 +118,7 @@
 \title{
     \vspace{2in}
     \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ at 5pm}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
     \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
     \vspace{3in}
 }
@@ -492,7 +492,7 @@
 	(b) Calculate the commutator, $\left[ H,U(m,n) \right]$
 	\\
 	\\
-	(c) Prove the relation: $U(m,n)U^\dagger(m,n) = \delta_{nq}(m,p)$
+	(c) Prove the relation: $U(m,n)U^\dagger(p,q) = \delta_{nq}U(m,p)$
 	\\
 	\\
 	(d) Calculate $Tr\{U(m,n)\}$, the trace of the operator $U(m,n)$.
@@ -533,8 +533,55 @@
 	\]
 	(c) Using the definition of $U^\dagger$ determined in part (a):
 	\[
-		U(m,n)U^\dagger(m,n) = \ket{\phi_m}\bra{\phi_n} \ket{\phi_n}\bra{\phi_m}
+		\begin{split}
+		U(m,n)U^\dagger(p,q) =& \ket{\phi_m}\bra{\phi_n} (\ket{\phi_p}\bra{\phi_q})^\dagger \\
+		=& \ket{\phi_m}\braket{\phi_n \rvert \phi_q}\bra{\phi_p} \\
+		=& \ket{\phi_m}\delta_{nq}\bra{\phi_p} \\
+		=&\delta{nq} \ket{\phi_m}\bra{\phi_p} \\
+		=& \delta{nq}U(m,p)
+		\end{split}
 	\]
+	(d) 
+	\[
+		\begin{split}
+		Tr\{U(m,n)\} =& \sum_i \braket{i\rvert U(m,n)\rvert i} \\
+		=& \sum_i \braket{i\rvert m}\braket{n\rvert i}
+		\end{split}
+	\]
+	Each separate bra-ket is just a number, so the order can be readily changed. If we swap the order we can clearly see the identity operator in there:
+	\[
+		\begin{split}
+		Tr\{U(m,n)\} =& \sum_i \braket{i\rvert m}\braket{n\rvert i} \\
+		=& \sum_i \braket{n\rvert i}\braket{i\rvert m} \\
+		=& \braket{n\rvert I\rvert m} \\
+		=& \braket{n\rvert m}
+		\end{split}
+	\]
+	(e) 
+	\[
+		\begin{split}
+		A_{mn}=&\braket{\phi_m\rvert A\rvert \phi_n} \\
+		\sum_m A_{mn}\ket{\phi_m} =& \sum_m \ket{\phi_m}\braket{\phi_m\rvert A\rvert \phi_n} \\
+		=& I A\ket{\phi_n} \\
+		=& A\ket{\phi_n} \\
+		\sum_{m,n} A_{mn}\ket{\phi_m}\bra{\phi_n} =& \sum_n A\ket{\phi_n}\bra{\phi_n} \\
+		=& A I \\
+		=& A \\
+		\ket{\phi_m}\bra{\phi_n} =& U(m,n) \\
+		\Rightarrow \sum_{m,n} A_{mn}U(m,n) =& A
+		\end{split}
+	\]
+	(f) 
+		\[
+			\begin{split}
+			Tr\{AU^\dagger(m,n)\} =& \sum_i \braket{i\rvert AU^\dagger(m,n)\rvert i} \\
+			=& \sum_i \braket{i \rvert A\rvert \phi_n}\braket{\phi_m\rvert i} \\
+			=& \sum_i \braket{\phi_m\rvert i}\braket{i \rvert A\rvert \phi_n} \\
+			=& \braket{\phi_m\rvert IA\rvert \phi_n} \\
+			=& \braket{\phi_m\rvert A\rvert \phi_n} \\
+			=& A_{mn}
+			\end{split}
+		\]
 \end{homeworkProblem}
 
 \pagebreak
@@ -692,6 +739,27 @@
 		\end{split}
 	\]
  The sums above are well-known and they converge to $e$ and $1/e$ as I put in the final result. (see \url{https://en.wikipedia.org/wiki/E_(mathematical_constant})
+ \\
+ \\
+ (e) 
+	 \[
+		 \begin{split}
+		 F(A) =& \sum_n \frac{1}{n!}\frac{d^nF(A)}{dA^n}\bigg\rvert_{A=0}A^n \\
+		 F(B) =& \sum_m \frac{1}{m!}\frac{d^mF(B)}{dB^m}\bigg\rvert_{B=0}B^n \\
+		 F(A+B) =& \sum_n \frac{1}{n!}\frac{d^nF(A+B)}{d(A+B)^n}\bigg\rvert_{A+B=0}(A+B)^n \\
+		 \end{split}
+	 \]
+	 We can see that $F(A)F(B) = F(B)F(A)$ only if $[A^n,B^m]=0$, which can not be said to be true in general. $F(A+B) \neq F(A)F(B)$
+	 \\
+	 \\
+	 (f) If B were replaced by the parity operator, $\Pi$:
+	 \[
+		 \begin{split} 
+		 F(\Pi) =& \sum_m \frac{1}{m!}\frac{d^mF(\Pi)}{d\Pi^m}\bigg\rvert_{\Pi=0}\Pi^n \\
+		 F(A+\Pi) =& \sum_n \frac{1}{n!}\frac{d^nF(A+\Pi)}{d(A+\Pi)^n}\bigg\rvert_{A+\Pi=0}(A+\Pi)^n \\
+		 \end{split}
+	 \]
+	 Then $F(A)F(\Pi) = F(\Pi)F(A)$ since A has even parity and $A$ commutes with the parity operator. But $F(A+\Pi) \neq F(A)F(\Pi)$ and $F(A+\Pi) \neq F(\Pi)F(A)$
 \end{homeworkProblem}
 
 \pagebreak
