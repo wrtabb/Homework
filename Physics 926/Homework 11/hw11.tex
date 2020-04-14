@@ -222,7 +222,7 @@
 	\textbf{Solution}
 	\\
 	\\
-	In homework \#1, we had to derive conversion factors between natural units and SI units. In this problem we will use this to convert between length in $GeV^{-1}$ and $km$. The various ratios for conversions are:
+	To start with, we know that the argument must be dimensionless since it is inside the sine function. And we see that in natural units we have \( [\Delta m_{12}^2][L]/[E] = GeV^2GeV^{-1}/GeV= \) dimensionless. Starting from these units, we can convert to $eV^2$ and $km$ to get the expression posed in the problem. In homework \#1, we had to derive conversion factors between natural units and SI units. In this problem we will use this to convert between length in $GeV^{-1}$ and $km$. The various ratios for conversions are:
 	\[
 		\begin{split}
 		&L(GeV^{-1})=\frac{5.067\times 10^{15}\;GeV^{-1}}{1\;m}\frac{10^3 \; m}{1\; km}L(km) \\
@@ -352,8 +352,105 @@
 \begin{homeworkProblem} 
 	We only briefly mentioned the possibility that neutrinos are their own antiparticles, i.e. are Majorana particles, and only briefly discussed the issue of CP violation. Let's explore these a little further. In class we said that for the three'generation mixing,
 	\[
-		P(\nu_\alpha \rightarrow \nu_\beta)= \delta_{\alpha\beta}-4\sum_{i>j}Re(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)\sin^2\frac{\Delta m_{ij}^2L}{4E}+2\sum_{i>j}Im(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)\sin^2\frac{\Delta m_{ij}^2L}{4E}
+		P(\nu_\alpha \rightarrow \nu_\beta)= \delta_{\alpha\beta}-4\sum_{i>j}Re(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)\sin^2\frac{\Delta m_{ij}^2L}{4E}+2\sum_{i>j}Im(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)\sin\frac{\Delta m_{ij}^2L}{4E}
 	\]
+	Now, if neutrinos are Majorana particles, then the neutrino mixing matrix includes two extra Majorana phases, like so:
+	\[
+		U=\begin{pmatrix} 
+		1 & 0 & 0\\
+		0 & c_{23} & s_{23}\\
+		0 & -s_{23} & c_{23}\end{pmatrix}
+		\begin{pmatrix} 
+		c_{13} & 0 & s_{13}e^{-i\delta} \\
+		0 & 1 & 0 \\
+		s_{13}e^{i\delta} & 0 & c_{13}\end{pmatrix}
+		\begin{pmatrix} 
+		c_{12} & s_{12} & 0 \\
+		-s_{12} & c_{12} & 0 \\
+		0 & 0 & 1\end{pmatrix}
+		\begin{pmatrix} 
+		e^{i\eta_1/2} & 0 & 0 \\
+		0 & e^{i\eta_2/2} & 0 \\
+		0 & 0 & 1\end{pmatrix}
+	\]
+	(a) Verify that these new phases have no effect on the oscillation probability.
+	\\
+	\\
+	(b) As discussed in class, there is CP violation in neutrino oscillation if the imaginary term of the oscillation probability is non-zero for $\alpha \neq \beta$. Use the unitarity of the mixing matrix \(\left( \sum U_{\alpha i}U_{\beta i}^* =\delta_{\alpha\beta}\right) \) to show that for a given pair of flavors $\alpha$ and $\beta$ (with $\alpha\neq\beta$), the quantity $Im(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*)$ is the same (up to a sign) for any $i$ and $j$. This argument, based simply on unitarity, can be expanded by	interchanging the roles of the rows and columns of $U$ to conclude that for a given pair of $i$ and $j$ ($i \neq j$) the same quantity is independent of $\alpha$ and $\beta$ up to a sign. Thus, that quantity is universal, independent of $i$, $j$, $\alpha$ and $\beta$.
+	\\
+	\\
+	(c) Use the expression for $U$ above, without the Majorana phases, to work out the value of the same imaginary quantity, with your favorite choice of $i$, $j$, $\alpha$, and $\beta$.
+	(since it doesn’t matter what you choose). Verify that this quantity is proportional
+	to $s_{12}s_{13}s_{23} \sin\delta$. This shows that CP violation needs not only a complex phase
+	$\delta$ but also non-trivial mixing between all three neutrino states. If any of the
+	rotation angles $\theta_{ij}$ is equal to $0$ or $\pi$, the CP violating effects disappear.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	(a) To start, we'll multiply out the four matrices to get one matrix to refer to for each of the components of the probability equation. 
+	\[
+		\begin{split}
+		U =& \begin{pmatrix} 
+		c_{12}c_{13} & s_{12}c_{13} &  s_{13}e^{-i\delta} \\ 
+		-s_{12}c_{23}-c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13} \\
+		s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}\\		
+		\end{pmatrix}
+		\begin{pmatrix} 
+		e^{i\eta_1/2} & 0 & 0 \\
+		0 & e^{i\eta_2/2} & 0 \\
+		0 & 0 & 1\end{pmatrix} \\
+		=& \begin{pmatrix} 
+		c_{12}c_{13}e^{i\eta_1/2} & s_{12}c_{13}e^{i\eta_2/2} & s_{13}e^{-i\delta} \\
+		-(s_{12}c_{23}+c_{12}s_{23}s_{13}e^{i\delta})e^{i\eta_1/2} & (c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta})e^{i\eta_2/2} & s_{23}c_{13} \\
+		(s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta})e^{i\eta_1/2} & -(c_{12}s_{23}+s_{12}c_{23}s_{13}e^{i\delta})e^{i\eta_2/2} & c_{23}c_{13} 
+		\end{pmatrix}
+		\end{split}
+	\]
+	So let's use this to write out the parts of the probability equation that have the components of $U$ in it. 
+	\[
+		\begin{split}
+		\sum_{i>j}(U_{\alpha i}^*U_{\beta i}U_{\alpha j}U_{\beta j}^*) =& -s_{12}c_{13}e^{-i\eta_2/2}(c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta})e^{i\eta_2/2}c_{12}c_{13}e^{i\eta_1/2}(s_{12}c_{23}+c_{12}s_{23}s_{13}e^{i\delta})e^{-i\eta_1/2} \\		
+		=& -s_{12}c_{13}(c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta})c_{12}c_{13}(s_{12}c_{23}+c_{12}s_{23}s_{13}e^{i\delta})
+		\end{split}
+	\]
+	As you can see, the additional phases all cancel each other out, so their addition to the matrix has no effect on the probability of oscillation.
+	\\
+	\\
+	(b)
+	\[
+		\begin{split}
+		\sum U_{\alpha i}U_{\beta i}^* =& U_{\alpha1}U_{\beta1}^*+U_{\alpha2}U_{\beta2}^*+U_{\alpha3}U_{\beta3}^* \\
+		=& -c_{12}c_{13}(s_{12}c_{23}+c_{12}s_{23}s_{13}e^{-i\delta}) \\
+		+& s_{12}c_{13}(c_{12}c_{23}-s_{12}s_{23}s_{13}e^{-i\delta}) \\
+		+& s_{13}c_{23}c_{13}e^{-i\delta} \\
+		=& -c_{12}c_{13}s_{12}c_{23}-c_{12}c_{13}c_{12}s_{23}s_{13}\cos\delta+ic_{12}c_{13}c_{12}s_{23}s_{13}\sin\delta \\
+		+& s_{12}c_{13}c_{12}c_{23}-s_{12}c_{13}s_{12}s_{23}s_{13}\cos\delta+is_{12}c_{13}s_{12}s_{23}s_{13}\sin\delta \\
+		+& s_{13}c_{23}c_{13}\cos\delta-is_{13}c_{23}c_{13}\sin\delta \\
+		=& -(c_{12}c_{13}c_{12}s_{23}s_{13}+s_{12}c_{13}s_{12}s_{23})\cos\delta \\
+		+&i(c_{12}c_{13}c_{12}s_{23}s_{13}+s_{12}c_{13}s_{12}s_{23}s_{13})\sin\delta \\
+		\Rightarrow & i(c_{12}c_{13}c_{12}s_{23}s_{13}+s_{12}c_{13}s_{12}s_{23}s_{13})\sin\delta = (c_{12}c_{13}c_{12}s_{23}s_{13}+s_{12}c_{13}s_{12}s_{23})\cos\delta \\
+		\Rightarrow & \tan\delta = -i
+		\end{split}
+	\]
+
+	(c)
+	\[
+		\begin{split}
+		Im(U_{1,1}^*U_{2,1}U_{1,3}U_{2,3}^*) =& Im[-c_{12}c_{13}(s_{12}c_{23}+c_{12}s_{23}s_{13}e^{i\delta})s_{13}s_{23}c_{13}e^{-i\delta}] \\
+		=& Im[-c_{12}c_{13}s_{12}c_{23}s_{13}s_{23}c_{13}e^{-i\delta}-c_{12}c_{13}c_{12}s_{23}s_{13}s_{13}s_{23}c_{13}] \\
+		=& c_{12}c_{13}s_{12}c_{23}s_{13}s_{23}c_{13}\sin\delta
+		\end{split}
+	\] 
+	\[
+	\begin{split}
+	Im(U_{1,2}^*U_{3,2}U_{1,3}U_{3,3}^*) =& -s_{12}c_{13}(c_{12}s_{23}+s_{12}c_{23}s_{13}e^{i\delta})s_{13}c_{23}c_{13}e^{-i\delta} \\
+	=& Im[-s_{12}c_{13}c_{12}s_{23}s_{13}c_{23}c_{13}e^{-i\delta}-s_{12}c_{13}s_{12}c_{23}s_{13}s_{13}c_{23}c_{13}] \\
+	=& s_{12}c_{13}c_{12}s_{23}s_{13}c_{23}c_{13}\sin\delta
+	\end{split}
+	\] 
+	I got the same value for two different arbitrarily chosen indices, but the factors in front of the $\sin\delta$ are not the same as those in the problem. I am unsure where I have gone wrong.
 \end{homeworkProblem}
 \end{document}
 
