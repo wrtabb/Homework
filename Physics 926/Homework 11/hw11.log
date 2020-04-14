@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  14 APR 2020 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  14 APR 2020 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -784,7 +784,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--309
 
  []
 
-<./Images/prob3.png, id=54, 1170.62344pt x 672.26157pt>
+<./Images/prob3.png, id=58, 1170.62344pt x 672.26157pt>
 File: ./Images/prob3.png Graphic file (type png)
 
 <use ./Images/prob3.png>
@@ -798,28 +798,27 @@ Overfull \hbox (57.02069pt too wide) in paragraph at lines 341--343
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
+[6] [7pdfTeX warning (ext4): destination with the same identifier (name{figure.
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.350 \end{document}
+l.358 \end{document}
                      <./Images/prob3.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
  (./hw11.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 358.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
 Package rerunfilecheck Info: File `hw11.out' has not changed.
-(rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
+(rerunfilecheck)             Checksum: 43B5C1C18FD7E756618D8FEAC01FF9E3;180.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
  ) 
 Here is how much of TeX's memory you used:
- 17580 strings out of 493033
- 334995 string characters out of 6137749
+ 17582 strings out of 493033
+ 335017 string characters out of 6137749
  419336 words of memory out of 5000000
- 20793 multiletter control sequences out of 15000+600000
+ 20794 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,66p,416b,390s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -836,10 +835,10 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2015/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti12.pfb>
-Output written on hw11.pdf (7 pages, 203865 bytes).
+Output written on hw11.pdf (7 pages, 206234 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 42 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
