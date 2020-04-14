@@ -156,8 +156,6 @@
 \begin{document}
 
 \maketitle
-*In addition to the lecture notes, the following resources were used to better understand the material:\\
-\url{https://arxiv.org/ftp/arxiv/papers/1511/1511.06752.pdf}\\
 
 \pagebreak
 
@@ -224,47 +222,19 @@
 	\textbf{Solution}
 	\\
 	\\
-	First we want to get the expression in terms of S.I. units as a starting point for the conversion. The factor in question, $\Delta m_{12}^2L/4E$, has to be dimensionless since it is the argument of a sine function. So let's look at the dimensions:
+	In homework \#1, we had to derive conversion factors between natural units and SI units. In this problem we will use this to convert between length in $GeV^{-1}$ and $km$. The various ratios for conversions are:
 	\[
 		\begin{split}
-		\frac{[\Delta m_{12}^2][L]}{[E]} =& \frac{M^2L}{ML^2/T^2} \\
-		=& \frac{MT^2}{L}
+		&L(GeV^{-1})=\frac{5.067\times 10^{15}\;GeV^{-1}}{1\;m}\frac{10^3 \; m}{1\; km}L(km) \\
+		&\Delta m^2 (GeV^2) = \left( \frac{1\; GeV}{10^9\; eV} \right)^2 \Delta m^2 (eV^2)
 		\end{split}
 	\]
-	To get this to be unitless, we need a factor with units of $L/MT^2$. Since we have been working under the paradigm that $c=\hbar =1$ we need to plug in factors of these to give the needed units. 
+	Now plug these into the argument of the sine function from the previous problem to see what we get:
 	\[
 		\begin{split} 
-		[c] =& \frac{L}{T} \\
-		[\hbar] = & \frac{ML^2}{T}
-		\end{split}
-	\]
-	To get the needed units of $L/MT^2$, we can see right away that $\hbar$ must be in the denominator with a power of one since it's the only unit with mass in it. The $T$ from $\hbar$ is going to cancel the $T$ from c, and we need a $T^2$ in the final result. This leads to the conclusion that $c$ must be to the third power. 
-	\[
-		\begin{split}
-		\frac{[c]^3}{[\hbar]} =& \left( \frac{L^3}{T^3} \right) \left( \frac{T}{ML^2} \right) \\
-		=& \frac{L}{MT^2}
-		\end{split}
-	\]
-	These are the dimensions we needed to make the argument of the sine function dimensionless. Therefore we can rewrite the argument this way:
-	\[
-		\frac{\Delta m_{12}^2L}{4E}\frac{c^3}{\hbar}
-	\]
-	Let's start with $kg, m, J$ and use the conversions we used earlier in the semester to convert to $eV, km, GeV$. Using the values I calculated back in Homework \#1:
-	\[
-		\begin{split} 
-		1kg =& 5.608\times10^{26} GeV \\
-		=& 5.608\times10^{35} eV \\
-		\Delta m_{12}^2 (kg^2) = & \frac{1}{(5.608\times10^{35})^2}\Delta m_{12}^2 (eV) \\
-		L (m) =& 10^3 L(km) \\
-		E (J) =& 1.602\times10^{-19} J \times 10^9 eV = 1.602\times10^{-10} E (GeV) \\
-		c =& 2.998\times10^8 m/s \\
-		\hbar =& 1.055 J\cdot s
-		\end{split}
-	\]
-	Now putting this all together, we get:
-	\[
-		\begin{split} 
-		\left[ \frac{1}{(5.608\times10^{35})^2}\Delta m_{12}^2 (eV^2)  \right] \left[ \frac{10^3 L (km)}{4\times 1.602\times10^{-10} E(GeV)} \right] \left[ \frac{(2.998\times10^8 m/s)^3}{1.055\times10^{-34} J\cdot s} \right]= 1.27\frac{\Delta m_{12}^2 (eV^2)L(km)}{E (GeV)}
+		\frac{\Delta m^2 (GeV^2)L(GeV^{-1})}{4E(GeV)}=&\frac{\left( \frac{1\; GeV}{10^9\; eV} \right)^2 \Delta m^2 (eV^2)\frac{5.067\times 10^{15}\;GeV^{-1}}{1\;m}\frac{10^3 \; m}{1\; km}L(km)}{4E(GeV)} \\
+		=& \frac{10^3}{10^{18}}\frac{5.067\times 10^{15}}{4}\frac{\Delta m^2 (eV^2)L(km)}{E (GeV)} \\
+		=& 1.27 \frac{\Delta m^2 (eV^2)L(km)}{E (GeV)}
 		\end{split}
 	\]
 \end{homeworkProblem}
@@ -287,7 +257,35 @@
 	\textbf{Solution}
 	\\
 	\\
-	(a)
+	(a) Starting with the energy given, $E=20 \; GeV$, we can calculate velocity and time and use basic special relativity to get a good estimate. I am going to assume that the bulk of pions decaying means betwen 5 and 10 lifetimes (This may be a bit of an overestimate, but might as well err on the side of caution).
+	\\
+	\\
+	Here are some relevant values:
+	\[
+		\begin{split}
+		&\bar{\tau}=(2.603\pm 0.005)\times 10^{-8}s \\
+		&m=0.14\; GeV = 1.78\times 10^{-27}\; kg \\
+		&E=20\; GeV \\
+		&p=\sqrt{E^2-m^2}\approx 20\;GeV = 1.07\times 10^{-17}\; kg\cdot m/s \\		
+		\end{split}
+	\]
+	Where $\bar{\tau}$ is the mean lifetime, $m$ is the mass, $E$ is the energy, and $p$ is the momentum.\\
+	Now I'll use these values to calculate velocity, lifetime in the rest frame of the particle, and thus the distance traveled.
+	\[
+		\begin{split}
+		&p=\gamma mv=\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}} \\
+		&v=\frac{cp}{\sqrt{m^2c^2+\frac{p^2}{c^2}}} = \frac{(2.998\times 10^8)(1.07\times 10^{-17})}{\sqrt{(1.78\times 10^{-27}\cdot 2.998\times10^8)^2+\left(\frac{1.07\times 10^{-17}}{2.998\times 10^8}\right)^2}} \\
+		&v=2.9979\times 10^8 m/s \approx 0.999976\; c \\
+		&\gamma = \frac{1}{\sqrt{1-0.999976^2}} = 143.3 \\
+		&\tau_{0,lower} = 5\gamma \bar{\tau} = 1.87\times 10^{-5}s \\
+		&\tau_{0,upper} = 10\gamma \bar{\tau} = 3.73\times 10^{-5}s \\
+		&d_{lower}=(2.9979\times 10^8)(1.87\times 10^{-5})  = 5.6\; km\\
+		&d_{upper}=(2.9979\times 10^8)(3.73\times 10^{-5})  = 11.1\; km\\
+		\end{split}
+	\]
+	Where $\tau_{0,lower}$ is the time estimate for five lifetimes, $\tau_{0,upper}$ is the time estimate for ten lifetimes, $d_{0,lower}$ is the distance using five lifetimes, and $d_{0,upper}$ is the distance using ten lifetimes. \\
+	\\
+	So based on my estimates the bulk of pions will be gone between $5.6$ and $11.1$ kilometers.
 	\\
 	\\
 	(b) In the lab frame, the four-momenta of each particle can be defined. Let the initial direction of the pion be in the x-direction. ($\sigma$ is the index of the four-vectors while $\mu$ and $\nu$ are reserved for the muon and neutrino)
