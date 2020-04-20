@@ -5,6 +5,7 @@
 \usepackage{braket}
 \usepackage{extramarks}
 \usepackage{amsmath}
+\usepackage{slashed}
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{tikz}
@@ -160,7 +161,62 @@
 \pagebreak
 
 \begin{homeworkProblem}
+	If the vertex factor for the decay of a vector boson $X$ into two spin-1/2 fermions $f_1$ and $f_2$ is
+	\[
+		-igx\gamma^\mu\frac{1}{2}(c_v-c_A\gamma^5)
+	\]
+	then show that
+	\[
+		\Gamma(X\rightarrow f_1\bar{f}_2)=\frac{g_X^2}{48\pi}(c_v^2+c_A^2)M_X
+	\]
+	where $M_X$ is the mass of the boson and where we have neglected the mass of the fermions. Hints: use
+	\[
+		\sum_{\lambda} \epsilon_\mu^{(\lambda)*} \epsilon_\nu^\lambda=-g_{\mu\nu}+\frac{p_\mu p_\nu}{M^2}
+	\]
+	to show that after summing over the fermions and averaging over the boson spins ,
+	\[
+		\overline{\abs{\mathcal{M}}^2}=\frac{1}{12} g_X^2(c_v^2+c_A^2)(-g_{\mu\nu})Tr(\gamma^\mu\slashed{k}\gamma^\nu\slashed{k}')
+	\]
+	where $k$ and $k'$ are the four-momenta of the fermions. Work in the boson rest frame, and use
+	\[
+		\Gamma(X\rightarrow f_1\bar{f}_2)\frac{p_f}{32\pi^2m_X^2}\int \overline{\abs{\mathcal{M}}^2} d\Omega
+	\]
 \textbf{Solution}
+\\
+\\
+	Using the vertex factor given in the problem, begin by writing the matrix element
+	\[
+		\begin{split}
+		\mathcal{M}=&\bar{u}(k)\left[-ig_X\gamma^\mu\frac{1}{2}(c_v-c_A\gamma^5)\right]v(k')\epsilon_\mu \\
+		=&-\frac{ig_X}{2}\left[\bar{u}(k)\gamma^\mu(c_v-c_A\gamma^5)v(k')\epsilon_\mu\right] \\
+		\abs{\mathcal{M}}^2 =&\frac{g_X^2}{4}\left[\bar{u}(k)\gamma^\mu(c_v-c_A\gamma^5)v(k')\epsilon_\mu\right]\left[\bar{u}(k)\gamma^\nu(c_v-c_A\gamma^5)v(k')\epsilon_\nu\right]^*
+		\end{split}
+	\]
+	We now need to write the average by summing over the spins and polarizations. In this step, assume the fermion masses can be neglected and use the formula: \( \sum_s [\bar{u}(a)\Gamma_1v(b)][\bar{u}(a)\Gamma_1v(b)]^* = Tr[\Gamma_1\slashed{b}\bar{\Gamma}_2\slashed{a}]  \), recalling that \( \bar{\Gamma} =\gamma^0\Gamma^\dagger\gamma^0 \)
+	\[
+		\begin{split}
+		\overline{\abs{\mathcal{M}}^2} =& \frac{1}{4}\sum_{s,\lambda}\abs{\mathcal{M}}^2 \\
+		=&\frac{g_X^2}{16}\sum_\lambda\left( \epsilon_\mu \epsilon_\nu^* \right) \sum_s \left[\bar{u}(k)\gamma^\mu(c_v-c_A\gamma^5)v(k')\right]\left[\bar{u}(k)\gamma^\nu(c_v-c_A\gamma^5)v(k')\right]^* \\
+		=&\frac{g_X^2}{16} \left( -g_{\mu\nu}+\frac{q_\mu q_\nu}{M_X^2} \right)Tr\left[ \gamma^\mu(c_v-c_A\gamma^5)\slashed{k}'\gamma^0(\gamma^\nu(c_v-c_A\gamma^5))^\dagger\gamma^0\slashed{k} \right] \\
+		=& \frac{g_X^2}{16} \left( -g_{\mu\nu}+\frac{q_\mu q_\nu}{M_X^2} \right)Tr\left[ (c_v\gamma^\mu\slashed{k}'-c_A\gamma^\mu\gamma^5\slashed{k}') (c_v\gamma^0\gamma^{\nu\dagger}\gamma^0\slashed{k}-c_A\gamma^0\gamma^{5\dagger}\gamma^{\nu\dagger}\gamma^0\slashed{k}) \right] \\
+		=& \frac{g_X^2}{16} \left( -g_{\mu\nu}+\frac{q_\mu q_\nu}{M_X^2} \right) Tr\left[ (c_v\gamma^\mu\slashed{k}'-c_A\gamma^\mu\gamma^5\slashed{k}')    (c_v\gamma^{\nu}\slashed{k}+c_A\gamma^{5}\gamma^{\nu}\slashed{k}) \right] \\
+		\end{split}
+	\]
+	Where the plus sign in the last line comes from letting \(\gamma^0\gamma^5\rightarrow \gamma^5\gamma^0  \)
+	Now let's evaluate that trace
+	\[
+		\begin{split} 
+		Tr\left[(c_v\gamma^\mu\slashed{k}'-c_A\gamma^\mu\gamma^5\slashed{k}')    (c_v\gamma^{\nu}\slashed{k}+c_A\gamma^{5}\gamma^{\nu}\slashed{k})  \right] =& Tr\left[ c_v^2\gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k}-c_A^2\gamma^\mu\gamma^5\slashed{k}'\gamma^{5}\gamma^{\nu}\slashed{k}  \right] \\
+		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] - c_A^2Tr \left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^{5}\gamma^{\nu}\slashed{k} \right] \\
+		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] - c_A^2Tr \left[- \gamma^\mu\slashed{k}'\gamma^5\gamma^{5}\gamma^{\nu}\slashed{k} \right] \\
+		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] + c_A^2Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] \\
+		=& 2Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2)
+		\end{split}
+	\]
+	Putting all this together:
+	\[
+		\overline{\abs{\mathcal{M}}^2} = \frac{g_X^2}{8} \left( -g_{\mu\nu}+\frac{q_\mu q_\nu}{M_X^2} \right)Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2)
+	\]
 \end{homeworkProblem}
 
 \pagebreak
