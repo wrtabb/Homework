@@ -226,13 +226,18 @@
 		\overline{\abs{\mathcal{M}}^2} =& \frac{g_X^2}{12} \left( -g_{\mu\nu} +q_\mu q_\nu \right)Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2) \\
 		=&\frac{g_X^2}{12} \left( -g_{\mu\nu}Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] +q_\mu q_\nu Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] \right)(c_v^2+c_A^2) \\
 		=& \frac{g_X^2}{12} \left( -g_{\mu\nu}4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) +q_\mu q_\nu 4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) \right)(c_v^2+c_A^2) \\
-		=& 
+		=& -\frac{g_X^2}{12} 4\left( k'_\nu k^\nu-4(k'\cdot k)+k'_\nu k^\nu +\left(\frac{M_X^2}{2}\right)^2+\left(\frac{M_X^2}{2}\right)^2-2\frac{M_X^2}{4}M_X^2 \right)(c_v^2+c_A^2) \\
+		=& -\frac{g_X^2}{3} \left( 2(k'\cdot k)-4(k'\cdot k)\right)(c_v^2+c_A^2) \\
+		=& \frac{g_X^2}{3} \left( 2(k'\cdot k)\right)(c_v^2+c_A^2) 
 		\end{split} 
 	\]
 	Now we calculate the decay rate, $\Gamma$, but first let's go ahead and evaluate that trace
 	\[
 		\begin{split}
-		\Gamma(X\rightarrow f_1\bar{f}_2) = \frac{p_f}{32\pi^2M_X^2}\int \overline{\abs{\mathcal{M}}^2}d\Omega \\
+		\Gamma(X\rightarrow f_1\bar{f}_2) =& \frac{p_f}{32\pi^2M_X^2}\int \overline{\abs{\mathcal{M}}^2}d\Omega \\
+		=&\frac{M_X}{2}\frac{2g_X^2}{96\pi^2M_X^2}(c_v^2+c_A^2)\int k'\cdot k d\Omega \\
+		=& \frac{g_X^2}{96\pi^2M_X}(c_v^2+c_A^2)4\pi \frac{M_X^2}{2} \\
+		=& \frac{g_X^2}{48\pi}(c_v^2+c_A^2) M_X
 		\end{split}
 	\]
 \end{homeworkProblem}
