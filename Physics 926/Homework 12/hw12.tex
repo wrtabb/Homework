@@ -213,20 +213,20 @@
 		=& Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2)-2c_vc_ATr\left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^\nu\slashed{k} \right]
 		\end{split}
 	\]
-	From the trace theorems in Chapter 6 of the text, we see that our last trace is proportional to the levi-cevita tensor which is antisymmetric. Both $g_{\mu\nu}$ and $q_\mu q_\nu$ are symmetric. The inner product between an antisymmetric and a symmetric tensor is zero.
+	From the trace theorems in Chapter 6 of the text, we see that our last trace is proportional to the levi-cevita tensor which is antisymmetric. Both $g_{\mu\nu}$ and $q_\mu q_\nu$ are symmetric. The inner product between an antisymmetric and a symmetric tensor is zero, therefore this term disappears.
 	\\
 	\\
-	Since we are working the rest frame of the boson, we have the following four-momenta:
+	Since we are working in the rest frame of the boson, we have the following four-momenta:
 	\[
-		P_X^\sigma = (M_X,0),\; P_1^\sigma=(\frac{M_X}{2},\vec{p}),\; P_2^\sigma = (\frac{M_X}{2},-\vec{p})
+		P_X^\sigma = \left(M_X,0\right),\; P_1^\sigma=\left(\frac{M_X}{2},\vec{p}\right),\; P_2^\sigma = \left(\frac{M_X}{2},-\vec{p}\right)
 	\]
 	Putting all this together:
 	\[
 		\begin{split} 
-		\overline{\abs{\mathcal{M}}^2} =& \frac{g_X^2}{12} \left( -g_{\mu\nu} +q_\mu q_\nu \right)Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2) \\
-		=&\frac{g_X^2}{12} \left( -g_{\mu\nu}Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] +q_\mu q_\nu Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] \right)(c_v^2+c_A^2) \\
-		=& \frac{g_X^2}{12} \left( -g_{\mu\nu}4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) +q_\mu q_\nu 4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) \right)(c_v^2+c_A^2) \\
-		=& -\frac{g_X^2}{12} 4\left( k'_\nu k^\nu-4(k'\cdot k)+k'_\nu k^\nu +\left(\frac{M_X^2}{2}\right)^2+\left(\frac{M_X^2}{2}\right)^2-2\frac{M_X^2}{4}M_X^2 \right)(c_v^2+c_A^2) \\
+		\overline{\abs{\mathcal{M}}^2} =& \frac{g_X^2}{12} \left( -g_{\mu\nu} +\frac{q_\mu q_\nu}{M_X^2} \right)Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2) \\
+		=&\frac{g_X^2}{12} \left( -g_{\mu\nu}Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] +\frac{q_\mu q_\nu}{M_X^2} Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] \right)(c_v^2+c_A^2) \\
+		=& \frac{g_X^2}{12} \left( -g_{\mu\nu}4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) +\frac{q_\mu q_\nu}{M_X^2} 4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) \right)(c_v^2+c_A^2) \\
+		=& -\frac{g_X^2}{12} 4\left( k'_\nu k^\nu-4(k'\cdot k)+k'_\nu k^\nu +\left( \frac{1}{M_X^2} \right)\left[\left(\frac{M_X^2}{2}\right)^2+\left(\frac{M_X^2}{2}\right)^2-2\frac{M_X^2}{4}M_X^2 \right] \right)(c_v^2+c_A^2) \\
 		=& -\frac{g_X^2}{3} \left( 2(k'\cdot k)-4(k'\cdot k)\right)(c_v^2+c_A^2) \\
 		=& \frac{g_X^2}{3} \left( 2(k'\cdot k)\right)(c_v^2+c_A^2) 
 		\end{split} 
