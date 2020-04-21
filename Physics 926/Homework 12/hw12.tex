@@ -244,36 +244,90 @@
 		\end{tabular}
 	\end{center}
 
-	The decay widths: (all of these have the form $Z\rightarrow ff$, so in the equations I just put which type of fermion it decays to)
+	The relation between $G_F$ and $g$ is given by \( G_F=\frac{\sqrt{2}}{8}\frac{g^2}{M_X^2} \). So in the decay equation, we write:
+	\[
+		\Gamma(X\rightarrow f_1\bar{f}_2)=\frac{8G_FM_X^2}{\sqrt{2}48\pi}(c_v^2+c_A^2)M_X=\frac{G_FM_X^3}{6\pi\sqrt{2}}(c_v^2+c_A^2)
+	\]
+	The decay widths: (all of these have the form $Z\rightarrow ff$, so in the equations I just put which type of fermion it decays to). The values of the constant, $c_v$ and $c_A$ come from the textbook, p. 301 using $\sin^2\theta_W=0.23$.
 	\[
 		\begin{split}
-		\Gamma(q^+) =& \frac{G^2M_Z(c_{v,q^+}^2+c_{A,q^+}^2)}{48\pi} \\
-		=& 2.37\times 10^{-11} \\
-		\Gamma(q^-) =& \frac{G^2M_Z(c_{v,q^-}^2+c_{A,q^-}^2)}{48\pi} \\
-		=& 3.08\times 10^{-11} \\
-		\Gamma(l) =& \frac{G^2M_Z(c_{v,l}^2+c_{A,l}^2)}{48\pi} \\
-		=& 2.08\times 10^{-11} \\
-		\Gamma(\nu) =& \frac{G^2M_Z(c_{v,\nu}^2+c_{A,\nu}^2)}{48\pi} \\
-		=& 4.13\times 10^{-11} \\
-		\Gamma_Z =& 2\Gamma(q^+)+3(\Gamma(q^-)+\Gamma(l)+\Gamma(\nu))	\\
-		=& 3.24\times10^{-10}
+		\Gamma(q^+) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,q^+}^2+c_{A,q^+}^2) \\
+		=& 0.095 \\
+		\Gamma(q^-) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,q^-}^2+c_{A,q^-}^2) \\
+		=& 0.12 \\
+		\Gamma(l) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,l}^2+c_{A,l}^2) \\
+		=& 0.083 \\
+		\Gamma(\nu) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,\nu}^2+c_{A,\nu}^2) \\
+		=& 0.165 \\
+		\Gamma_Z =& 	\\
+		=& 0.47
 		\end{split} 
 	\]
 	Then the branching ratios are:
 	\[
 		\begin{split} 
-		\Gamma(q^+)/\Gamma_Z =& 0.073\\
-		\Gamma(q^-)/\Gamma_Z =& 0.094\\
-		\Gamma(l)/\Gamma_Z =& 0.064\\
-		\Gamma(\nu)/\Gamma_Z =& 0.13
+		\Gamma(q^+)/\Gamma_Z =& 0.20\\
+		\Gamma(q^-)/\Gamma_Z =& 0.26\\
+		\Gamma(l)/\Gamma_Z =& 0.18\\
+		\Gamma(\nu)/\Gamma_Z =& 0.35
 		\end{split}
+	\]
+	Now for the $W$ decays. We have to be careful to separate the positive from the negative $W$ boson. We also have to consider that the $W$ boson allows for flavor changing interactions.
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|c|} 
+			quarks & $W^+\rightarrow u\bar{d}$ & $W^+\rightarrow u\bar{s}$ & $W^+\rightarrow u\bar{b}$ & $W^+\rightarrow c\bar{d}$ & $W^+\rightarrow c\bar{s}$ & $W^+\rightarrow c\bar{b}$ \\  
+			quarks & $W^-\rightarrow \bar{u}d$ & $W^-\rightarrow \bar{u}s$ & $W^-\rightarrow \bar{u}b$ & $W^-\rightarrow \bar{c}d$ & $W^+\rightarrow \bar{c}s$ & $W^+\rightarrow \bar{c}b$ \\ 
+			lepton $\nu$ & $W^+\rightarrow e^+\nu_e$ & $W^+\rightarrow \mu^+\nu_\mu$ & $W^+\rightarrow \tau^+\nu_\tau$ & X & X & X \\
+			lepton $\nu$ & $W^-\rightarrow e^-\bar{\nu}_e$ & $W^-\rightarrow \mu^-\bar{\nu}_\mu$ & $W^-\rightarrow \tau^-\bar{\nu}_\tau$ & X & X & X \\		    
+		\end{tabular}
+	\end{center}
+	Since $W$ goes to particles and antiparticles the same way, just with everything conjugated, the decay rates will be the same. So only one from each pair needs to be calculated. In the case of the quarks, we have to include the strength of the flavor-changing interactions from the CKM matrix. Because these are different for different quark pairs, unlike with the $Z$ decay, we have to calculate different decay widths for each quark pair. Also note, $c_A=c_v=1/\sqrt{2}$ for $W$ decays.
+	\[
+		\begin{split} 
+		\Gamma(l^+\nu)=&\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.114\\
+		\Gamma(u\bar{d})=&V_{ud}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.111\\
+		\Gamma(u\bar{s})=&V_{us}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.0257\\
+		\Gamma(u\bar{b})=&V_{ub}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.000400\\
+		\Gamma(c\bar{d})=&V_{cd}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.0257\\
+		\Gamma(c\bar{s})=&V_{cs}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.111\\
+		\Gamma(c\bar{b})=&V_{cb}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
+		=& 0.00470\\
+		\Gamma_W = 0.785
+		\end{split} 
+	\]
+	The branching ratios are then:
+	\[
+		\begin{split} 
+		\Gamma(l^+\nu)/\Gamma_W =& 0.145 \\
+		\Gamma(u\bar{d})/\Gamma_W =& 0.141 \\
+		\Gamma(u\bar{b})/\Gamma_W =& 0.0327 \\
+		\Gamma(u\bar{s}/\Gamma_W =& 0.000510 \\
+		\Gamma(c\bar{d})/\Gamma_W =& 0.0327 \\
+		\Gamma(c\bar{s})/\Gamma_W =& 0.141 \\
+		\Gamma(c\bar{b})/\Gamma_W =& 0.00510 
+		\end{split} 
 	\]
 \end{homeworkProblem}
 
 \pagebreak
 
 \begin{homeworkProblem}
-\textbf{Solution}
+	The Lagrangian for three interacting real fields $\phi_1$, $\phi_2$, $\phi_3$ is
+	\[
+		\mathcal{L}=\frac{1}{2}(\partial_\mu\phi_i)^2-\frac{1}{2}\mu^2\phi_i^2-\frac{1}{4}\lambda(\phi_i^2)^2
+	\]
+	with $\mu^2<0$ and $\lambda>0$, and where summation of $\phi_i^2$ over $i$ is implied. Show that it describes a massive field of mass $\sqrt{-2\mu^2}$ and two massless Goldstone bosons.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
 \end{homeworkProblem}
 
 \end{document}
