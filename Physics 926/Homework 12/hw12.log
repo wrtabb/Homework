@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  21 APR 2020 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  21 APR 2020 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,19 +748,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--337
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--356
+Underfull \hbox (badness 10000) in paragraph at lines 351--359
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--359
 
  []
 
 [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
  (./hw12.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `hw12.out' has not changed.
 (rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
  17584 strings out of 493033
@@ -783,7 +788,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2015/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti12.pfb>
-Output written on hw12.pdf (6 pages, 171283 bytes).
+Output written on hw12.pdf (6 pages, 171491 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
