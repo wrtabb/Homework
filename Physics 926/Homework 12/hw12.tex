@@ -333,6 +333,32 @@
 	\textbf{Solution}
 	\\
 	\\
+	We can rewrite this in a more explicit way as:
+	\[
+		\mathcal{L}=\frac{1}{2}(\partial_\mu\phi_1)^2+\frac{1}{2}(\partial_\mu\phi_2)^2+\frac{1}{2}(\partial_\mu\phi_3)^2-\frac{1}{2}\mu^2(\phi_1^2+\phi_2^2+\phi_3^2)-\frac{1}{4}\lambda(\phi_1^2+\phi_2^2+\phi_3^2)^2
+	\]
+	The last two terms describe the potential. For the case where $\mu^2<0$ we have a a breaking of the symmetry of the potential. We have a set of minima that satisfy the equation:
+	\[
+		\phi_1^2+\phi_2^2+\phi_3^2=v^2=-\frac{\mu^2}{\lambda}
+	\]
+	This is the equation of a sphere and any point on this sphere represents a potential minimum. In order to expand the Lagrangian about the minimum, we have to choose one, thus breaking the symmetry. Let's choose $\phi_1=v,\;\phi_2=0,\; \phi_3=0$. Let's do an expansion like:
+	\[
+		\phi\propto\left[ v+\eta(x)+i\xi(x)+j\rho(x) \right]
+	\]
+	Then if we plug this into the Lagrangian, we get something like what was given in the lecture notes:
+	\[
+		\mathcal{L}=\frac{1}{2}(\partial_\mu\xi)^2+\frac{1}{2}(\partial_\mu\rho)^2+\frac{1}{2}(\partial_\mu\eta)^2+\mu^2\eta^2+\cdots
+	\]
+	Just as in the notes, we have a massive field, $eta$, and two massless fields which are called Golstone bosons. 
+	\\
+	\\
+	Using the rule for determining the mass of the field, let's look at the mass term:
+	\[
+		\begin{split} 
+		\mu^2\eta^2=\frac{1}{2}(-2\mu^2)\eta^2 \\
+		\Rightarrow mass = \sqrt{-2\mu^2}
+		\end{split}
+	\]
 \end{homeworkProblem}
 
 \end{document}
