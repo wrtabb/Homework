@@ -206,16 +206,28 @@
 	Now let's evaluate that trace
 	\[
 		\begin{split} 
-		Tr\left[(c_v\gamma^\mu\slashed{k}'-c_A\gamma^\mu\gamma^5\slashed{k}')    (c_v\gamma^{\nu}\slashed{k}+c_A\gamma^{5}\gamma^{\nu}\slashed{k})  \right] =& Tr\left[ c_v^2\gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k}-c_A^2\gamma^\mu\gamma^5\slashed{k}'\gamma^{5}\gamma^{\nu}\slashed{k}  \right] \\
-		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] - c_A^2Tr \left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^{5}\gamma^{\nu}\slashed{k} \right] \\
-		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] - c_A^2Tr \left[- \gamma^\mu\slashed{k}'\gamma^5\gamma^{5}\gamma^{\nu}\slashed{k} \right] \\
-		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] + c_A^2Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] \\
-		=& Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2)
+		Tr\left[(c_v\gamma^\mu\slashed{k}'-c_A\gamma^\mu\gamma^5\slashed{k}')    (c_v\gamma^{\nu}\slashed{k}+c_A\gamma^{5}\gamma^{\nu}\slashed{k})  \right] =& Tr\left[ c_v^2\gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k}-c_A^2\gamma^\mu\gamma^5\slashed{k}'\gamma^{5}\gamma^{\nu}\slashed{k} -2c_vc_A\gamma^\mu\gamma^5\slashed{k}'\gamma^\nu\slashed{k} \right] \\
+		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] - c_A^2Tr \left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^{5}\gamma^{\nu}\slashed{k} \right] - 2c_vc_ATr\left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^\nu\slashed{k} \right]\\
+		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] - c_A^2Tr \left[- \gamma^\mu\slashed{k}'\gamma^5\gamma^{5}\gamma^{\nu}\slashed{k} \right]-2c_vc_ATr\left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^\nu\slashed{k} \right] \\
+		=& c_v^2Tr\left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] + c_A^2Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] -2c_vc_ATr\left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^\nu\slashed{k} \right]\\
+		=& Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2)-2c_vc_ATr\left[ \gamma^\mu\gamma^5\slashed{k}'\gamma^\nu\slashed{k} \right]
 		\end{split}
+	\]
+	From the trace theorems in Chapter 6 of the text, we see that our last trace is proportional to the levi-cevita tensor which is antisymmetric. Both $g_{\mu\nu}$ and $q_\mu q_\nu$ are symmetric. The inner product between an antisymmetric and a symmetric tensor is zero.
+	\\
+	\\
+	Since we are working the rest frame of the boson, we have the following four-momenta:
+	\[
+		P_X^\sigma = (M_X,0),\; P_1^\sigma=(\frac{M_X}{2},\vec{p}),\; P_2^\sigma = (\frac{M_X}{2},-\vec{p})
 	\]
 	Putting all this together:
 	\[
-		\overline{\abs{\mathcal{M}}^2} = \frac{g_X^2}{12} \left( -g_{\mu\nu} \right)Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2)
+		\begin{split} 
+		\overline{\abs{\mathcal{M}}^2} =& \frac{g_X^2}{12} \left( -g_{\mu\nu} +q_\mu q_\nu \right)Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right](c_v^2+c_A^2) \\
+		=&\frac{g_X^2}{12} \left( -g_{\mu\nu}Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] +q_\mu q_\nu Tr \left[ \gamma^\mu\slashed{k}'\gamma^{\nu}\slashed{k} \right] \right)(c_v^2+c_A^2) \\
+		=& \frac{g_X^2}{12} \left( -g_{\mu\nu}4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) +q_\mu q_\nu 4(k'^\mu k^\nu-g^{\mu\nu}(k'\cdot k)+k'^\mu k^\nu) \right)(c_v^2+c_A^2) \\
+		=& 
+		\end{split} 
 	\]
 	Now we calculate the decay rate, $\Gamma$, but first let's go ahead and evaluate that trace
 	\[
@@ -251,16 +263,11 @@
 	The decay widths: (all of these have the form $Z\rightarrow ff$, so in the equations I just put which type of fermion it decays to). The values of the constant, $c_v$ and $c_A$ come from the textbook, p. 301 using $\sin^2\theta_W=0.23$.
 	\[
 		\begin{split}
-		\Gamma(q^+) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,q^+}^2+c_{A,q^+}^2) \\
-		=& 0.095 \\
-		\Gamma(q^-) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,q^-}^2+c_{A,q^-}^2) \\
-		=& 0.12 \\
-		\Gamma(l) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,l}^2+c_{A,l}^2) \\
-		=& 0.083 \\
-		\Gamma(\nu) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,\nu}^2+c_{A,\nu}^2) \\
-		=& 0.165 \\
-		\Gamma_Z =& 	\\
-		=& 0.47
+		\Gamma(q^+) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,q^+}^2+c_{A,q^+}^2) = 0.0950 \\
+		\Gamma(q^-) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,q^-}^2+c_{A,q^-}^2) = 0.123 \\
+		\Gamma(l) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,l}^2+c_{A,l}^2) = 0.0832 \\
+		\Gamma(\nu) =& \frac{G_FM_Z^3}{6\pi\sqrt{2}}(c_{v,\nu}^2+c_{A,\nu}^2) = 0.165 \\
+		\Gamma_Z =& 0.467
 		\end{split} 
 	\]
 	Then the branching ratios are:
@@ -284,33 +291,26 @@
 	Since $W$ goes to particles and antiparticles the same way, just with everything conjugated, the decay rates will be the same. So only one from each pair needs to be calculated. In the case of the quarks, we have to include the strength of the flavor-changing interactions from the CKM matrix. Because these are different for different quark pairs, unlike with the $Z$ decay, we have to calculate different decay widths for each quark pair. Also note, $c_A=c_v=1/\sqrt{2}$ for $W$ decays.
 	\[
 		\begin{split} 
-		\Gamma(l^+\nu)=&\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.114\\
-		\Gamma(u\bar{d})=&V_{ud}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.111\\
-		\Gamma(u\bar{s})=&V_{us}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.0257\\
-		\Gamma(u\bar{b})=&V_{ub}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.000400\\
-		\Gamma(c\bar{d})=&V_{cd}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.0257\\
-		\Gamma(c\bar{s})=&V_{cs}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.111\\
-		\Gamma(c\bar{b})=&V_{cb}\frac{G_FM_W^3}{12\pi\sqrt{2}} \\
-		=& 0.00470\\
-		\Gamma_W = 0.785
+		\Gamma(l^+\nu)=&\frac{G_FM_W^3}{12\pi\sqrt{2}} = 0.114\\
+		\Gamma(u\bar{d})=&V_{ud}^2\frac{G_FM_W^3}{12\pi\sqrt{2}} = 0.108\\
+		\Gamma(u\bar{s})=&V_{us}^2\frac{G_FM_W^3}{12\pi\sqrt{2}} = 0.00577\\
+		\Gamma(u\bar{b})=&V_{ub}^2\frac{G_FM_W^3}{12\pi\sqrt{2}} = 1.41\times 10^{-6}\\
+		\Gamma(c\bar{d})=&V_{cd}^2\frac{G_FM_W^3}{12\pi\sqrt{2}} = 0.00577\\
+		\Gamma(c\bar{s})=&V_{cs}^2\frac{G_FM_W^3}{12\pi\sqrt{2}} = 0.108\\
+		\Gamma(c\bar{b})=&V_{cb}^2\frac{G_FM_W^3}{12\pi\sqrt{2}} = 0.000194\\
+		\Gamma_W =& 0.684
 		\end{split} 
 	\]
 	The branching ratios are then:
 	\[
 		\begin{split} 
-		\Gamma(l^+\nu)/\Gamma_W =& 0.145 \\
-		\Gamma(u\bar{d})/\Gamma_W =& 0.141 \\
-		\Gamma(u\bar{b})/\Gamma_W =& 0.0327 \\
-		\Gamma(u\bar{s}/\Gamma_W =& 0.000510 \\
-		\Gamma(c\bar{d})/\Gamma_W =& 0.0327 \\
-		\Gamma(c\bar{s})/\Gamma_W =& 0.141 \\
-		\Gamma(c\bar{b})/\Gamma_W =& 0.00510 
+		\Gamma(l^+\nu)/\Gamma_W =& 0.167 \\
+		\Gamma(u\bar{d})/\Gamma_W =& 0.158 \\
+		\Gamma(u\bar{b})/\Gamma_W =& 0.00844 \\
+		\Gamma(u\bar{s}/\Gamma_W =& 2.05\times10^{-6} \\
+		\Gamma(c\bar{d})/\Gamma_W =& 0.00844 \\
+		\Gamma(c\bar{s})/\Gamma_W =& 0.158 \\
+		\Gamma(c\bar{b})/\Gamma_W =& 0.000283 
 		\end{split} 
 	\]
 \end{homeworkProblem}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  21 APR 2020 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  21 APR 2020 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -717,13 +717,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--188
 
  []
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 231--233
+
+Overfull \hbox (19.58563pt too wide) in paragraph at lines 215--215
+[] 
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 215--220
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--239
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
 
  []
 
@@ -750,11 +760,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 333.
 Here is how much of TeX's memory you used:
  17584 strings out of 493033
  335109 string characters out of 6137749
- 423621 words of memory out of 5000000
+ 426621 words of memory out of 5000000
  20798 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,20n,66p,502b,394s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,21n,66p,502b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2015
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2015/texmf-di
@@ -768,7 +778,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2015/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmti12.pfb>
-Output written on hw12.pdf (6 pages, 164524 bytes).
+Output written on hw12.pdf (6 pages, 166948 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
