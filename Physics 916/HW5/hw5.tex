@@ -1,0 +1,214 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{braket}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{ {./Images/} }
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\newcommand*{\Value}{\frac{1}{2}x^2}%
+
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName}
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Homework\ \#5}
+\newcommand{\hmwkDueDate}{April , 2020}
+\newcommand{\hmwkClass}{Physics 916}
+\newcommand{\hmwkClassTime}{}
+\newcommand{\hmwkClassInstructor}{Professor Jean Marcel Ngoko}
+\newcommand{\hmwkAuthorName}{\textbf{Robert Tabb}}
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\hmwkAuthorName}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\begin{homeworkProblem}
+	Show that any $2\times2$ matrix can be represented in terms of the identity matrix and the pauli matrices.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	First I will use a common convention and define $\sigma_0$ as the identity operator. So we have:
+	\[
+		\begin{split} 
+		M=\vec{a}\cdot\vec{\sigma} 
+		=& a_0 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+		+ a_1 \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+		+ a_2 \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
+		+ a_3 \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \\
+		=& \begin{pmatrix} a_0+a_3 & a_1-ia_2 \\ a_1+ia_2 & a_0-a_3 \end{pmatrix}
+		\end{split} 
+	\]
+	Assuming that the elements of $\vec{a}$ are complex, they can be used to define any number in the matrix $M$ which I defined above.
+\end{homeworkProblem}
+
+\pagebreak
+
+\begin{homeworkProblem}
+	Show that 
+	\[
+		\left[ S_x,S_y \right] = i\hbar S_z
+	\]
+	\textbf{Solution}
+	\\
+	\\
+	\[
+		S_x = \frac{\hbar}{2}\sigma_x,\; S_y = \frac{\hbar}{2}\sigma_y,\;S_z = \frac{\hbar}{2}\sigma_z
+	\]
+	\[
+		\begin{split}
+		S_xS_y=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} 
+		\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} = \frac{\hbar^2}{4} \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} \\
+		S_yS_x=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
+		\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \frac{\hbar^2}{4} \begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} \\
+		\end{split} 
+	\]
+	\[
+		\begin{split} 
+		S_xS_y-S_yS_x =& \frac{\hbar^2}{4} \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} - \frac{\hbar^2}{4} \begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} \\
+		=& \frac{\hbar^2}{4} \begin{pmatrix} 2i & 0 \\ 0 & -2i \end{pmatrix} = \frac{i\hbar^2}{2} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \\
+		=& i\hbar\left( \frac{\hbar}{2}\sigma_z \right) \\
+		\Rightarrow \left[ S_x,S_y \right] =& i\hbar S_z
+		\end{split} 
+	\]
+	
+\end{homeworkProblem}
+\end{document}
