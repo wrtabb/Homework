@@ -204,18 +204,125 @@
 \end{homeworkProblem}
 
 \pagebreak
+\begin{homeworkProblem}
+
+\end{homeworkProblem}
+
+\pagebreak
 
 \begin{homeworkProblem}
-	Show that 
-	\[
-		\left[ S_x,S_y \right] = i\hbar S_z
-	\]
+	The spin operator, $\boldsymbol{S}$ of an electron is pointing in any direction and is related to the Pauli matrices as $\boldsymbol{S}=\frac{\hbar}{2}\boldsymbol{\sigma}$ in the orthonormal basis $\{\ket{+},\ket{-}\}$ for $S_z$.
+	\\
+	\\
+	1. Write down the matrix for $S_x,\;S_y,\;S_z,\;S_u$. Are they Hermitian? \\
+	2. Determine the eigenvalues of each component for the spin operator. \\
+	3. Determine the eigenvectors of each component for the spin operator. \\
+	4. Show that $[S_x,S_y]=i\hbar S_z$, $[S_y,S_z]=i\hbar S_x$, $[S_z,S_x]=i\hbar S_y$ \\
+	5. Show that $[\boldsymbol{S}^2,\boldsymbol{S}]=0$ 
+	\\
+	\\
+
 	\textbf{Solution}
 	\\
 	\\
+	1. For $S_x,S_y,S_z$, we simply plug in the Pauli matrices.
 	\[
-		S_x = \frac{\hbar}{2}\sigma_x,\; S_y = \frac{\hbar}{2}\sigma_y,\;S_z = \frac{\hbar}{2}\sigma_z
+		\begin{split} 
+		S_x=& \frac{\hbar}{2}\sigma_x = \frac{\hbar}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+		S_y=& \frac{\hbar}{2}\sigma_y = \frac{\hbar}{2}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \\
+		S_z=& \frac{\hbar}{2}\sigma_z = \frac{\hbar}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+		\end{split} 
 	\]
+	To find $S_u$ we use the definition: $S_u=\boldsymbol{S}\cdot\boldsymbol{u}$, where $\boldsymbol{u}$ is the unit vector in 3-dimensional space.
+	\[
+		\begin{split}
+		S_u =& \boldsymbol{S}\cdot\boldsymbol{u}=S_xu_x+S_yu_y+S_zu_z \\
+		=&\frac{\hbar}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \sin\theta\cos\phi
+		+\frac{\hbar}{2}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \sin\theta\sin\phi
+		+\frac{\hbar}{2}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \cos\theta \\
+		=& \frac{\hbar}{2}\begin{pmatrix} \cos\theta & \sin\theta\cos\phi-i\sin\theta\sin\phi \\ \sin\theta\cos\phi+i\sin\theta\sin\phi & \cos\theta \end{pmatrix} \\
+		=& \frac{\hbar}{2}\begin{pmatrix} \cos\theta & \sin\theta(\cos\phi-i\sin\phi) \\ \sin\theta(\cos\phi+i\sin\phi) & \cos\theta \end{pmatrix} \\
+		=& \frac{\hbar}{2}\begin{pmatrix} \cos\theta & e^{-i\phi}\sin\theta \\ e^{i\phi}\sin\theta & \cos\theta \end{pmatrix}
+		\end{split}
+	\]
+	Each of these matrices is symmetric except for the two cases with complex parts, $S_y,S_u$, but in both of those matrices, $S_{21} = S_{12}^*$, so these are all Hermitian.
+	\\
+	\\
+	2. We find the eigenvalues in the usual way by solving the characteristic equation. \\
+	For $S_x$:
+	\[
+		\begin{split} 
+		\begin{vmatrix} -\lambda & \hbar/2 \\ \hbar/2 & -\lambda \end{vmatrix} = \lambda^2-\frac{\hbar^2}{4} =0 \Rightarrow \lambda = \pm \hbar/2 \\
+		\end{split}
+	\]
+	For $S_y$:
+	\[
+	\begin{split} 
+	\begin{vmatrix} -\lambda & -i\hbar/2 \\ i\hbar/2 & -\lambda \end{vmatrix} = \lambda^2+i^2\frac{\hbar^2}{4} = \lambda^2-\frac{\hbar^2}{4} = 0 \Rightarrow \lambda = \pm \hbar/2 \\
+	\end{split}
+	\]
+	For $S_x$:
+	\[
+	\begin{split} 
+	\begin{vmatrix} \hbar/2-\lambda & 0 \\ 0 & \hbar/2-\lambda \end{vmatrix} = -\left(\frac{\hbar}{2}+\lambda\right)\left(\frac{\hbar}{2}-\lambda\right) = 0 \Rightarrow \lambda = \pm \hbar/2
+	\end{split}
+	\]
+	So each of the spin operators has the same eigenvalues.
+	\\
+	\\
+	3. For each of the spin operators, plug the eigenvalues calculated in the last part into the eigenvalue equation and calculate the eigenvectors.
+	\\
+	For $S_x$,$\lambda=+1$ (leaving off the factors of $\hbar/2$ since they don't matter here):
+	\[
+		\begin{split} 
+		&\begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_2=c_1 \\
+		&\vec{v}_{\lambda=+1} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}
+		\end{split}
+	\]
+	For $S_x$,$\lambda=-1$:
+	\[
+	\begin{split} 
+	&\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+	&c_2=-c_1 \\
+	&\vec{v}_{\lambda=-1} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -1 \end{pmatrix}
+	\end{split}
+	\]
+	For $S_y$,$\lambda=+1$:
+	\[
+	\begin{split} 
+	&\begin{pmatrix} -1 & -i \\ i & -1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+	&c_2=ic_1 \\
+	&\vec{v}_{\lambda=+1} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}
+	\end{split}
+	\]
+	For $S_y$,$\lambda=-1$:
+	\[
+	\begin{split} 
+	&\begin{pmatrix} 1 & -i \\ i & 1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+	&c_2=-ic_1 \\
+	&\vec{v}_{\lambda=-1} = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ -i \end{pmatrix}
+	\end{split}
+	\]
+	For $S_z$,$\lambda=+1$:
+	\[
+	\begin{split} 
+	&\begin{pmatrix} 0 & 0 \\ 0 & -2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+	&c_2=0 \\
+	&\vec{v}_{\lambda=+1} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+	\end{split}
+	\]
+	For $S_z$,$\lambda=-1$:
+	\[
+	\begin{split} 
+	&\begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+	&c_1=0 \\
+	&\vec{v}_{\lambda=+1} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+	\end{split}
+	\]
+	
+
+	4. Use the matrix definitions given in part 1 to explicitly calculate the commutators
 	\[
 		\begin{split}
 		S_xS_y=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} 
