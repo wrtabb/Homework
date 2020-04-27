@@ -160,7 +160,11 @@
 \pagebreak
 
 \begin{homeworkProblem}
-	Show that any $2\times2$ matrix can be represented in terms of the identity matrix and the pauli matrices.
+	Show that in general, any $2\times2$ matrix $M$ can be represented in terms of the unit matrix, $I$, and the Pauli matrices. i.e.
+	\[
+		M=\begin{pmatrix} M_{11} & M_{12} \\ M_{21} & M_{22} \end{pmatrix} = a_0I+\vec{a}\cdot \vec{\sigma}
+	\]
+	where the expansion coefficients $a_i=\frac{1}{2}Tr\{M\sigma_i\}$
 	\\
 	\\
 	\textbf{Solution}
@@ -174,10 +178,29 @@
 		+ a_1 \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
 		+ a_2 \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
 		+ a_3 \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \\
-		=& \begin{pmatrix} a_0+a_3 & a_1-ia_2 \\ a_1+ia_2 & a_0-a_3 \end{pmatrix}
+		=& \begin{pmatrix} a_0+a_3 & a_1-ia_2 \\ a_1+ia_2 & a_0-a_3 \end{pmatrix} \\
+		M_{11}=& a_0+a_3 \\
+		M_{12}=& a_1-ia_2 \\
+		M_{21}=& a_1+ia_2 \\
+		M_{22}=& a_0-a_3 
 		\end{split} 
 	\]
-	Assuming that the elements of $\vec{a}$ are complex, they can be used to define any number in the matrix $M$ which I defined above.
+	\[
+		\begin{split}
+		a_0=&\frac{1}{2}Tr\{ M\sigma_0 \} =\frac{1}{2}Tr\left[ \begin{pmatrix}M_{11} & M_{12} \\ M_{21} & M_{22} \end{pmatrix} \begin{pmatrix}1&0\\0&1\end{pmatrix} \right] = Tr\left[ \begin{pmatrix}M_{11} & M_{12} \\ M_{21} & M_{22} \end{pmatrix} \right]\\
+		=& \frac{1}{2}\left( M_{11}+M_{22} \right) = \frac{1}{2}\left( a_0+a_3+a_0-a_3 \right) \\
+		=& a_0 \\
+		a_1=&\frac{1}{2}Tr\{ M\sigma_1 \} =\frac{1}{2}Tr\left[ \begin{pmatrix}M_{11} & M_{12} \\ M_{21} & M_{22} \end{pmatrix} \begin{pmatrix}0&1\\1&0\end{pmatrix} \right] = Tr\left[ \begin{pmatrix}M_{12} & M_{11} \\ M_{22} & M_{21} \end{pmatrix} \right]\\
+		=& \frac{1}{2}\left( M_{12}+M_{21} \right) = \frac{1}{2}\left( a_1-ia_2+a_1+ia_2 \right) \\
+		=& a_1 \\
+		a_2=&\frac{1}{2}Tr\{ M\sigma_2 \} =\frac{1}{2}Tr\left[ \begin{pmatrix}M_{11} & M_{12} \\ M_{21} & M_{22} \end{pmatrix} \begin{pmatrix}0&-i\\i&0\end{pmatrix} \right] = Tr\left[ \begin{pmatrix}iM_{12} & -iM_{11} \\ iM_{22} & -iM_{21} \end{pmatrix} \right]\\
+		=& \frac{1}{2}\left( iM_{12}-iM_{21} \right) = \frac{1}{2}\left( ia_1-i^2a_2-ia_1-i^2a_2 \right) \\
+		=& a_2 \\
+		a_3=&\frac{1}{2}Tr\{ M\sigma_3 \} =\frac{1}{2}Tr\left[ \begin{pmatrix}M_{11} & M_{12} \\ M_{21} & M_{22} \end{pmatrix} \begin{pmatrix}1&0\\0&-1\end{pmatrix} \right] = Tr\left[ \begin{pmatrix}M_{11} & -M_{12} \\ M_{21} & -M_{22} \end{pmatrix} \right]\\
+		=& \frac{1}{2}\left( M_{11}-M_{22} \right) = \frac{1}{2}\left( a_0+a_3-a_0+a_3 \right) \\
+		=& a_3
+		\end{split} 
+	\]
 \end{homeworkProblem}
 
 \pagebreak
