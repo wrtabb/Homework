@@ -188,12 +188,88 @@
 	(a) We want the field be be electrically neutral, this means that $Q\phi_0 = 0$
 	\[
 		\begin{split}
-		Q = T_3+\frac{Y}{2} \\
-		T_3\phi_0 = -\phi_0 \\	
-		Y\phi_0=2\phi_0	
+		Q\phi_0 =& \left(T_3+\frac{Y}{2}\right)\phi_0 \\
+		=& T_3\phi_0+\frac{1}{2}Y\phi_0 \\
+		=& -\phi_0+\frac{1}{2}Y\phi_0 \\
+		=& 0
 		\end{split}
 	\]
-	A hypercharge of 2 gives us a field which is electrically neutral.
+	This means that a hypercharge of 2 gives us a field which is electrically neutral.
+	\\
+	\\
+	Following from the lecture notes, we have the Lagrangian:
+	\[
+		\mathcal{L}=\abs{\left( i\partial_\mu-\frac{g}{2}\tau_aW_\mu^a-\frac{g'}{2}YB_\mu \right)\phi_0}^2-V\phi_0
+	\]
+	To find the masses, we only need the terms which are quadratic in the fields, and they come from the following piece, given by equation (24) from the lecture notes from 4/21:
+	\[
+		\begin{split}
+		&\abs{\left(\frac{g}{2}\tau_aW_\mu^a+\frac{g'}{2}YB_\mu \right)\phi_0}^2 \\
+		=& \frac{1}{4}\abs{ 
+			g\begin{pmatrix} W_\mu^3 & \frac{1}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+							\frac{1}{\sqrt2}(W_\mu^1+iW_\mu^2)&0 & \frac{1}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+							 0 & \frac{1}{\sqrt2}(W_\mu^1+iW_\mu^2) & -W_\mu^3 \end{pmatrix}
+							 \begin{pmatrix} 0 \\ 0 \\ v \end{pmatrix}
+							 +g'\begin{pmatrix} 2B_\mu & 0 & 0 \\ 0 & 2B_\mu & 0 \\ 0 & 0 & 2B_\mu
+							  \end{pmatrix} \begin{pmatrix} 0 \\ 0 \\ v \end{pmatrix}}^2 \\
+							=& \frac{1}{4}\abs{\begin{pmatrix} gW_\mu^3+2g'B_\mu & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+							\frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2)& 2g'B_\mu & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+							0 & \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & -gW_\mu^3+2g'B_\mu \end{pmatrix}\begin{pmatrix} 0 \\ 0 \\ v \end{pmatrix}}^2 \\
+						=& \frac{1}{4}\begin{pmatrix} 0 & 0 & v \end{pmatrix}
+						\begin{pmatrix} gW_\mu^3+2g'B_\mu & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+						\frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2)& 2g'B_\mu & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+						0 & \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & -gW_\mu^3+2g'B_\mu \end{pmatrix} \cdot
+						\\
+						\cdot& \begin{pmatrix} gW_\mu^3+2g'B_\mu & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+						\frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2)& 2g'B_\mu & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+						0 & \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & -gW_\mu^3+2g'B_\mu \end{pmatrix}
+						\begin{pmatrix} 0 \\ 0 \\ v \end{pmatrix} \\
+						=& \frac{1}{4}\begin{pmatrix} 0 & \frac{vg}{\sqrt{2}}(W_\mu^1+iW_\mu^2) & +v(-gW_\mu^3+2g'B_\mu) \end{pmatrix} 
+						\begin{pmatrix} 0 \\ \frac{vg}{2}(W_\mu^1-iW_\mu^2) \\ v(-gW_\mu^3+2g'B_\mu) \end{pmatrix} \\
+						=& \frac{v^2g^2}{8}\left[(W_\mu^1)^2+(W_\mu^2)^2\right]+\frac{v^2}{4}\left[-gW_\mu^3+2g'B_\mu\right]^2
+		\end{split}
+	\]
+	What we see here is that we have two gauge bosons with the same mass such that \(m_W=\frac{vg}{2}\). These are the two w-bosons. Then we have another mass term which is a superposition of the $W$ and $B$ fields.
+	\\
+	\\
+	Since we identify the mass terms in the Lagrangian in the form \(\frac{1}{2}m_G^2G^2\), where $G$ is some field and $m_G$ is its mass, we can associate this term with the second part of the above equation (since the photon mass is zero we know the only term we have must be the Z). We can now identify the Z-boson field (normalized):
+	\[
+		Z_\mu=\frac{2g'B_\mu-gW_\mu}{\sqrt{4g'^2+g^2}}
+	\]
+	\[
+		\begin{split} 
+		Z_\mu\sqrt{4g'^2+g^2}=2g'B_\mu-gW_\mu
+		\end{split}
+	\]
+	Now compare the mass term with what was obtained above 
+	\[
+		\begin{split} 
+		&\frac{v^2}{4}(2g'B_\mu-gW_\mu)^2=\frac{1}{2}\left[ \frac{v^2}{2}(4g'^2+g^2) \right]Z_\mu Z^\mu \\
+		&\Rightarrow m_Z = v\sqrt{\frac{4g'^2+g^2}{2}}
+		\end{split}
+	\]
+	From the text, we see that we can express these results in terms of $\theta_W$ (equations 15.22 and 15.23)
+	\[
+		\begin{split} 
+		&Z_\mu=\cos\theta_WW_\mu^3 -\sin\theta_WB_\mu \\
+		&\cos\theta_W = -g \\
+		&\sin\theta_W = -2g' \\
+		&\tan\theta_W = 2g'/g \\
+		&g'=\frac{g\tan\theta_W}{2}
+		\end{split}
+	\]
+	Let's use these identities to rewrite $m_Z$ in terms of just $g$ and then take the ratio of $m_W/m_Z$.
+	\[
+		\begin{split}
+		m_Z=&v\sqrt{\frac{g^2\tan^2\theta_W+g^2}{2}} \\
+		=&vg\sqrt{\frac{\tan^2\theta_W+1}{2}} \\
+		=&vg\frac{\sec\theta_W}{\sqrt2} \\
+		m_W/m_Z=& \frac{vg}{2} \frac{\sqrt2}{vg\sec\theta_W} \\
+		=& \frac{\cos\theta_W}{\sqrt2}
+		\end{split} 
+	\]
+
+	
 
 \end{homeworkProblem}
 
