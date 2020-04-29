@@ -199,7 +199,49 @@
 
 \pagebreak
 
+\begin{homeworkProblem} 
+	
+	\textbf{Solution}
+	
+\end{homeworkProblem} 
 
+\pagebreak 
+
+\begin{homeworkProblem} 
+	Consider the spontaneous symmetry breaking of an $SU(2)$ local gauge symmetry, as we did in class. We made a particular choice of vacuum. Show that for any choice of vacuum, all three gauge bosons still acquire the same mass.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	The kinetic energy term will wind up giving us the mass of the boson(s) as seen in equations (17) AND (18) from the lecture notes.
+	\[
+		\frac{g^2}{4}\left(\frac{1}{\sqrt{2}}\right)^2\abs{\begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\phi}^2
+	\]
+	We can let $\phi$ be any generic choice: $\phi = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$
+	\[
+		\begin{split} 
+		&\frac{g^2}{4}\left(\frac{1}{\sqrt{2}}\right)^2\abs{\begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} }^2 = \\
+		=&\frac{g^2}{8}\left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right]^\dagger \left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right] \\
+		=& \frac{g^2}{8} \left[ \begin{pmatrix} v_1 & v_2 \end{pmatrix} \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix} \right]\left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right] \\
+		=& \frac{g^2}{8} \begin{pmatrix} W_\mu^3v_1+(W_\mu^1+iW_\mu^2)v_2 & (W_\mu^1-iW_\mu^2)v_1-W_\mu^3v_2 \end{pmatrix} 
+		\begin{pmatrix} W_\mu^3v_1+(W_\mu^1-iW_\mu^2)v_2 \\ (W_\mu^1+iW_\mu^2)v_1-W_\mu^3v_2\end{pmatrix} \\
+		=&\frac{g^2}{8} (W_\mu^3)^2v_1^2+(W_\mu^1+iW_\mu^2)(W_\mu^1-iW_\mu^2)v_2^2+W_\mu^3(W_\mu^1-iW_\mu^2)v_1v_2+W_\mu^3(W_\mu^1+iW_\mu^2)v_1v_2 \\
+		+&\frac{g^2}{8}(W_\mu^1-iW_\mu^2)(W_\mu^1+iW_\mu^2)v_1^2+(W_\mu^3)^2v_2^2-W_\mu^3(W_\mu^1-iW_\mu^2)v_1v_2-W_\mu^3(W_\mu^1+iW_\mu^2)v_1v_2 \\
+		=&\frac{g^2}{8} (W_\mu^3)^2v_1^2+(W_\mu^1)^2v_2^2+(W_\mu^2)^2v_2^2+  (W_\mu^3)^2v_2^2+(W_\mu^1)^2v_1^2+(W_\mu^2)^2v_1^2 \\
+		=&\frac{g^2}{8} (v_1^2+v_2^2)(W_\mu^1)^2+(v_1^2+v_2^2)(W_\mu^2)^2+(v_1^2+v_2^2)(W_\mu^3)^2 \\
+		=&\frac{g^2(v_1^2+v_2^2)}{8} \left[ (W_\mu^1)^2+(W_\mu^2)^2+(W_\mu^3)^2 \right]
+		\end{split} 
+	\]
+	And now we have three gauge bosons with the same mass such that
+	\[
+		m=\frac{g\sqrt{v_1^2+v_2^2}}{2}
+	\]
+\end{homeworkProblem} 
+
+\pagebreak 
 
 \end{document}
+
+
 
