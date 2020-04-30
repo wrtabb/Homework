@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  29 APR 2020 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  30 APR 2020 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -732,46 +732,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--189
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--201
-
- []
-
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 231--236
+Underfull \hbox (badness 10000) in paragraph at lines 233--238
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 270--275
+Underfull \hbox (badness 10000) in paragraph at lines 272--277
 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 321--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--296
+Underfull \hbox (badness 10000) in paragraph at lines 321--328
 
  []
 
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 322.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 322.
+[6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 366.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 366.
  (./hw13.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 322.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 322.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 366.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 366.
 Package rerunfilecheck Info: File `hw13.out' has not changed.
-(rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 322.
+(rerunfilecheck)             Checksum: 43B5C1C18FD7E756618D8FEAC01FF9E3;180.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 366.
  ) 
 Here is how much of TeX's memory you used:
- 17582 strings out of 493033
- 335099 string characters out of 6137749
+ 17585 strings out of 493033
+ 335127 string characters out of 6137749
  428621 words of memory out of 5000000
- 20796 multiletter control sequences out of 15000+600000
+ 20797 multiletter control sequences out of 15000+600000
  12456 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,23n,66p,416b,380s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -785,10 +780,10 @@ s/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
 fb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw13.pdf (6 pages, 132739 bytes).
+Output written on hw13.pdf (7 pages, 137703 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

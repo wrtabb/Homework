@@ -194,12 +194,14 @@
 		=& 0
 		\end{split}
 	\]
-	This means that a hypercharge of 2 gives us a field which is electrically neutral.
-	\\
-	\\
+	This means that a hypercharge of 2 gives us a field which is electrically neutral. In matrix form, we could write $Y$ like this:
+	\[
+		Y=\begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 2 \end{pmatrix}
+	\]
+
 	Following from the lecture notes, we have the Lagrangian:
 	\[
-		\mathcal{L}=\abs{\left( i\partial_\mu-\frac{g}{2}\tau_aW_\mu^a-\frac{g'}{2}YB_\mu \right)\phi_0}^2-V\phi_0
+		\mathcal{L}=\abs{\left( i\partial_\mu-\frac{g}{2}\tau_aW_\mu^a-\frac{g'}{2}YB_\mu \right)\phi_0}^2-V(\phi_0)
 	\]
 	To find the masses, we only need the terms which are quadratic in the fields, and they come from the following piece, given by equation (24) from the lecture notes from 4/21:
 	\[
@@ -271,7 +273,37 @@
 	This clearly does not correspond to our physical reality. This would mean that if the w-boson had a mass of 80 GeV, then the z would have a mass of 129 GeV. And of course the z-mass is roughly 91 GeV.
 	\\
 	\\
-	(b) This time I'll carry out the same calculation but with the new given value of the vacuum.
+	(b) This time I'll carry out the same calculation but with the new given value of $\phi_0$.
+	
+	\[
+	\begin{split}
+	&\abs{\left(\frac{g}{2}\tau_aW_\mu^a+\frac{g'}{2}YB_\mu \right)\phi_0}^2 \\
+	=& \frac{1}{4}\abs{ 
+		g\begin{pmatrix} W_\mu^3 & \frac{1}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+		\frac{1}{\sqrt2}(W_\mu^1+iW_\mu^2)&0 & \frac{1}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+		0 & \frac{1}{\sqrt2}(W_\mu^1+iW_\mu^2) & -W_\mu^3 \end{pmatrix}
+		\begin{pmatrix} 0 \\ v \\ 0 \end{pmatrix}
+		+g'\begin{pmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 2B_\mu
+		\end{pmatrix} \begin{pmatrix} 0 \\ v \\ 0 \end{pmatrix}}^2 \\
+	=& \frac{1}{4}\abs{\begin{pmatrix} gW_\mu^3 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+		\frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2)& 0 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+		0 & \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & -gW_\mu^3+2g'B_\mu \end{pmatrix}\begin{pmatrix} 0 \\ v \\ 0 \end{pmatrix}}^2 \\
+	=& \frac{1}{4}\begin{pmatrix} 0 & v & 0 \end{pmatrix}
+	\begin{pmatrix} gW_\mu^3 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+	\frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2)& 0 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+	0 & \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & -gW_\mu^3+2g'B_\mu \end{pmatrix} \cdot
+	\\
+	\cdot& \begin{pmatrix} gW_\mu^3 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) & 0\\
+	\frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2)& 0 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2)\\
+	0 & \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & -gW_\mu^3+2g'B_\mu \end{pmatrix}
+	\begin{pmatrix} 0 \\ v \\ 0 \end{pmatrix} \\
+	=& v^2\begin{pmatrix} \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) & 0 & \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) \end{pmatrix}
+	\begin{pmatrix} \frac{g}{\sqrt2}(W_\mu^1-iW_\mu^2) \\ 0 \\ \frac{g}{\sqrt2}(W_\mu^1+iW_\mu^2) \end{pmatrix} \\
+	=& \frac{v^2g^2}{2}\left[ (W_\mu^1)^2+(W_\mu^2)^2 \right]+0+\frac{v^2g^2}{2}\left[ (W_\mu^1)^2+(W_\mu^2)^2 \right] \\
+	=& v^2g^2\left[ (W_\mu^1)^2+(W_\mu^2)^2 \right]
+	\end{split}
+	\]
+	Here we see that we only have two bosons acquiring mass such that $m=vg\sqrt2$ for both of them.
 	
 \end{homeworkProblem}
 
@@ -318,6 +350,18 @@
 \end{homeworkProblem} 
 
 \pagebreak 
+
+\begin{homeworkProblem} 
+	The Lagrangian for the scalar field
+	\[
+		\mathcal{L}=\abs{\left( i\partial_\mu-\frac{g}{2}\tau_aW_\mu^a-\frac{g'}{2}YB_\mu \right)\phi}^2-V(\phi)
+	\]
+	contains trilinear $hW^+W^-$ and quadrilinear $hhW^+W^-$ Higgs boson couplings. Use
+	\[
+		\phi=\sqrt{\frac{1}{2}}\begin{pmatrix} 0 \\ v+h(x) \end{pmatrix}
+	\]
+	to show that in the standard model the vertex factors are $igM_W$ and $ig^2/4$
+\end{homeworkProblem} 
 
 \end{document}
 
