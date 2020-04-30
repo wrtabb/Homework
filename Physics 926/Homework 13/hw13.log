@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  30 APR 2020 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  30 APR 2020 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,15 +752,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 321--328
 
  []
 
-[6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 366.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 366.
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 362--369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--369
+
+ []
+
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
  (./hw13.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 366.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 366.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
 Package rerunfilecheck Info: File `hw13.out' has not changed.
 (rerunfilecheck)             Checksum: 43B5C1C18FD7E756618D8FEAC01FF9E3;180.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 366.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
  ) 
 Here is how much of TeX's memory you used:
  17585 strings out of 493033
@@ -780,7 +795,7 @@ s/cm/cmr7.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
 fb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw13.pdf (7 pages, 137703 bytes).
+Output written on hw13.pdf (7 pages, 138376 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream

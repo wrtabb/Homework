@@ -188,9 +188,9 @@
 	(a) We want the field be be electrically neutral, this means that $Q\phi_0 = 0$
 	\[
 		\begin{split}
-		Q\phi_0 =& \left(T_3+\frac{Y}{2}\right)\phi_0 \\
-		=& T_3\phi_0+\frac{1}{2}Y\phi_0 \\
-		=& -\phi_0+\frac{1}{2}Y\phi_0 \\
+		Q\phi_0 =& e\left(T_3+\frac{Y}{2}\right)\phi_0 \\
+		=& eT_3\phi_0+\frac{e}{2}Y\phi_0 \\
+		=& -e\phi_0+\frac{e}{2}Y\phi_0 \\
 		=& 0
 		\end{split}
 	\]
@@ -328,16 +328,16 @@
 	\[
 		\frac{g^2}{4}\left(\frac{1}{\sqrt{2}}\right)^2\abs{\begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix} \begin{pmatrix} 0 \\ v \end{pmatrix}}^2
 	\]
-	We can let $\phi$ be any generic choice and let the vector in the above equation be $\begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$
+	We can let $\phi$ be any generic choice and let the vector in the above equation be $\begin{pmatrix} v_1 \\ v_2 \end{pmatrix}$, where $v_1$ and $v_2$ are both complex numbers
 	\[
 		\begin{split} 
 		&\frac{g^2}{4}\left(\frac{1}{\sqrt{2}}\right)^2\abs{\begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} }^2 = \\
 		=&\frac{g^2}{8}\left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right]^\dagger \left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right] \\
-		=& \frac{g^2}{8} \left[ \begin{pmatrix} v_1 & v_2 \end{pmatrix} \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix} \right]\left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right] \\
-		=& \frac{g^2}{8} \begin{pmatrix} W_\mu^3v_1+(W_\mu^1+iW_\mu^2)v_2 & (W_\mu^1-iW_\mu^2)v_1-W_\mu^3v_2 \end{pmatrix} 
+		=& \frac{g^2}{8} \left[ \begin{pmatrix} v_1^* & v_2^* \end{pmatrix} \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix} \right]\left[ \begin{pmatrix} W_\mu^3 & W_\mu^1-iW_\mu^2 \\ W_\mu^1+iW_\mu^2 & -W_\mu^3 \end{pmatrix}\begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \right] \\
+		=& \frac{g^2}{8} \begin{pmatrix} W_\mu^3v_1^*+(W_\mu^1+iW_\mu^2)v_2^* & (W_\mu^1-iW_\mu^2)v_1^*-W_\mu^3v_2^* \end{pmatrix} 
 		\begin{pmatrix} W_\mu^3v_1+(W_\mu^1-iW_\mu^2)v_2 \\ (W_\mu^1+iW_\mu^2)v_1-W_\mu^3v_2\end{pmatrix} \\
-		=&\frac{g^2}{8} (W_\mu^3)^2v_1^2+(W_\mu^1+iW_\mu^2)(W_\mu^1-iW_\mu^2)v_2^2+W_\mu^3(W_\mu^1-iW_\mu^2)v_1v_2+W_\mu^3(W_\mu^1+iW_\mu^2)v_1v_2 \\
-		+&\frac{g^2}{8}(W_\mu^1-iW_\mu^2)(W_\mu^1+iW_\mu^2)v_1^2+(W_\mu^3)^2v_2^2-W_\mu^3(W_\mu^1-iW_\mu^2)v_1v_2-W_\mu^3(W_\mu^1+iW_\mu^2)v_1v_2 \\
+		=&\frac{g^2}{8} (W_\mu^3)^2v_1^2+(W_\mu^1+iW_\mu^2)(W_\mu^1-iW_\mu^2)v_2^2+W_\mu^3(W_\mu^1-iW_\mu^2)v_1^*v_2+W_\mu^3(W_\mu^1+iW_\mu^2)v_1v_2^* \\
+		+&\frac{g^2}{8}(W_\mu^1-iW_\mu^2)(W_\mu^1+iW_\mu^2)v_1^2+(W_\mu^3)^2v_2^2-W_\mu^3(W_\mu^1-iW_\mu^2)v_1^*v_2-W_\mu^3(W_\mu^1+iW_\mu^2)v_1v_2^* \\
 		=&\frac{g^2}{8} (W_\mu^3)^2v_1^2+(W_\mu^1)^2v_2^2+(W_\mu^2)^2v_2^2+  (W_\mu^3)^2v_2^2+(W_\mu^1)^2v_1^2+(W_\mu^2)^2v_1^2 \\
 		=&\frac{g^2}{8} (v_1^2+v_2^2)(W_\mu^1)^2+(v_1^2+v_2^2)(W_\mu^2)^2+(v_1^2+v_2^2)(W_\mu^3)^2 \\
 		=&\frac{g^2(v_1^2+v_2^2)}{8} \left[ (W_\mu^1)^2+(W_\mu^2)^2+(W_\mu^3)^2 \right]
@@ -360,7 +360,13 @@
 	\[
 		\phi=\sqrt{\frac{1}{2}}\begin{pmatrix} 0 \\ v+h(x) \end{pmatrix}
 	\]
-	to show that in the standard model the vertex factors are $igM_W$ and $ig^2/4$
+	to show that in the standard model the vertex factors are $igM_W$ and $ig^2/4$, respectively. 
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	
 \end{homeworkProblem} 
 
 \end{document}
