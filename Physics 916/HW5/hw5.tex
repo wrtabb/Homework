@@ -222,6 +222,13 @@
 	3. Directly solve the secular equations for $K$ and $H$ and determine the corresponding eigenvalues. Check that the relation between $E_\pm$ and $\kappa_\pm$ established in part 2 is correct.
 	\\
 	\\
+	4. Let us define angles $0\leq\theta\leq\pi$ and $0\leq\phi\leq2\pi$ defined as:\\
+	\(\tan\theta=\frac{2\abs{H_{21}}}{H_{11}-H_{22}}\) and \( H_{21}=\abs{H_{21}}e^{i\phi} \)
+	\\
+	\\
+	5. Show that $E_++E_-=Tr\{H\}$, and that $E_+E_-=\det H$
+	\\
+	\\
 	\textbf{Solution}
 	\\
 	\\
@@ -276,7 +283,7 @@
 		=&\frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{(H_{11}+H_{22})^2-4(H_{11}H_{22}-\abs{H_{12}}^2)} \\
 		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{H_{11}^2+H_{22}^2+2H_{11}H_{22}-4H_{11}H_{22}+4\abs{H_{12}}^2} \\
 		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{H_{11}^2+H_{22}^2-2H_{11}H_{22}+4\abs{H_{12}}^2} \\
-		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{(H_{11}^2-H_{22}^2)^2+4\abs{H_{12}}^2}
+		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2}
 		\end{split} 
 	\]
 	Now I'll do the same for the eigenvalues of $K$. Recall from part 1 that $K_{11} = 1,\;K_{22}=-1$
@@ -294,6 +301,48 @@
 		 \lambda =& \pm\sqrt{1+\abs{\frac{2}{H_{11}-H_{22}}H_{12}}^2} \\
 		 =& \pm\frac{1}{H_{11}-H_{22}}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2} \\
 		\end{split}  
+	\]
+	4. We have:
+	\[
+		\begin{split} 
+		\tan\theta=&\frac{2\abs{H_{21}}}{H_{11}-H_{22}},\; H_{21}=\abs{H_{21}}e^{i\phi} \\
+		\Rightarrow e^{i\phi}\tan\theta=&\frac{2H_{21}}{H_{11}-H_{22}} \\
+		K_{21} =& e^{i\phi}\tan\theta \\
+		K_{12} =&e^{-i\phi}\tan\theta
+		\end{split} 
+	\]
+	We already established that $K_{11}=1$ and $K_{22}=-1$, so we have:
+	\[
+		K=\begin{pmatrix} 1 & e^{-i\phi}\tan\theta \\ e^{i\phi}\tan\theta & -1 \end{pmatrix}
+	\]
+	Then the eigenvalue can be expressed using the equation in the last part of part 3:
+	\[
+		\begin{split} 
+		\kappa_\pm =&\pm\sqrt{1+\abs{\frac{2}{H_{11}-H_{22}}H_{12}}^2} \\
+		=& \pm\sqrt{1+\abs{e^{i\phi}\tan\theta}^2} \\
+		=& \pm\sqrt{1+\tan^2\theta} \\
+		=& \pm\sec\theta
+		\end{split} 
+	\]
+	5. Taking the eigenvalues of $H$ from part 3:
+	\[
+		\begin{split} 
+		E_++E_- =& \frac{1}{2}(H_{11}+H_{22})+\frac{1}{2}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2} + \frac{1}{2}(H_{11}+H_{22})-\frac{1}{2}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2} \\
+		=& \frac{1}{2}(H_{11}+H_{22})+\frac{1}{2}(H_{11}+H_{22}) \\
+		=& H_{11}+H_{22} \\
+		=& Tr\{H\}
+		\end{split} 
+	\]
+	Now to calculate $E_+E_-$. The form of this will be $(a+b)(a-b)=a^2-b^2$:
+	\[
+		\begin{split}
+		E_+E_-=& \left( \frac{1}{2}(H_{11}+H_{22}) \right)^2-\left( \frac{1}{2}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2} \right)^2 \\
+		=& \frac{1}{4}\left(H_{11}^2+H_{22}^2+2H_{11}H_{22}\right)-\frac{1}{4}(H_{11}-H_{22})^2-\abs{H_{12}}^2 \\
+		=& \frac{1}{4}\left(H_{11}^2+H_{22}^2+2H_{11}H_{22}\right)-\frac{1}{4}(H_{11}^2+H_{22}^2-2H_{11}H_{22})-\abs{H_{12}}^2 \\
+		=&\frac{1}{4}2H_{11}H_{22}-\frac{1}{4}(-2H_{11}H_{22})-\abs{H_{12}}^2 \\
+		=& H_{11}H_{22}-\abs{H_{12}}^2 \\
+		=& \det H
+		\end{split} 
 	\]
 \end{homeworkProblem}
 
