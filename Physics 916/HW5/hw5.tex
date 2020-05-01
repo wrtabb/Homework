@@ -105,7 +105,7 @@
 %
 
 \newcommand{\hmwkTitle}{Homework\ \#5}
-\newcommand{\hmwkDueDate}{April , 2020}
+\newcommand{\hmwkDueDate}{May 4, 2020}
 \newcommand{\hmwkClass}{Physics 916}
 \newcommand{\hmwkClassTime}{}
 \newcommand{\hmwkClassInstructor}{Professor Jean Marcel Ngoko}
@@ -205,7 +205,43 @@
 
 \pagebreak
 \begin{homeworkProblem}
-
+	Consider the quantum operator, $H$, whose matrix representation in the orthonormal basis $\{ \ket{u_1},\ket{u_2} \}$ writes:
+	\[
+		H=\begin{pmatrix} H_{11} & H_{12} \\ H_{21} & H_{22} \end{pmatrix}
+	\]
+	where $H_{11}$ and $H_{22}$ are real numbers and $H_{12}=H_{21}^*$. It is thus obvious that $H$ is Hermitian. 
+	\\
+	\\
+	1. Show that: \\
+	\(H=\frac{1}{2}(H_{11}+H_{22})I+\tilde{K}\equiv\frac{1}{2}(H_{11}+H_{22})I+\frac{1}{2}(H_{11}-H_{22})K\) where $I$ is the identity operator, and the operators $\tilde{K}, K$ must be determined in terms of the matrix elements of $H$. Are $\tilde{K}$ and $K$ Hermitian?
+	\\
+	\\
+	2. 
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	1. If we let the following be true we will have the relation suggested:
+	\[
+		\begin{split} 
+		H_{11}=&\frac{1}{2}[H_{11}(1+K_{11})+H_{22}(1-K_{11})] \\
+		H_{22}=&\frac{1}{2}[H_{11}(1+K_{22})+H_{22}(1-K_{22})] \\
+		H_{12}=&\frac{1}{2}K_{12}(H_{11}-H_{22})\\
+		H_{21}=&\frac{1}{2}K_{12}(H_{11}-H_{22})
+		\end{split} 
+	\]
+	From here we can determine a couple of things about $K$ and $\tilde{K}$
+	\[
+		\begin{split} 
+		&K_{11}=1,\;K_{22}=-1 \\
+		K_{12}=&\frac{2}{H_{11}-H_{22}}H_{12}=\frac{2}{H_{11}-H_{22}}H_{21}^*=K_{21}^*\\
+		\end{split} 
+	\]
+	So we know the value of the diagonal of $K$ and $\tilde K$ and we also know that they are Hermitian.
+	\\
+	\\
+	2.  
 \end{homeworkProblem}
 
 \pagebreak
