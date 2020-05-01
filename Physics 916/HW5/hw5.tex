@@ -216,7 +216,10 @@
 	\(H=\frac{1}{2}(H_{11}+H_{22})I+\tilde{K}\equiv\frac{1}{2}(H_{11}+H_{22})I+\frac{1}{2}(H_{11}-H_{22})K\) where $I$ is the identity operator, and the operators $\tilde{K}, K$ must be determined in terms of the matrix elements of $H$. Are $\tilde{K}$ and $K$ Hermitian?
 	\\
 	\\
-	2. 
+	2. A key result from the decomposition in part 1 is that the operators $\tilde K, K$, and $H$ all have the same eigenvectors $\ket{\psi_\pm}$. Let $\tilde\kappa_\pm,\kappa_\pm,E_\pm$ be the eigenvalues of $\tilde K, K$, and $H$. Use the result of part 1 to establish the relation between $E_\pm$ and $\kappa_\pm$, and the relation between $E_\pm$ and $\tilde{\kappa}_\pm$. Show that these relations allow for a change of the eigenvalue origin.
+	\\
+	\\
+	3. Directly solve the secular equations for $K$ and $H$ and determine the corresponding eigenvalues. Check that the relation between $E_\pm$ and $\kappa_\pm$ established in part 2 is correct.
 	\\
 	\\
 	\textbf{Solution}
@@ -241,7 +244,57 @@
 	So we know the value of the diagonal of $K$ and $\tilde K$ and we also know that they are Hermitian.
 	\\
 	\\
-	2.  
+	2. Starting with the relation between $E_\pm$ and $\tilde{\kappa}_\pm$
+	\[
+		\begin{split}
+		H\ket{\psi_\pm}=&\frac{1}{2}(H_{11}+H_{22})I\ket{\psi_\pm}+\tilde K\ket{\psi_\pm} \\
+		=& \frac{1}{2}(H_{11}+H_{22})\ket{\psi_\pm}+\tilde{\kappa}_\pm \ket{\psi_\pm} \\
+		=& E_\pm\ket{\psi_\pm} \\
+		\Rightarrow E_\pm=&\frac{1}{2}(H_{11}+H_{22})+\tilde{\kappa}_\pm
+		\end{split} 
+	\]
+	Now for the relation between $E_\pm$ and $\kappa_\pm$
+	\[
+	\begin{split}
+	H\ket{\psi_\pm}=&\frac{1}{2}(H_{11}+H_{22})I\ket{\psi_\pm}+ \frac{1}{2}(H_{11}-H_{22})K\ket{\psi_\pm} \\
+	=& \frac{1}{2}(H_{11}+H_{22})\ket{\psi_\pm}+\frac{1}{2}(H_{11}-H_{22}){\kappa}_\pm \ket{\psi_\pm} \\
+	=& E_\pm\ket{\psi_\pm} \\
+	\Rightarrow E_\pm=&\frac{1}{2}(H_{11}+H_{22})+\frac{1}{2}(H_{11}-H_{22}){\kappa}_\pm
+	\end{split} 
+	\]
+	In both of these cases, the eigenvalues are related by a shift by a constant, $\frac{1}{2}(H_{11}+H_{22})$, thus "shifting the origin" of the eigenvalues.
+	\\
+	\\
+	3. Start by solving the secular equation to find the eigenvalues of $H$
+	\[
+		\begin{split}
+		\begin{vmatrix} H_{11}-\lambda & H_{12} \\ H_{21} & H_{22}-\lambda \end{vmatrix} =& (H_{11}-\lambda)(H_{22}-\lambda)-\abs{H_{12}}^2 \\
+		=& H_{11}H_{22}+\lambda^2-\lambda H_{22}-\lambda H_{11}-\abs{H_{12}}^2 \\
+		=& \lambda^2-\lambda(H_{11}+H_{22})+H_{11}H_{22}-\abs{H_{12}}^2 \\
+		=&0 \\
+		\Rightarrow \lambda=&\frac{-b\pm\sqrt{b^2-4ac}}{2a} \\
+		=&\frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{(H_{11}+H_{22})^2-4(H_{11}H_{22}-\abs{H_{12}}^2)} \\
+		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{H_{11}^2+H_{22}^2+2H_{11}H_{22}-4H_{11}H_{22}+4\abs{H_{12}}^2} \\
+		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{H_{11}^2+H_{22}^2-2H_{11}H_{22}+4\abs{H_{12}}^2} \\
+		=& \frac{1}{2}(H_{11}+H_{22})\pm\frac{1}{2}\sqrt{(H_{11}^2-H_{22}^2)^2+4\abs{H_{12}}^2}
+		\end{split} 
+	\]
+	Now I'll do the same for the eigenvalues of $K$. Recall from part 1 that $K_{11} = 1,\;K_{22}=-1$
+	\[
+		\begin{split} 
+		\begin{vmatrix} 1-\lambda & K_{12} \\ K_{21} & -(1+\lambda) \end{vmatrix} =& -(1+\lambda)(1-\lambda) -\abs{K_{12}}^2 \\
+		=& \lambda^2-1-\abs{K_{12}}^2 \\
+		=&0 \\
+		\Rightarrow \lambda =& \pm\sqrt{1+\abs{K_{12}}^2}
+		\end{split}
+	\]
+	Recall from part 1: $K_{12}=\frac{2}{H_{11}-H_{22}}H_{12}$
+	\[
+		\begin{split}
+		 \lambda =& \pm\sqrt{1+\abs{\frac{2}{H_{11}-H_{22}}H_{12}}^2} \\
+		 =& \pm\frac{1}{H_{11}-H_{22}}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2} \\
+		\end{split}  
+	\]
 \end{homeworkProblem}
 
 \pagebreak
