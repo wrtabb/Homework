@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  1 MAY 2020 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  1 MAY 2020 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -749,20 +749,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 269--276
 
  []
 
-[4] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 377.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 377.
+[4] [5] [6] [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
  (./hw5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 377.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 377.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
 Package rerunfilecheck Info: File `hw5.out' has not changed.
 (rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 377.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
  ) 
 Here is how much of TeX's memory you used:
- 17583 strings out of 493033
- 334978 string characters out of 6137749
- 426236 words of memory out of 5000000
+ 17584 strings out of 493033
+ 334984 string characters out of 6137749
+ 429236 words of memory out of 5000000
  20793 multiletter control sequences out of 15000+600000
  14905 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -780,10 +780,10 @@ exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2015/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2015/texmf-dist/fonts/typ
 e1/public/amsfonts/symbols/msbm7.pfb>
-Output written on hw5.pdf (6 pages, 141102 bytes).
+Output written on hw5.pdf (7 pages, 143887 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

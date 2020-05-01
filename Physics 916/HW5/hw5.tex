@@ -373,5 +373,20 @@
 		\Rightarrow \left[ S_z,S_x \right] =& i\hbar S_y
 		\end{split}
 		\]
+		5. To start with, calculate $\boldsymbol{S}^2$
+		\[
+			\begin{split}
+			\boldsymbol{S}=&\begin{pmatrix} S_x \\ S_y\\ S_z \end{pmatrix} = \frac{\hbar}{2} \begin{pmatrix}\sigma_x\\\sigma_y\\\sigma_z\end{pmatrix} \\
+			\boldsymbol{S}^2=&\frac{\hbar^2}{4} \begin{pmatrix}\sigma_x&\sigma_y&\sigma_z\end{pmatrix} \begin{pmatrix}\sigma_x\\\sigma_y\\\sigma_z\end{pmatrix} \\
+			=& \frac{\hbar^2}{4}[\sigma_x^2+\sigma_y^2+\sigma_z^2] \\
+			=& \frac{\hbar^2}{4} [I+I+I] \\
+			=& \frac{3\hbar^2}{4} I
+			\end{split} 
+		\]
+		For each of the Pauli matrices, $\sigma_i^2=I$, the identity matrix. So now we know:
+		\[
+			\left[ \boldsymbol{S}^2,\boldsymbol{S} \right]\propto \left[ I,\boldsymbol{S} \right]=0
+		\]
+		Because the identity matrix commutes with everything.
 \end{homeworkProblem}
 \end{document}
