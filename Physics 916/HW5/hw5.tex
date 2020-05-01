@@ -229,6 +229,12 @@
 	5. Show that $E_++E_-=Tr\{H\}$, and that $E_+E_-=\det H$
 	\\
 	\\
+	6. Show that if $H$ has a degenerate spectrum, then it is necessarily proportional to the identity operator.
+	\\
+	\\
+	7. Use the operator, $K(\theta,\phi)$ to calculate normalized eigenvectors $\ket{\psi_\pm}$ in terms of these angles in the orthonormal basis $\{\ket{u_1},\ket{u_2}  \}$. You must find that the eigenvectors $\ket{\psi_\pm}$ are collinear to the eigenvectors $\ket{\pm}$ of the $1/2$ spin operator $S_u$, where $u$ is an arbitrary unit vector defined by these angles.
+	\\
+	\\
 	\textbf{Solution}
 	\\
 	\\
@@ -343,6 +349,20 @@
 		=& H_{11}H_{22}-\abs{H_{12}}^2 \\
 		=& \det H
 		\end{split} 
+	\]
+	6. Since $H$ is only $2\times2$, there are only two eigenvalues, so for it to be degenerate means that the eigenvalues are the same. $\Rightarrow E_+=E_-$
+	\[
+		\begin{split} 
+		\Rightarrow &\frac{1}{2}(H_{11}+H_{22})+\frac{1}{2}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2}=\frac{1}{2}(H_{11}+H_{22})-\frac{1}{2}\sqrt{(H_{11}-H_{22})^2+4\abs{H_{12}}^2} \\
+		&(H_{11}-H_{22})^2+4\abs{H_{12}}^2=0
+		\end{split}
+	\]
+	For this to be true, $\abs{H_{12}}=0$. This is because otherwise $H_{11}$ and/or $H_{22}$ would have to be complex, and it was specified in the problem that they are real. Then if $\abs{H_{12}}=0$, $H_{11}=H_{22}$. This means that $H$ must be proportional to the identity matrix.
+	\\
+	\\
+	7. The eigenvalues of $K$ are $\kappa_\pm=\pm\sec\theta$, and $K$ is defined as:
+	\[
+		K=\begin{pmatrix} 1 & e^{-i\phi}\tan\theta \\ e^{i\phi}\tan\theta & -1 \end{pmatrix}
 	\]
 \end{homeworkProblem}
 
