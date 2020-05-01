@@ -336,9 +336,42 @@
 		S_xS_y-S_yS_x =& \frac{\hbar^2}{4} \begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} - \frac{\hbar^2}{4} \begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} \\
 		=& \frac{\hbar^2}{4} \begin{pmatrix} 2i & 0 \\ 0 & -2i \end{pmatrix} = \frac{i\hbar^2}{2} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \\
 		=& i\hbar\left( \frac{\hbar}{2}\sigma_z \right) \\
-		\Rightarrow \left[ S_x,S_y \right] =& i\hbar S_z
-		\end{split} 
+		\Rightarrow \left[ S_x,S_y \right] =& i\hbar S_z \\
+		\end{split}
 	\]
 	
+		\[
+		\begin{split}
+		S_yS_z=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} 
+		\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} = \frac{\hbar^2}{4} \begin{pmatrix} 0 & i \\ i & 0 \end{pmatrix} \\
+		S_zS_y=& \frac{\hbar^2}{4} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
+		 = \frac{\hbar^2}{4} \begin{pmatrix} 0 & -i \\ -i & 0 \end{pmatrix} \\
+		\end{split} 
+		\]
+		\[
+		\begin{split} 
+		S_yS_z-S_zS_y=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & i \\ i & 0 \end{pmatrix} - \frac{\hbar^2}{4} \begin{pmatrix} 0 & -i \\ -i & 0 \end{pmatrix} \\
+		=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & 2i \\ 2i & 0 \end{pmatrix} = \frac{i\hbar^2}{2} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+		=&i\hbar\left( \frac{\hbar}{2}\sigma_x \right) \\
+		\Rightarrow \left[ S_y,S_z \right] =& i\hbar S_x
+		\end{split}
+		\]
+		
+		\[
+		\begin{split}
+		S_zS_x=& \frac{\hbar^2}{4} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} 
+		\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \frac{\hbar^2}{4} \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \\
+		S_xS_z=& \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+		= \frac{\hbar^2}{4} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \\
+		\end{split} 
+		\]
+		\[
+		\begin{split} 
+		S_zS_x-S_xS_z=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}-\frac{\hbar^2}{4} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}\\
+		=& \frac{\hbar^2}{4} \begin{pmatrix} 0 & 2 \\ -2 & 0 \end{pmatrix}=\frac{i\hbar^2}{2} \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \\
+		=& i\hbar\left( \frac{\hbar}{2}\sigma_y \right) \\
+		\Rightarrow \left[ S_z,S_x \right] =& i\hbar S_y
+		\end{split}
+		\]
 \end{homeworkProblem}
 \end{document}
