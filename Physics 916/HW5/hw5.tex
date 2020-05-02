@@ -235,9 +235,27 @@
 	7. Use the operator, $K(\theta,\phi)$ to calculate normalized eigenvectors $\ket{\psi_\pm}$ in terms of these angles in the orthonormal basis $\{\ket{u_1},\ket{u_2}  \}$. You must find that the eigenvectors $\ket{\psi_\pm}$ are collinear to the eigenvectors $\ket{\pm}$ of the $1/2$ spin operator $S_u$, where $u$ is an arbitrary unit vector defined by these angles.
 	\\
 	\\
+	8. Show that $K(\theta=0,\phi=0)$ is proportional to the z-component of the Pauli operator, $\sigma_z$. What are the corresponding eigenvalues and eigenvectors?
+	\\
+	\\
+	9. When $\theta=\pi/2$, the operator $K$ is not finite and we must use $\tilde K$. Show that $\tilde K_x\equiv\tilde K(\theta=\pi/2,\phi=0)$ is proportional to the x-component of the Pauli operator, $\sigma_x$. What are the corresponding eigenvalues and eigenvectors?
+	\\
+	\\
+	10. Show that $\tilde K_y \equiv\tilde K(\theta=\pi/2,\phi=\pi/2)$ is proportional to the y-component of the Pauli operator, $\sigma_y$. What are the corresponding eigenvalues and eigenvectors?
+	\\
+	\\
+	11. Calculate the commutator, $[\tilde K_x, \tilde K_y]$, and show that it is proportional to the z-component of the pauli operator, $\sigma_z$.
+	\\
+	\\
 	\textbf{Solution}
 	\\
 	\\
+	Since they will be used several times later on in this problem, here are the definitions of the $2\times2$ Pauli operators:
+	\[
+		\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix},\; 
+		\sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix},\;
+		\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+	\]
 	1. If we let the following be true we will have the relation suggested:
 	\[
 		\begin{split} 
@@ -364,6 +382,153 @@
 	\[
 		K=\begin{pmatrix} 1 & e^{-i\phi}\tan\theta \\ e^{i\phi}\tan\theta & -1 \end{pmatrix}
 	\]
+	To find the eigenvectors, starting with $\kappa_+$
+	\[
+		\begin{split}
+		&\begin{pmatrix} 1-\sec\theta & e^{-i\phi}\tan\theta \\ e^{i\phi}\tan\theta & -(1+\sec\theta) \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&\Rightarrow c_2 = c_1\frac{\sec\theta-1}{\tan\theta}e^{i\phi}=c_1\tan\frac{\theta}{2}e^{i\phi} \\
+		&v_+ = \begin{pmatrix} 1 \\ \tan\frac{\theta}{2}e^{i\phi} \end{pmatrix}
+		\end{split} 
+	\]
+	Now to normalize it:
+	\[
+		\begin{split}
+		&A_+^2(1+\tan^2\frac{\theta}{2}) = 1 \\
+		&A_+=\sqrt{\frac{1}{1+\tan^2\frac{\theta}{2}}} = \sqrt{\frac{1}{\sec^2\frac{\theta}{2}}} = \cos\frac{\theta}{2}
+		\end{split}  
+	\]
+	For the eigenvalue $\kappa_+$, we have:
+	\[
+		\ket{\psi_+} = \cos\frac{\theta}{2}\begin{pmatrix} 1 \\ \tan\frac{\theta}{2}e^{i\phi} \end{pmatrix}
+	\]
+	
+	Now for $\kappa_-$
+	\[
+	\begin{split}
+	&\begin{pmatrix} \sec\theta+1 & e^{-i\phi}\tan\theta \\ e^{i\phi}\tan\theta & \sec\theta-1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+	&\Rightarrow c_2 = c_1\frac{\tan\theta}{1-\sec\theta}e^{i\phi}=-c_1\cot\frac{\theta}{2}e^{i\phi} \\
+	&v_- = \begin{pmatrix} 1 \\ -\cot\frac{\theta}{2}e^{i\phi} \end{pmatrix}
+	\end{split} 
+	\]
+	Now to normalize it:
+	\[
+	\begin{split}
+	&A_-^2(1+\cot^2\frac{\theta}{2}) = 1 \\
+	&A_-=\sqrt{\frac{1}{1+\cot^2\frac{\theta}{2}}} = \sqrt{\frac{1}{\csc^2\frac{\theta}{2}}} = \sin\frac{\theta}{2}
+	\end{split}  
+	\]
+	For the eigenvalue $\kappa_+$, we have:
+	\[
+	\ket{\psi_-} = \sin\frac{\theta}{2}\begin{pmatrix} 1 \\ -\cot\frac{\theta}{2}e^{i\phi} \end{pmatrix}
+	\]
+	8. The operator $K(\theta,\phi)$ is defined in the matrix representation as:
+	\[
+		 K=\begin{pmatrix} 1 & e^{-i\phi}\tan\theta \\ e^{i\phi}\tan\theta & -1 \end{pmatrix}
+	\]
+	If we let $\theta=\phi=0$, we have:
+	\[
+		K=\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+	\]
+	This is equal to the Pauli matrix, $\sigma_z$. The eigenvalues and eigenvectors can be found by solving the characteristic equation:
+	\[
+		\begin{split}
+		&\begin{vmatrix} 1-\lambda & 0 \\ 0 &-(1+\lambda) \end{vmatrix} = 0 \\
+		&\lambda = \pm 1 \\
+		\\
+		&\lambda=1 \\
+		&\begin{pmatrix} 0 & 0 \\ 0 &-2 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_2=0 \\
+		&\Rightarrow v_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix} \\
+		\\
+		&\lambda=-1 \\
+		&\begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_1=0 \\
+		&\Rightarrow v_1 = \begin{pmatrix} 0 \\ 1 \end{pmatrix} 
+		\end{split}  
+	\]
+	\\
+	\\
+	9. Using the definitions from part 4, we can write:
+	\[
+		H_{11}-H_{22}=\frac{2\abs{H_{12}}}{\tan\theta}
+	\]
+	\[
+		\begin{split}
+		\tilde K=\frac{1}{2}(H_{11}-H_{22})K =& \begin{pmatrix} \frac{\abs{H_{12}}}{\tan\theta} & e^{-i\phi}\tan\theta\frac{\abs{H_{12}}}{\tan\theta} \\ e^{i\phi}\tan\theta\frac{\abs{H_{12}}}{\tan\theta} & -\frac{\abs{H_{12}}}{\tan\theta} \end{pmatrix} \\
+		=& \begin{pmatrix} \frac{\abs{H_{12}}}{\tan\theta} & \abs{H_{12}}e^{-i\phi} \\ \abs{H_{12}}e^{i\phi} & -\frac{\abs{H_{12}}}{\tan\theta} \end{pmatrix}
+		\end{split}
+	\]
+	For $\theta=\pi/2$ and $\phi=0$, we have:
+	\[
+		\begin{split}
+		\tilde K_x
+		=& \abs{H_{12}}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\propto \sigma_x
+		\end{split}
+	\]
+	Now we use the usual method to find eigenvalues and eigenvectors:
+	\[
+		\begin{split}
+		&\begin{vmatrix} -\lambda & 1 \\ 1 &-\lambda \end{vmatrix} = \lambda^2-1 = 0 \\
+		&\lambda = \pm 1 \\
+		\\
+		&\lambda=1 \\
+		&\begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_2=c_1 \\
+		&\Rightarrow v_1 = \frac{1}{\sqrt2}\begin{pmatrix} 1 \\ 1 \end{pmatrix} \\
+		\\
+		&\lambda=-1 \\
+		&\begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_2=-c_1 \\
+		&\Rightarrow v_1 = \frac{1}{\sqrt2}\begin{pmatrix} 1 \\ -1 \end{pmatrix} 
+		\end{split}
+	\]
+	10. 
+	\[
+		\begin{split}
+		\tilde K=& \begin{pmatrix} \frac{\abs{H_{12}}}{\tan\theta} & \abs{H_{12}}e^{-i\phi} \\ \abs{H_{12}}e^{i\phi} & -\frac{\abs{H_{12}}}{\tan\theta} \end{pmatrix} \\
+		\tilde K(\pi/2,\pi/2)=& \begin{pmatrix} 0 & \abs{H_{12}}e^{-i\pi/2} \\ \abs{H_{12}}e^{i\pi/2} & 0 \end{pmatrix}
+		\end{split} 
+	\]
+	\[
+		\begin{split}
+		e^{i\pi/2}=&\cos(\pi/2)+i\sin(\pi/2) = i \\
+		e^{-i\pi/2}=&\cos(\pi/2)-i\sin(\pi/2) = -i \\
+		\end{split}
+	\]
+	\[
+		\Rightarrow \tilde K(\pi/2,\pi/2)= \abs{H_{12}}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \propto \sigma_y
+	\]
+		Now we use the usual method to find eigenvalues and eigenvectors:
+		\[
+		\begin{split}
+		&\begin{vmatrix} -\lambda & -i \\ i &-\lambda \end{vmatrix} = \lambda^2+i^2 = 0 \\
+		&\lambda = \pm 1 \\
+		\\
+		&\lambda=1 \\
+		&\begin{pmatrix} -1 & -i \\ i & -1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_2=ic_1 \\
+		&\Rightarrow v_1 = \frac{1}{\sqrt2}\begin{pmatrix} 1 \\ i \end{pmatrix} \\
+		\\
+		&\lambda=-1 \\
+		&\begin{pmatrix} 1 & -i \\ i & 1 \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}= \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		&c_2=-ic_1 \\
+		&\Rightarrow v_1 = \frac{1}{\sqrt2}\begin{pmatrix} 1 \\ -i \end{pmatrix} 
+		\end{split}
+		\]
+		
+		11. 
+		\[
+			\begin{split}
+			[\tilde K_x, \tilde K_y] =& \tilde K_x\tilde K_y - \tilde K_y\tilde K_x \\
+			\tilde K_x\tilde K_y =&  \abs{H_{12}}^2\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} = 
+			\abs{H_{12}}^2\begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} \\
+			\tilde K_y\tilde K_x =&  \abs{H_{12}}^2\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} =
+			\abs{H_{12}}^2\begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} \\
+			[\tilde K_x, \tilde K_y] =& \abs{H_{12}}^2\begin{pmatrix} i & 0 \\ 0 & -i \end{pmatrix} - \abs{H_{12}}^2\begin{pmatrix} -i & 0 \\ 0 & i \end{pmatrix} \\
+			=& \abs{H_{12}}^2 \begin{pmatrix} 2i & 0 \\ 0 & -2i \end{pmatrix} \\
+			=& 2i\abs{H_{12}}^2 \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \propto \sigma_z
+			\end{split}
+		\]
 \end{homeworkProblem}
 
 \pagebreak
