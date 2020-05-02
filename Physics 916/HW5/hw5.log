@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  2 MAY 2020 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.1)  2 MAY 2020 17:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -835,20 +835,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 592--599
  []
 
 [11] [12] [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 715.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 715.
+Underfull \hbox (badness 10000) in paragraph at lines 717--727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--743
+
+ []
+
+[15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 748.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 748.
  (./hw5.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 715.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 715.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 748.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 748.
 Package rerunfilecheck Info: File `hw5.out' has not changed.
-(rerunfilecheck)             Checksum: 27946C9C9F915D08D63F8E6209AB272B;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 715.
+(rerunfilecheck)             Checksum: 43B5C1C18FD7E756618D8FEAC01FF9E3;180.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 748.
  ) 
 Here is how much of TeX's memory you used:
- 17591 strings out of 493033
- 335031 string characters out of 6137749
+ 17594 strings out of 493033
+ 335060 string characters out of 6137749
  429235 words of memory out of 5000000
- 20793 multiletter control sequences out of 15000+600000
+ 20794 multiletter control sequences out of 15000+600000
  14905 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,24n,66p,456b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -866,10 +886,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm7.pfb>
-Output written on hw5.pdf (14 pages, 178252 bytes).
+Output written on hw5.pdf (15 pages, 182043 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 

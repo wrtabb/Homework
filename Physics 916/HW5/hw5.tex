@@ -712,4 +712,37 @@
 		\]
 		Because the identity matrix commutes with everything.
 \end{homeworkProblem}
+\pagebreak
+\begin{homeworkProblem} 
+	Let us consider two Stern-Gerlach experiments where the first one prepares the atoms in a state and the second one measures a spin physical quantity. Here, the state of the 1/2 spin system is prepared such that the spin is pointing down along $\hat{u}$ in the $x$-$z$ plane.
+	\\
+	\\
+	1. Immediately before measurement, what is the state $\ket{\psi}$ of the system in the basis of eigenvectors of $S_z$?
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	1. In the $S_z$ basis, with the spin known to be in the $x$-$z$ plane ($\phi=0$), we can write:
+	\[
+		\ket{+}_u=\begin{pmatrix} \cos\frac{\theta}{2} \\ \sin\frac{\theta}{2} \end{pmatrix},\; 
+		\ket{-}_u=\begin{pmatrix} -\sin\frac{\theta}{2} \\ \cos\frac{\theta}{2}\end{pmatrix}
+	\]
+	In general, we can write the state of the system as:
+	\[
+		\ket{\psi} = \alpha\ket{+}+\beta\ket{-}
+	\]
+	2. Since we are starting in the state, $\ket -_u$, the probability of finding it in the $-\hbar/2$ state is:
+	\[
+		\mathcal P=\abs{\braket{-|+}_u}^2 = \cos^2\frac{\theta}{2}
+	\]
+	Immediately following this measurement, the state of the system is spin down in $S_z$.
+	\\
+	\\
+	3. Since we are starting in the state, $\ket -_u$, the probability of finding it in the $-\hbar/2$ state is:
+	\[
+	\mathcal P=\abs{\braket{+|+}_u}^2 = \sin^2\frac{\theta}{2}
+	\]
+	Immediately following this measurement, the state of the system is spin up in $S_z$.
+\end{homeworkProblem} 
 \end{document}
