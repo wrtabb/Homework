@@ -745,4 +745,48 @@
 	\]
 	Immediately following this measurement, the state of the system is spin up in $S_z$.
 \end{homeworkProblem} 
+\pagebreak
+\begin{homeworkProblem} 
+	Consider a spin 1/2 particle placed in a magnetic field $\vec B=\begin{pmatrix} B_x & 0 & B_z \end{pmatrix}=\frac{B_0}{\sqrt2}\begin{pmatrix} 1 & 0 & 1 \end{pmatrix}$ in the orthonormal basis $\{\ket{+},\ket{-}\}$ for $S_z$.
+	\\
+	\\
+	1. Calculate the matrix representing the Hamiltonian $H$ of the system.
+	\\
+	\\
+	2. Calculate the eigenvalues and eigenvectors of $H$.
+	\\
+	\\
+	3. The system at time $t=0$ is in the state $\ket{-}$. What values can be found if the energy is measured, and with what probabilities?
+	\\
+	\\
+	4. Calculate the state vector $\ket{\psi(t)}$ at time $t$. At this instant, $S_x$ is measured; what is the mean value of the results that can be obtained? Give a geometrical interpretation of your results.
+	\\
+	\\
+	\textbf{Solution}
+	\\
+	\\
+	1. The Hamiltonian of a particle of spin 1/2 in a magnetic field is:
+	\[
+		\begin{split} 
+		H=&-\vec{\mu}\cdot\vec B \\
+		\vec{\mu}=&\gamma \vec S \\
+		\Rightarrow H=&-\gamma\vec S\cdot\vec B \\
+		=& -\gamma(S_xB_x+S_yB_y+S_zB_z) \\
+		=& -\frac{\gamma B_0\hbar}{2\sqrt2} \left[\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}+\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \right] \\
+		=& -\frac{\gamma B_0\hbar}{2\sqrt2} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}
+		\end{split} 
+	\]
+	2. By the usual means, calculate eigenvalues then eigenvectors:
+	\[
+		\begin{split}
+		\begin{vmatrix} 1-\lambda & 1 \\ 1 & -(1+\lambda) \end{vmatrix} =& -(1+\lambda)(1-\lambda)-1=0\\
+		=& -(1-\lambda^2)-1 = \lambda^2-2=0 \\
+		\Rightarrow \lambda=\pm\sqrt2
+		\end{split}
+	\]
+	So the eigenvalues of $H$ are:
+	\[
+		E_\pm = \mp\frac{\gamma B_0\hbar}{2}
+	\]
+\end{homeworkProblem} 
 \end{document}
