@@ -720,6 +720,28 @@
 	1. Immediately before measurement, what is the state $\ket{\psi}$ of the system in the basis of eigenvectors of $S_z$?
 	\\
 	\\
+	2. What is the probability that a measurement of spin along the z-axis will find $-\hbar/2$? What is the state of the system immediately after measurement?
+	\\
+	\\
+	3. What is the probability that a measurement of spin along the z-axis will find $+\hbar/2$? What is the state of the system immediately after measurement?
+	\\
+	\\
+	4. What is the probability that spin down along the y-axis? What is the state of the system immediately after measurement?
+	\\
+	\\
+	5. What is the probability for spin up along the x-axis? What is the state of the
+	system immediately after the measurement?
+	\\
+	\\
+	6. What is the probability that a measurement of spin along the u-axis will find $-\hbar/2$?
+	\\
+	\\
+	7. What is the probability that a measurement of spin along the u-axis will find $+\hbar/2$?
+	\\
+	\\
+	8. 
+	\\
+	\\
 	\textbf{Solution}
 	\\
 	\\
@@ -728,10 +750,11 @@
 		\ket{+}_u=\begin{pmatrix} \cos\frac{\theta}{2} \\ \sin\frac{\theta}{2} \end{pmatrix},\; 
 		\ket{-}_u=\begin{pmatrix} -\sin\frac{\theta}{2} \\ \cos\frac{\theta}{2}\end{pmatrix}
 	\]
-	In general, we can write the state of the system as:
+	Since the state is prepared to be in the down state along $\hat u$, so the state before measurement would be:
 	\[
-		\ket{\psi} = \alpha\ket{+}+\beta\ket{-}
+		\ket{\psi} = \ket{-}_u=-\sin\frac{\theta}{2}\ket{+}+\cos\frac{\theta}{2}\ket{-}
 	\]
+
 	2. Since we are starting in the state, $\ket -_u$, the probability of finding it in the $-\hbar/2$ state is:
 	\[
 		\mathcal P=\abs{\braket{-|+}_u}^2 = \cos^2\frac{\theta}{2}
@@ -739,11 +762,46 @@
 	Immediately following this measurement, the state of the system is spin down in $S_z$.
 	\\
 	\\
-	3. Since we are starting in the state, $\ket -_u$, the probability of finding it in the $-\hbar/2$ state is:
+	3. Since we are starting in the state, $\ket -_u$, the probability of finding it in the $+\hbar/2$ state is:
 	\[
 	\mathcal P=\abs{\braket{+|+}_u}^2 = \sin^2\frac{\theta}{2}
 	\]
 	Immediately following this measurement, the state of the system is spin up in $S_z$.
+	\\
+	\\
+	4. Since the spin is along $\hat u$ which is only in the $x$-$z$ plane, there is zero probability that the spin will be found along the y-axis.
+	\\
+	\\
+	5. 
+	\[
+		\begin{split}
+		\ket{+}_x=&\frac{1}{\sqrt2}\left[ \ket{+}+\ket{-} \right] \\
+		\mathcal P_{x+}=&\frac{1}{2}\abs{ \braket{+|\psi} + \braket{-|\psi} }^2 \\
+		=& \frac{1}{2} \left( -\sin\frac{\theta}{2} + \cos\frac{\theta}{2} \right)^2 \\
+		=& \frac{1}{2} \left( \sin^2\frac{\theta}{2} + \cos^2\frac{\theta}{2}-2\sin\frac{\theta}{2}\cos\frac{\theta}{2} \right) \\
+		=&  \frac{1}{2}-\sin\frac{\theta}{2}\cos\frac{\theta}{2}
+		\end{split}
+	\]
+	6. The probability is 100\% since we prepared the system in the down u-direction to begin with.
+	\\
+	\\
+	7. Since the system is set up in the state down along $\hat u$, the probability to find it up along $\hat u$ is zero.
+	\\
+	\\
+	8. Calculate the mean value $\braket{\psi|S_z|\psi}$ by two methods. First by using statistical
+	analysis where the incident beam contains N silver atoms, and the direct
+	calculation of the matrix element. How does this result compare with classical
+	prediction?
+	\[
+		\begin{split}
+		\braket{\psi|S_z|\psi} =& \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix}
+		\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} -\sin\frac{\theta}{2} \\ \cos\frac{\theta}{2}\end{pmatrix} \\
+		=& \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix} 
+		\begin{pmatrix} -\sin\frac{\theta}{2} \\ -\cos\frac{\theta}{2}\end{pmatrix} \\
+		=& \frac{\hbar}{2}\sin^2\frac{\theta}{2}-\cos^2\frac{\theta}{2} \\
+		=& -\frac{\hbar}{2}\cos\theta
+		\end{split}
+	\]
 \end{homeworkProblem} 
 \pagebreak
 \begin{homeworkProblem} 
@@ -786,7 +844,58 @@
 	\]
 	So the eigenvalues of $H$ are:
 	\[
-		E_\pm = \mp\frac{\gamma B_0\hbar}{2}
+		E_\pm = \mp\frac{\gamma B_0\hbar}{2} = \pm\frac{\omega_0\hbar}{2}
 	\]
+	where $\omega_0$ is the Larmor frequency.\\
+	\\
+	Now plug in these values to calculate the eigenvectors.
+	\[
+		\begin{split} 
+		&\lambda=+\sqrt2 \\
+		&\begin{pmatrix} 1-\sqrt2 & 1 \\ 1 & -(1+\sqrt2) \end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}
+		\\
+		\\
+		&\lambda=-\sqrt2 \\
+		&\begin{pmatrix} 1+\sqrt2 & 1 \\ 1 & -\sqrt2-1 \end{pmatrix}
+		\begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \end{pmatrix} \\
+		\\
+		\\
+		&v_+= \begin{pmatrix} 1 \\ \sqrt2-1 \end{pmatrix} \\
+		&v_-= \begin{pmatrix} 1 \\ -\sqrt2-1 \end{pmatrix}
+		\end{split}
+	\]
+	3. At $t=0$ the system is in the $\ket{-}$ state, meaning $v_-$ from the last step.
+	\[
+		\ket{\psi(0)}=\begin{pmatrix} 0 \\ 1 \end{pmatrix} = \ket{-}
+	\]
+	To find the possible energies, we simply apply the Hamiltonian operator that was calculated in part 1.
+	\[
+		\begin{split} 
+		H\ket{\psi(0)}=&-\frac{\gamma B_0\hbar}{2\sqrt2} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}\begin{pmatrix} 0 \\ 1 \end{pmatrix} \\
+		=&-\frac{\gamma B_0\hbar}{2\sqrt2}\begin{pmatrix} 1 \\ -1 \end{pmatrix} \\
+		=& -\frac{\gamma B_0\hbar}{2\sqrt2} \ket{+}+\frac{\gamma B_0\hbar}{2\sqrt2}\ket{-} \\
+		E_\pm =& \mp\frac{\gamma B_0\hbar}{2\sqrt2} \\
+		\end{split} 
+	\]
+	But since the system is in the $\ket{-}$ state, there is zero possibility of finding it to have $E=E_+$ and a 100\% probability to find it to have energy $E=E_-$ state.
+	\\
+	\\
+	4. 
+	\[
+		\begin{split}
+		\ket{\psi(t)}=& -\frac{\gamma B_0\hbar}{2\sqrt2}e^{-i\omega_0t} \ket{+}+\frac{\gamma B_0\hbar}{2\sqrt2}e^{i\omega_0t}\ket{-} \\
+		=& -\frac{\gamma B_0\hbar}{2\sqrt2} \begin{pmatrix} e^{-i\omega_0t} \\ -e^{i\omega_0t} \\
+		 \end{pmatrix} \\
+		\braket{S_x}=& \braket{\psi(t)|S_x|\psi(t)} \\
+		=& \left( \frac{\gamma B_0\hbar}{2\sqrt2} \right)^2 \begin{pmatrix} e^{i\omega_0t} & -e^{-i\omega_0t}\end{pmatrix} \frac{\hbar}{2}\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} e^{-i\omega_0t} \\ -e^{i\omega_0t} \\
+		\end{pmatrix} \\
+		=& \frac{\gamma^2B_0^2\hbar^3}{16} \begin{pmatrix} e^{i\omega_0t} & -e^{-i\omega_0t} \end{pmatrix} \begin{pmatrix} -e^{i\omega_0t} \\ e^{-i\omega_0t} \end{pmatrix} \\
+		=& -\frac{\gamma^2B_0^2\hbar^3}{16} \left( e^{2i\omega_0t}+e^{-2i\omega_0t} \right) \\
+		=& -\frac{\gamma^2B_0^2\hbar^3}{8}\cos2\omega_0t
+		\end{split}
+	\]
+	The interpretation of this result is that the average x-component of the spin oscillates proportional to $\cos2\omega_0t$
+
 \end{homeworkProblem} 
 \end{document}
