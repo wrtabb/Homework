@@ -739,7 +739,10 @@
 	7. What is the probability that a measurement of spin along the u-axis will find $+\hbar/2$?
 	\\
 	\\
-	8. 
+	8. Calculate the mean value $\braket{\psi|S_z|\psi}$ by two methods. First by using statistical
+	analysis where the incident beam contains N silver atoms, and the direct
+	calculation of the matrix element. How does this result compare with classical
+	prediction?
 	\\
 	\\
 	\textbf{Solution}
@@ -779,7 +782,8 @@
 		\mathcal P_{x+}=&\frac{1}{2}\abs{ \braket{+|\psi} + \braket{-|\psi} }^2 \\
 		=& \frac{1}{2} \left( -\sin\frac{\theta}{2} + \cos\frac{\theta}{2} \right)^2 \\
 		=& \frac{1}{2} \left( \sin^2\frac{\theta}{2} + \cos^2\frac{\theta}{2}-2\sin\frac{\theta}{2}\cos\frac{\theta}{2} \right) \\
-		=&  \frac{1}{2}-\sin\frac{\theta}{2}\cos\frac{\theta}{2}
+		=&  \frac{1}{2}-\sin\frac{\theta}{2}\cos\frac{\theta}{2} \\
+		=& \frac{1}{2}\left( 1-\sin\theta \right)
 		\end{split}
 	\]
 	6. The probability is 100\% since we prepared the system in the down u-direction to begin with.
@@ -788,20 +792,42 @@
 	7. Since the system is set up in the state down along $\hat u$, the probability to find it up along $\hat u$ is zero.
 	\\
 	\\
-	8. Calculate the mean value $\braket{\psi|S_z|\psi}$ by two methods. First by using statistical
-	analysis where the incident beam contains N silver atoms, and the direct
-	calculation of the matrix element. How does this result compare with classical
-	prediction?
+	8. First, using statistics, we need to know what possible outcomes there are from applying $S_z$ to $\ket{\psi}$ and with what probabilities. In parts 2 and 3 we explored this, so we already have the answers. Our two possible outcomes for measurements of $S_z$ are:
+	\[
+		s_{z+}=+\frac{\hbar}{2},\; s_{z-}=-\frac{\hbar}{2}
+	\]
+	With probabilities:
+	\[
+		\mathcal P_+=\sin^2\frac{\theta}{2},\; \mathcal P_-=\cos^2\frac{\theta}{2}
+	\]
+	And the average value for this series of measurements is given by:
+	\[
+		\begin{split}
+		\braket{S_z} =& \sum s_{z\pm}\mathcal P_\pm\\
+		=& \frac{\hbar}{2}\sin^2\frac{\theta}{2}+\left( -\frac{\hbar}{2} \right)\cos^2\frac{\theta}{2}\\
+		=& \frac{\hbar}{2}\sin^2\frac{\theta}{2}-\frac{\hbar}{2}\cos^2\frac{\theta}{2} \\
+		=& -\frac{\hbar}{2}\cos\theta
+		\end{split}
+	\]
+	Now we want to do the same calculation but by using direct matrix element manipulation:
 	\[
 		\begin{split}
 		\braket{\psi|S_z|\psi} =& \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix}
 		\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} -\sin\frac{\theta}{2} \\ \cos\frac{\theta}{2}\end{pmatrix} \\
 		=& \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix} 
 		\begin{pmatrix} -\sin\frac{\theta}{2} \\ -\cos\frac{\theta}{2}\end{pmatrix} \\
-		=& \frac{\hbar}{2}\sin^2\frac{\theta}{2}-\cos^2\frac{\theta}{2} \\
+		=& \frac{\hbar}{2}\sin^2\frac{\theta}{2}-\frac{\hbar}{2}\cos^2\frac{\theta}{2} \\
 		=& -\frac{\hbar}{2}\cos\theta
 		\end{split}
 	\]
+	In the classical picture, you would not find two discrete values with various probabilities, but rather a continuous range of values between $\frac{\hbar}{2},-\frac{\hbar}{2}$. But the average of $S_z$ measurements in the quantum picture does not have to be one of the allowed states, and the probabilities that govern the two possible states are the sames for both the classical and quantum pictures. So even whether your system can take continuous or discrete values, the averages are calculated the same way. 
+	\\
+	\\
+	Therefore, in the classical picture:
+	\[
+		\bar S_z = -\frac{\hbar}{2}\cos\theta
+	\]
+
 \end{homeworkProblem} 
 \pagebreak
 \begin{homeworkProblem} 
