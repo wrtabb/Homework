@@ -812,7 +812,7 @@
 	Now we want to do the same calculation but by using direct matrix element manipulation:
 	\[
 		\begin{split}
-		\braket{\psi|S_z|\psi} =& \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix}
+		\braket{S_z}=&\braket{\psi|S_z|\psi} = \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix}
 		\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} -\sin\frac{\theta}{2} \\ \cos\frac{\theta}{2}\end{pmatrix} \\
 		=& \frac{\hbar}{2}\begin{pmatrix} -\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{pmatrix} 
 		\begin{pmatrix} -\sin\frac{\theta}{2} \\ -\cos\frac{\theta}{2}\end{pmatrix} \\
@@ -820,7 +820,7 @@
 		=& -\frac{\hbar}{2}\cos\theta
 		\end{split}
 	\]
-	In the classical picture, you would not find two discrete values with various probabilities, but rather a continuous range of values between $\frac{\hbar}{2},-\frac{\hbar}{2}$. But the average of $S_z$ measurements in the quantum picture does not have to be one of the allowed states, and the probabilities that govern the two possible states are the sames for both the classical and quantum pictures. So even whether your system can take continuous or discrete values, the averages are calculated the same way. 
+	In the classical picture, you would not find two discrete values with various probabilities, but rather a continuous range of values between $\frac{\hbar}{2},-\frac{\hbar}{2}$. But the average of $S_z$ measurements in the quantum picture does not have to be one of the allowed states, and the probabilities that govern the two possible states are the sames for both the classical and quantum pictures. So even whether your system can take continuous or discrete values, the averages are calculated the same way. This also fits nicely with Ehrenfest's Theorem, which shows that the average values of quantum states behave like classical values.
 	\\
 	\\
 	Therefore, in the classical picture:
